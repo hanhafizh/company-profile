@@ -8,6 +8,31 @@ class HomeController extends Controller
 {
     public function index()
     {
-        echo "Selamat Datang di Laravel";
+        return view('home.index');
+    }
+
+    public function about()
+    {
+        return view('home.about');
+    }
+
+    public function service()
+    {
+        return view('home.service');
+    }
+
+    public function ourwork()
+    {
+        return view('home.ourwork');
+    }
+
+    public function event()
+    {
+        return view('home.event');
+    }
+
+    public function contact()
+    {
+        return view('home.contact');
     }
 }
