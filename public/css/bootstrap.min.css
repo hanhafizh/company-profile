@@ -86,7 +86,7 @@ h1,
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 500;
     line-height: 1.2;
-    color: #353f4f;
+    color: #010a57;
 }
 h1,
 .h1 {
@@ -6861,7 +6861,7 @@ fieldset:disabled .btn {
     color: #f6f6fa !important;
 }
 .text-dark {
-    color: #353f4f !important;
+    color: #010a57 !important;
 }
 .text-white {
     color: #fff !important;
