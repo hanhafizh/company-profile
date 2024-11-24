@@ -1,7 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
-        {{-- <img src="/lte/dist/img/AdminLTELogo.png" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> --}}
         <span class="brand-text font-weight-light" style="font-size: 20px">Karya Prima Usahatama</span>
     </a>
 
@@ -29,22 +28,22 @@
                 </li>
 
                 <!-- Configuration -->
-                <li class="nav-item {{ Request::is('configuration/*') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ Request::is('configuration/*') ? 'active' : '' }}">
+                <li class="nav-item {{ Request::is('setting/*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ Request::is('setting/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-cogs"></i>
                         <p>
-                            Configuration
+                            Settings
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('configuration.organization') }}" class="nav-link {{ Request::routeIs('configuration.organization') ? 'active' : '' }}">
+                            <a href="{{ route('organization-setup') }}" class="nav-link {{ Request::routeIs('organization') ? 'active' : '' }}">
                                 <p>Organization</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('configuration.event') }}" class="nav-link {{ Request::routeIs('configuration.event') ? 'active' : '' }}">
+                            <a href="{{ route('event-setup') }}" class="nav-link {{ Request::routeIs('event') ? 'active' : '' }}">
                                 <p>Event</p>
                             </a>
                         </li>

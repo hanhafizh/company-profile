@@ -13,7 +13,6 @@ Route::get('/ourwork', [HomeController::class, 'ourwork'])->name('ourwork');
 Route::get('/event', [HomeController::class, 'event'])->name('event');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
-
 // Auth
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'authenticated'])->name('login.post');
@@ -25,9 +24,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     // Configuration Group
-    Route::prefix('configuration')->group(function () {
-        Route::get('organization', [DashboardController::class, 'organization'])->name('configuration.organization');
-        Route::get('event', [DashboardController::class, 'event'])->name('configuration.event');
+    Route::prefix('setting')->group(function () {
+        Route::get('organization-setup', [DashboardController::class, 'organization'])->name('organization-setup');
+        Route::get('event-setup', [DashboardController::class, 'event'])->name('event-setup');
     });
 
     // Logout

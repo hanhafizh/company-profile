@@ -8,16 +8,18 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('dashboard.index');
+        $userName = auth()->user()->name;   
+        return view('dashboard.index', compact('userName'));
+
     }
 
     public function organization()
     {
-        return view('dashboard.configuration.organization');
+        return view('dashboard.organizations.index');
     }
 
     public function event()
     {
-        return view('dashboard.configuration.event');
+        return view('dashboard.events.index');
     }
 }
