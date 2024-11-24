@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     @include('templates_dashboard.head')
-    <body>
-        <div class="d-flex flex-column flex-lg-row">
+    <body class="hold-transition sidebar-mini">
+        <div class="wrapper">
+            <!-- Navbar -->
+            @include('templates_dashboard.navbar')
             <!-- Sidebar -->
             @include('templates_dashboard.sidebar')
-
-            <!-- Main Content -->
-            <div class="content flex-grow-1">
-                <!-- Toggle Sidebar Button for Mobile -->
-                <button class="btn btn-primary d-lg-none m-3" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-expanded="false" aria-controls="sidebar">
-                    <i class="fa fa-bars"></i>
-                </button>
-                
-                <main class="p-4">
-                    @yield('content')
-                </main>
+            <!-- Content Wrapper -->
+            <div class="content-wrapper">
+                <!-- Main Content -->
+                @yield('content')
+                <!-- Footer -->
                 @include('templates_dashboard.footer')
             </div>
         </div>
+        <!-- Scripts -->
         @include('templates_dashboard.script')
     </body>
 </html>

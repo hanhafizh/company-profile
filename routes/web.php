@@ -13,6 +13,7 @@ Route::get('/ourwork', [HomeController::class, 'ourwork'])->name('ourwork');
 Route::get('/event', [HomeController::class, 'event'])->name('event');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
+
 // Auth
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'authenticated'])->name('login.post');

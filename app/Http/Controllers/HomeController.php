@@ -35,4 +35,9 @@ class HomeController extends Controller
     {
         return view('home.contact');
     }
+
+    public function tes()
+    {
+        return view('dashboard');
+    }
 }
