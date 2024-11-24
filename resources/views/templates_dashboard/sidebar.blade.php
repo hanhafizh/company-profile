@@ -32,7 +32,7 @@
                     <a href="#" class="nav-link {{ Request::is('setting/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-cogs"></i>
                         <p>
-                            Main Settings
+                            Pengaturan Content
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
