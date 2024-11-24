@@ -10,4 +10,14 @@ class DashboardController extends Controller
     {
         return view('dashboard.index');
     }
+
+    public function organization()
+    {
+        return view('dashboard.configuration.organization');
+    }
+
+    public function event()
+    {
+        return view('dashboard.configuration.event');
+    }
 }
