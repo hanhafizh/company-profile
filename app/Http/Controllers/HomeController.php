@@ -16,7 +16,7 @@ class HomeController extends Controller
         return view('home.about');
     }
 
-    public function service()
+    public function services()
     {
         return view('home.service');
     }
