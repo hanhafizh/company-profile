@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Event</h1>
+                    <h1 class="m-0">Acara</h1>
                 </div>
             </div>
         </div>
@@ -21,8 +21,9 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <h5 class="card-title mb-0">List Event</h5>
-                            <button style="margin-left: auto;" class="btn btn-primary btn-sm">Tambah Event</button>
+                            <h5 class="card-title mb-0">Daftar Acara</h5>
+                            <button onclick="window.location.href='{{ route('events.create') }}'" style="margin-left: auto;"
+                                class="btn btn-primary btn-sm">Tambah Acara</button>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">

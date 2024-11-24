@@ -12,7 +12,7 @@
                 <img src="/lte/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="#" class="d-block">{{ $userName }}</a>
             </div>
         </div>
 
@@ -32,19 +32,19 @@
                     <a href="#" class="nav-link {{ Request::is('setting/*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-cogs"></i>
                         <p>
-                            Settings
+                            Main Settings
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('organization-setup') }}" class="nav-link {{ Request::routeIs('organization') ? 'active' : '' }}">
-                                <p>Organization</p>
+                            <a href="{{ route('events.list') }}" class="nav-link {{ Request::routeIs('events.list') ? 'active' : '' }}">
+                                <p>Acara</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('event-setup') }}" class="nav-link {{ Request::routeIs('event') ? 'active' : '' }}">
-                                <p>Event</p>
+                            <a href="{{ route('organizations.list') }}" class="nav-link {{ Request::routeIs('organizations.list') ? 'active' : '' }}">
+                                <p>Organisasi</p>
                             </a>
                         </li>
                     </ul>
