@@ -39,7 +39,7 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{ route('events.list') }}" class="nav-link {{ Request::routeIs('events.list') ? 'active' : '' }}">
-                                <p>Acara</p>
+                                <p>Tes Acara</p>
                             </a>
                         </li>
                         <li class="nav-item">
