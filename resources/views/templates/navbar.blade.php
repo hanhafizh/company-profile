@@ -1,15 +1,17 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top px-4 px-lg-5 py-3 py-lg-0">
     <div class="container-fluid">
         <a href="{{ route('home') }}" class="navbar-brand p-0">
-            <h6 class="display-6 m-0 clTitle">Karya Prima</h6>
+            <img src="{{ asset('img/karyaprima-logo.png') }}" alt="Logo" class="logo d-lg-none" />
+
+            <h6 class="display-6 m-0 clTitle d-none d-lg-block">Karya Prima</h6>
         </a>
-        <button 
-            class="navbar-toggler" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#navbarCollapse" 
-            aria-controls="navbarCollapse" 
-            aria-expanded="false" 
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
             aria-label="Toggle navigation"
         >
             <span class="fa fa-bars"></span>
@@ -17,8 +19,8 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a 
-                        href="{{ route('home') }}" 
+                    <a
+                        href="{{ route('home') }}"
                         class="nav-link {{ Request::routeIs('home') ? 'active' : '' }}"
                         aria-current="{{ Request::routeIs('home') ? 'page' : '' }}"
                     >
@@ -26,32 +28,32 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a 
-                        href="{{ route('about') }}" 
+                    <a
+                        href="{{ route('about') }}"
                         class="nav-link {{ Request::routeIs('about') ? 'active' : '' }}"
                     >
                         About
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a 
-                        href="{{ route('services') }}" 
+                    <a
+                        href="{{ route('services') }}"
                         class="nav-link {{ Request::routeIs('services') ? 'active' : '' }}"
                     >
                         Services
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a 
-                        href="{{ route('ourwork') }}" 
+                    <a
+                        href="{{ route('ourwork') }}"
                         class="nav-link {{ Request::routeIs('ourwork') ? 'active' : '' }}"
                     >
                         Our Works
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a 
-                        href="{{ route('event') }}" 
+                    <a
+                        href="{{ route('event') }}"
                         class="nav-link {{ Request::routeIs('event') ? 'active' : '' }}"
                     >
                         Events

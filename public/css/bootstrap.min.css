@@ -10082,3 +10082,29 @@ fieldset:disabled .btn {
         display: none !important;
     }
 }
+
+/* Menampilkan logo dan menyembunyikan teks pada tampilan kecil */
+.logo {
+    width: 40px; /* Ukuran logo */
+    height: auto;
+}
+
+/* Menyembunyikan teks pada tampilan kecil */
+.d-none {
+    display: none;
+}
+
+/* Menampilkan teks pada tampilan besar */
+.d-lg-block {
+    display: block;
+}
+
+/* Menampilkan logo dan menyembunyikan teks pada tampilan kecil */
+@media (max-width: 991px) {
+    .d-lg-none {
+        display: block; /* Menampilkan logo pada tampilan kecil */
+    }
+    .d-none {
+        display: none; /* Menyembunyikan teks pada tampilan kecil */
+    }
+}
