@@ -11,6 +11,9 @@
         <!-- Update link to match route from sidebar.blade.php -->
         <a href="{{ route('configuration.organization') }}" class="nav-link {{ Request::routeIs('configuration.organization') ? 'active' : '' }}">Organisasi</a>
       </li>
+      <a href="{{ route('logout') }}" class="nav-link">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </a>
     </ul>
     <ul class="navbar-nav ml-auto">
       <!-- Add navbar components -->
