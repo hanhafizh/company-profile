@@ -24,23 +24,26 @@
       </div>
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>Starter Pages<i class="right fas fa-angle-left"></i></p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Active Page</p>
-                </a>
-              </li>
-            </ul>
-          </li>
+          <!-- Menu Acara -->
           <li class="nav-item">
-            <a href="logout" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="{{ route('configuration.event') }}" class="nav-link {{ Request::routeIs('configuration.event') ? 'active' : '' }}">
+              <i class="nav-icon fas fa-calendar-alt"></i>
+              <p>Acara</p>
+            </a>
+          </li>
+
+          <!-- Menu Organisasi -->
+          <li class="nav-item">
+            <a href="{{ route('configuration.organization') }}" class="nav-link {{ Request::routeIs('configuration.organization') ? 'active' : '' }}">
+              <i class="nav-icon fas fa-building"></i>
+              <p>Organisasi</p>
+            </a>
+          </li>
+
+          <!-- Menu Logout -->
+          <li class="nav-item">
+            <a href="{{ route('logout') }}" class="nav-link">
+              <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>Logout</p>
             </a>
           </li>
