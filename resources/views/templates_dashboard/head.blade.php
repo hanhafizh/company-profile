@@ -1,21 +1,12 @@
-<nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <!-- Update link to match route from sidebar.blade.php -->
-        <a href="{{ route('configuration.event') }}" class="nav-link {{ Request::routeIs('configuration.event') ? 'active' : '' }}">Acara</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <!-- Update link to match route from sidebar.blade.php -->
-        <a href="{{ route('configuration.organization') }}" class="nav-link {{ Request::routeIs('configuration.organization') ? 'active' : '' }}">Organisasi</a>
-      </li>
-      <a href="{{ route('logout') }}" class="nav-link">
-        <i class="fas fa-sign-out-alt"></i> Logout
-      </a>
-    </ul>
-    <ul class="navbar-nav ml-auto">
-      <!-- Add navbar components -->
-    </ul>
-  </nav>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@yield('title', 'Dashboard')</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="/lte/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/lte/dist/css/adminlte.min.css">
+</head>

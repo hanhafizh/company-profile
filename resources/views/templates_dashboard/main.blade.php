@@ -1,41 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>@yield('title')</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <link rel="stylesheet" href="/lte/plugins/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" href="/lte/dist/css/adminlte.min.css">
-</head>
-<body class="hold-transition sidebar-mini">
-<div class="wrapper">
+    @include('templates_dashboard.head')
+    <body class="hold-transition sidebar-mini">
+        <div class="wrapper">
+            <!-- Navbar -->
+            @include('templates_dashboard.navbar')
+            <!-- Sidebar -->
+            @include('templates_dashboard.sidebar')
 
-  @include('templates_dashboard.head')
-
-  @include('templates_dashboard.sidebar')
-
-  <div class="content-wrapper">
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Starter Page</h1>
-          </div>
+            <!-- Content Wrapper -->
+            <div class="content-wrapper">
+                <!-- Main Content -->
+                @yield('content')
+                <!-- Footer -->
+                @include('templates_dashboard.footer')
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="content">
-      <div class="container-fluid">
-        @yield('content')
-      </div>
-    </div>
-  </div>
-
-  @include('templates_dashboard.footer')
-
-</div>
-
-@include('templates_dashboard.script')
-</body>
+        <!-- Scripts -->
+        @include('templates_dashboard.script')
+    </body>
 </html>

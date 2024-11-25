@@ -1,6 +1,8 @@
 <footer class="main-footer">
+    <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      Karya Prima Usahatama
+        Admin Configuration
     </div>
-    <strong>Copyright &copy; 2024 <a href="https://kikiaka.id/" target="_blank">Kikiaka</a>.</strong> All rights reserved.
-  </footer>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2024 <a href="https://kikiaka.id">PT. Karya Prima Usahatama</a>.</strong> All rights reserved.
+</footer>
