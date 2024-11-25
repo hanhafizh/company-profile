@@ -7,7 +7,7 @@
             @include('templates_dashboard.navbar')
             <!-- Sidebar -->
             @include('templates_dashboard.sidebar')
-            
+
             <!-- Content Wrapper -->
             <div class="content-wrapper">
                 <!-- Main Content -->
