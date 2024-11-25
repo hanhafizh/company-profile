@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
@@ -24,9 +26,22 @@ Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     // Configuration Group
-    Route::prefix('configuration')->group(function () {
-        Route::get('organization', [DashboardController::class, 'organization'])->name('configuration.organization');
-        Route::get('event', [DashboardController::class, 'event'])->name('configuration.event');
+    Route::prefix('setting')->group(function () {
+        Route::prefix('organizations')->group(function () {
+            Route::get('list', [OrganizationController::class, 'index'])->name('organizations.list');
+            Route::get('create', [OrganizationController::class, 'create'])->name('organizations.create');
+            Route::post('store', [OrganizationController::class, 'store'])->name('organizations.store');
+            Route::get('edit/{id}', [OrganizationController::class, 'edit'])->name('organizations.edit');
+            Route::put('update/{id}', [OrganizationController::class, 'update'])->name('organizations.update');
+        });
+
+        Route::prefix('events')->group(function () {
+            Route::get('list', [EventController::class, 'index'])->name('events.list');
+            Route::get('create', [EventController::class, 'create'])->name('events.create');
+            Route::post('store', [EventController::class, 'store'])->name('events.store');
+            Route::get('edit/{id}', [EventController::class, 'edit'])->name('events.edit');
+            Route::put('update/{id}', [EventController::class, 'update'])->name('events.update');
+        });
     });
 
     // Logout
