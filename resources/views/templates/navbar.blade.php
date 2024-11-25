@@ -2,7 +2,6 @@
     <div class="container-fluid">
         <a href="{{ route('home') }}" class="navbar-brand p-0">
             <img src="{{ asset('img/karyaprima-logo.png') }}" alt="Logo" class="logo d-lg-none" />
-
             <h6 class="display-6 m-0 clTitle d-none d-lg-block">Karya Prima</h6>
         </a>
         <button
