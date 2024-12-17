@@ -17,13 +17,13 @@
                     <div class="blog-item">
                         <div class="blog-img">
                             <img src="img/blog-1.png" class="img-fluid w-100" alt="">
-                            <div class="blog-info">
+                            {{-- <div class="blog-info">
                                 <span><i class="fa fa-clock"></i> Dec 01.2024</span>
                                 <div class="d-flex">
                                     <span class="me-3"> 3 <i class="fa fa-heart"></i></span>
                                     <a href="#" class="text-white">0 <i class="fa fa-comment"></i></a>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="blog-content text-dark border p-4 ">
                             <h5 class="mb-4">Dolor, sit amet consectetur adipisicing</h5>
@@ -36,13 +36,6 @@
                     <div class="blog-item">
                         <div class="blog-img">
                             <img src="img/blog-2.png" class="img-fluid w-100" alt="">
-                            <div class="blog-info">
-                                <span><i class="fa fa-clock"></i> Dec 01.2024</span>
-                                <div class="d-flex">
-                                    <span class="me-3"> 3 <i class="fa fa-heart"></i></span>
-                                    <a href="#" class="text-white">0 <i class="fa fa-comment"></i></a>
-                                </div>
-                            </div>
                         </div>
                         <div class="blog-content text-dark border p-4 ">
                             <h5 class="mb-4">Dolor, sit amet consectetur adipisicing</h5>
@@ -55,13 +48,6 @@
                     <div class="blog-item">
                         <div class="blog-img">
                             <img src="img/blog-3.png" class="img-fluid w-100" alt="">
-                            <div class="blog-info">
-                                <span><i class="fa fa-clock"></i> Dec 01.2024</span>
-                                <div class="d-flex">
-                                    <span class="me-3"> 3 <i class="fa fa-heart"></i></span>
-                                    <a href="#" class="text-white">0 <i class="fa fa-comment"></i></a>
-                                </div>
-                            </div>
                         </div>
                         <div class="blog-content text-dark border p-4 ">
                             <h5 class="mb-4">Dolor, sit amet consectetur adipisicing</h5>
@@ -74,13 +60,6 @@
                     <div class="blog-item">
                         <div class="blog-img">
                             <img src="img/blog-4.png" class="img-fluid w-100" alt="">
-                            <div class="blog-info">
-                                <span><i class="fa fa-clock"></i> Dec 01.2024</span>
-                                <div class="d-flex">
-                                    <span class="me-3"> 3 <i class="fa fa-heart"></i></span>
-                                    <a href="#" class="text-white">0 <i class="fa fa-comment"></i></a>
-                                </div>
-                            </div>
                         </div>
                         <div class="blog-content text-dark border p-4 ">
                             <h5 class="mb-4">Dolor, sit amet consectetur adipisicing</h5>

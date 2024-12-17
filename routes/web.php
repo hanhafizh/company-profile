@@ -5,6 +5,7 @@ use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\OurworksController;
 use Illuminate\Support\Facades\Route;
 
 // Page
@@ -24,6 +25,9 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::middleware(['auth'])->group(function () {
     // Dashboard
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::resource('ourworks', OurworksController::class)->middleware('auth');
+
 
     // Configuration Group
     Route::prefix('setting')->group(function () {
