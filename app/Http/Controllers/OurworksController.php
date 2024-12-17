@@ -68,7 +68,10 @@ class OurworksController extends Controller
      * @param  \App\Models\Ourworks  $ourwork
      * @return \Illuminate\Http\Response
      */
-    public function show(Ourworks $ourwork) {}
+    public function show(Ourworks $ourwork)
+    {
+        return view('dashboard.ourworks.show', compact('ourwork'));
+    }
 
     /**
      * Show the form for editing the specified resource.

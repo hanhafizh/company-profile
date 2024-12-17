@@ -18,20 +18,16 @@
                         <div class="blog-item">
                             <div class="blog-img">
                                 <img src="/image/ourworks/{{ $ourwork->image }}" class="img-fluid w-100" alt="">
-                                {{-- <div class="blog-info">
-                                <span><i class="fa fa-clock"></i> Dec 01.2024</span>
-                                <div class="d-flex">
-                                    <span class="me-3"> 3 <i class="fa fa-heart"></i></span>
-                                    <a href="#" class="text-white">0 <i class="fa fa-comment"></i></a>
-                                </div>
-                            </div> --}}
                             </div>
                             <div class="blog-content text-dark border p-4 ">
                                 <h5 class="mb-4">{{ $ourwork->title }}</h5>
                                 <p class="mb-4">{{ \Illuminate\Support\Str::limit($ourwork->description, 100, '...') }}
                                 </p>
 
-                                <a class="btn btn-light rounded-pill py-2 px-4" href="#">Read More</a>
+                                <a class="btn btn-light rounded-pill py-2 px-4"
+                                    href="{{ route('ourworks.show', $ourwork->id) }}">Read More</a>
+
+
                             </div>
                         </div>
                     </div>
