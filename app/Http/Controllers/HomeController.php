@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ourworks;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,7 +24,10 @@ class HomeController extends Controller
 
     public function ourwork()
     {
-        return view('home.ourwork');
+        $ourworks = Ourworks::all();
+        return view('home.ourwork', compact(
+            'ourworks',
+        ));
     }
 
     public function event()
