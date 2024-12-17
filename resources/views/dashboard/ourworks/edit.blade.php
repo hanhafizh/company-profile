@@ -25,6 +25,7 @@
                                 Edit Our Work</h5>
                         </div>
                         <div class="card-body">
+                            <a href="/ourworks" class="btn btn-primary mb-2" style="margin-right: auto; ">Kembali</a>
                             <form action="{{ route('ourworks.update', $ourwork->id) }}" method="POST"
                                 enctype="multipart/form-data">
                                 @method('PUT')
@@ -62,6 +63,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 @endsection

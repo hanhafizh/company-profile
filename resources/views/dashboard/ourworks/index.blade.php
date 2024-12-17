@@ -46,7 +46,7 @@
                                                         class="img-fluid" width="90"></td>
                                                 <td>
                                                     <a href="{{ route('ourworks.edit', $ourwork->id) }}"
-                                                        class="btn btn-sm btn-primary">Edit</a>
+                                                        class="btn btn-sm btn-warning">Edit</a>
 
                                                     <form action="{{ route('ourworks.destroy', $ourwork->id) }}"
                                                         method="POST" style="display: inline-block;">
