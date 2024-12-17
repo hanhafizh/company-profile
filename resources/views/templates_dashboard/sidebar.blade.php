@@ -31,8 +31,10 @@
                 </li>
 
                 <!-- Configuration -->
-                <li class="nav-item {{ Request::is('setting/*') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ Request::is('setting/*') ? 'active' : '' }}">
+                <li
+                    class="nav-item {{ Request::is('setting/*') || Request::routeIs('events.list') || Request::routeIs('organizations.list') || Request::routeIs('ourworks.index') ? 'menu-open' : '' }}">
+                    <a href="#"
+                        class="nav-link {{ Request::is('setting/*') || Request::routeIs('events.list') || Request::routeIs('organizations.list') || Request::routeIs('ourworks.index') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-cogs"></i>
                         <p>
                             Pengaturan Content
@@ -60,6 +62,7 @@
                         </li>
                     </ul>
                 </li>
+
 
                 <!-- Logout -->
                 <li class="nav-item">
