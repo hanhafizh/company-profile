@@ -57,7 +57,13 @@
                         <li class="nav-item">
                             <a href="{{ route('ourworks.index') }}"
                                 class="nav-link {{ Request::routeIs('ourworks.index') ? 'active' : '' }}">
-                                <p>Ourworks</p>
+                                <p>Ourwork</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('landing.index') }}"
+                                class="nav-link {{ Request::routeIs('landing.index') ? 'active' : '' }}">
+                                <p>Landing</p>
                             </a>
                         </li>
                     </ul>
