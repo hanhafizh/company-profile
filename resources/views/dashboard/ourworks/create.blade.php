@@ -25,7 +25,7 @@
                                 Tambah Our Work Baru</h5>
                         </div>
                         <div class="card-body">
-                            <a href="/ourworks" class="btn btn-primary mb-2" style="margin-right: auto; ">Kembali</a>
+                            <a href="/admin/ourworks" class="btn btn-primary mb-2" style="margin-right: auto; ">Kembali</a>
                             <form action="{{ route('ourworks.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">

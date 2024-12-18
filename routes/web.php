@@ -25,9 +25,9 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 // Group Middleware untuk Admin
 Route::middleware(['auth'])->group(function () {
     // Dashboard
-    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('admin/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-    Route::resource('ourworks', OurworksController::class)->middleware('auth');
+    Route::resource('admin/ourworks', OurworksController::class)->middleware('auth');
 
 
     // Configuration Group

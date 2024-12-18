@@ -20,7 +20,8 @@
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <h5 class="card-title mb-0">Daftar Our Works</h5>
-                            <a href="/ourworks/create" class="btn btn-primary btn-sm" style="margin-left: auto;">Tambah
+                            <a href="/admin/ourworks/create" class="btn btn-primary btn-sm"
+                                style="margin-left: auto;">Tambah
                                 Data</a>
                         </div>
                         <div class="card-body">
