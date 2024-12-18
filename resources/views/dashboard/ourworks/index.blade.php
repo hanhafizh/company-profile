@@ -41,7 +41,7 @@
                                             <tr>
                                                 <td>{{ $i++ }}</td>
                                                 <td>{{ $ourwork->title }}</td>
-                                                <td>{{ $ourwork->description }}</td>
+                                                <td>{{ \Illuminate\Support\Str::limit($ourwork->description, 300) }}</td>
                                                 <td><img src="/image/ourworks/{{ $ourwork->image }}" alt="Image"
                                                         class="img-fluid" width="90"></td>
                                                 <td>
@@ -66,5 +66,6 @@
             </div>
         </div>
     </div>
+
     </div>
 @endsection
