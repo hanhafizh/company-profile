@@ -13,6 +13,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/service', [HomeController::class, 'services'])->name('services');
 Route::get('/ourwork', [HomeController::class, 'ourwork'])->name('ourwork');
+Route::get('ourworks/{id}', [HomeController::class, 'show'])->name('ourworks.show');
 Route::get('/event', [HomeController::class, 'event'])->name('event');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
