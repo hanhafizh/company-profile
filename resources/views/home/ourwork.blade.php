@@ -24,10 +24,8 @@
                                 <p class="mb-4">{{ \Illuminate\Support\Str::limit($ourwork->description, 100, '...') }}
                                 </p>
 
-                                <a class="btn btn-light rounded-pill py-2 px-4"
-                                    href="{{ route('ourworks.show', $ourwork->id) }}">Read More</a>
-
-
+                                <a class="btn btn-light rounded-pill py-2 px-4" href="/ourwork/{{ $ourwork->id }}">Read
+                                    More</a>
 
                             </div>
                         </div>

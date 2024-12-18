@@ -7,15 +7,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function show($id)
-    {
-        // Ambil data ourwork berdasarkan ID
-        // findOrFail otomatis akan mengembalikan 404 jika data tidak ditemukan
-        $ourwork = Ourworks::findOrFail($id);
 
-        // Kirim data ke view
-        return view('home.ourwork-detail', compact('ourwork'));
-    }
     public function index()
     {
         return view('home.index');
@@ -37,6 +29,13 @@ class HomeController extends Controller
         return view('home.ourwork', compact(
             'ourworks',
         ));
+    }
+
+    public function ourworkDetail($id)
+    {
+        $ourworks = Ourworks::findOrFail($id);
+
+        return view('home.ourwork-detail', compact('ourworks'));
     }
 
     public function event()
