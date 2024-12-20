@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Landing;
+use App\Models\Ourfeature;
 use App\Models\Ourworks;
 use Illuminate\Http\Request;
 
@@ -14,11 +15,13 @@ class HomeController extends Controller
     {
         $landings =  Landing::all();
         $abouts = About::all();
+        $ourfeatures = Ourfeature::all();
         // dd($landings->toArray());
 
         return view('home.index', compact(
             'landings',
             'abouts',
+            'ourfeatures',
         ));
     }
 

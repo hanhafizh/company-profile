@@ -54,14 +54,14 @@
     <!-- Feature Start -->
     <div class="container-fluid feature overflow-hidden py-5">
         <div class="container py-5">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
-                <h4 class="text-primary">Our Feature</h4>
-                <h1 class="display-5 mb-4">Important Features For Email Marketing</h1>
-                <p class="mb-0">Dolor sit amet consectetur, adipisicing elit. Ipsam, beatae maxime. Vel animi eveniet
-                    doloremque reiciendis soluta iste provident non rerum illum perferendis earum est architecto dolores
-                    vitae quia vero quod incidunt culpa corporis, porro doloribus. Voluptates nemo doloremque cum.
-                </p>
-            </div>
+            @foreach ($ourfeatures as $ourfeature)
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
+                    <h4 class="text-primary">Our Feature</h4>
+                    <h1 class="display-5 mb-4">{{ $ourfeature->title }}</h1>
+                    <p class="mb-0">{{ $ourfeature->description }}
+                    </p>
+                </div>
+            @endforeach
             <div class="row g-4 justify-content-center text-center mb-5">
                 <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="text-center p-4">
