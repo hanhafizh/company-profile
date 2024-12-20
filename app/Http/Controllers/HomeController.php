@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Featurelist;
 use App\Models\Landing;
 use App\Models\Ourfeature;
 use App\Models\Ourworks;
@@ -16,20 +17,26 @@ class HomeController extends Controller
         $landings =  Landing::all();
         $abouts = About::all();
         $ourfeatures = Ourfeature::all();
+        $featurelists = Featurelist::all();
         // dd($landings->toArray());
 
         return view('home.index', compact(
             'landings',
             'abouts',
             'ourfeatures',
+            'featurelists'
         ));
     }
 
     public function about()
     {
         $abouts = About::all();
+        $ourfeatures = Ourfeature::all();
+        $featurelists = Featurelist::all();
         return view('home.about', compact(
             'abouts',
+            'ourfeatures',
+            'featurelists',
         ));
     }
 
