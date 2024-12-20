@@ -17,7 +17,7 @@ class OurfeatureController extends Controller
         $ourfeatures = Ourfeature::all();
         // dd($ourfeature);
 
-        return view('dashboard.ourfeature.index', compact('ourfeatures'));
+        return view('dashboard.homesection.index', compact('ourfeatures'));
     }
 
     /**
@@ -27,7 +27,7 @@ class OurfeatureController extends Controller
      */
     public function create()
     {
-        return view('dashboard.ourfeature.create');
+        return view('dashboard.homesection.ourfeature.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class OurfeatureController extends Controller
 
         Ourfeature::create($input);
 
-        return redirect()->route('ourfeature.index')->with('success', 'Data berhasil ditambahkan!');
+        return redirect()->route('homesection.index')->with('success', 'Data berhasil ditambahkan!');
     }
 
     /**
@@ -69,7 +69,7 @@ class OurfeatureController extends Controller
      */
     public function edit(Ourfeature $ourfeature)
     {
-        return view('dashboard.ourfeature.edit', compact('ourfeature'));
+        return view('dashboard.homesection.ourfeature.edit', compact('ourfeature'));
     }
 
     /**
@@ -90,7 +90,7 @@ class OurfeatureController extends Controller
 
         $ourfeature->update($input);
 
-        return redirect()->route('ourfeature.index')->with('success', 'Data berhasil diperbarui!');
+        return redirect()->route('homesection.index')->with('success', 'Data berhasil diperbarui!');
     }
 
     /**
@@ -104,6 +104,6 @@ class OurfeatureController extends Controller
 
         $ourfeature->delete();
 
-        return redirect()->route('ourfeature.index')->with('success', 'Data berhasil dihapus!');
+        return redirect()->route('homesection.index')->with('success', 'Data berhasil dihapus!');
     }
 }

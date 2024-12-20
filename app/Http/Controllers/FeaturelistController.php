@@ -17,7 +17,7 @@ class FeaturelistController extends Controller
         $featurelists = Featurelist::all();
         // dd($featurelist);
 
-        return view('dashboard.featurelist.index', compact('featurelists'));
+        return view('dashboard.homesection.index', compact('featurelists'));
     }
 
     /**
@@ -27,7 +27,7 @@ class FeaturelistController extends Controller
      */
     public function create()
     {
-        return view('dashboard.featurelist.create');
+        return view('dashboard.homesection.featurelist.create');
     }
 
     /**
@@ -58,7 +58,7 @@ class FeaturelistController extends Controller
 
         Featurelist::create($input);
 
-        return redirect()->route('featurelist.index')->with('success', 'Data berhasil disimpan!');
+        return redirect()->route('homesection.index')->with('success', 'Data berhasil disimpan!');
     }
 
     /**
@@ -80,7 +80,7 @@ class FeaturelistController extends Controller
      */
     public function edit(Featurelist $featurelist)
     {
-        return view('dashboard.featurelist.edit', compact('featurelist'));
+        return view('dashboard.homesection.featurelist.edit', compact('featurelist'));
     }
 
     /**
@@ -116,7 +116,7 @@ class FeaturelistController extends Controller
 
         $featurelist->update($input);
 
-        return redirect()->route('featurelist.index')->with('success', 'Data berhasil diperbarui!');
+        return redirect()->route('homesection.index')->with('success', 'Data berhasil diperbarui!');
     }
 
     /**
@@ -134,6 +134,6 @@ class FeaturelistController extends Controller
 
         $featurelist->delete();
 
-        return redirect()->route('featurelist.index')->with('success', 'Data berhasil dihapus!');
+        return redirect()->route('homesection.index')->with('success', 'Data berhasil dihapus!');
     }
 }

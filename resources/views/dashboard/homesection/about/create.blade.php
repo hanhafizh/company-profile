@@ -1,6 +1,6 @@
 @extends('templates_dashboard.main')
 
-@section('title', 'Edit Feature List')
+@section('title', 'Tambah About')
 
 @section('content')
 
@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Edit Feature List</h1>
+                    <h1 class="m-0">Tambah About</h1>
                 </div>
             </div>
         </div>
@@ -22,19 +22,16 @@
                     <div class="card">
                         <div class="card-header">
                             <h5 class="card-title mb-0">
-                                Edit Feature List</h5>
+                                Tambah About Baru</h5>
                         </div>
                         <div class="card-body">
-                            <a href="/admin/featurelist" class="btn btn-primary mb-2"
+                            <a href="{{ route('homesection.index') }}" class="btn btn-primary mb-2"
                                 style="margin-right: auto; ">Kembali</a>
-                            <form action="{{ route('featurelist.update', $featurelist->id) }}" method="POST"
-                                enctype="multipart/form-data">
-                                @method('PUT')
+                            <form action="{{ route('about.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
                                     <label for="">Title</label>
-                                    <input type="text" class="form-control" name="title" placeholder="Title"
-                                        value="{{ $featurelist->title }}">
+                                    <input type="text" class="form-control" name="title" placeholder="Title">
                                 </div>
                                 @error('title')
                                     <small style="color:red">{{ $message }}</small>
@@ -42,12 +39,11 @@
                                 <div class="form-group">
                                     <label for="">Description</label>
                                     <textarea name="description" id="" cols="30" rows="10" class="form-control"
-                                        placeholder="Description">{{ $featurelist->description }}</textarea>
+                                        placeholder="Description"></textarea>
                                 </div>
                                 @error('description')
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
-                                <img src="/image/featurelist/{{ $featurelist->image }}" alt="" class="img-fluid">
                                 <div class="form-group">
                                     <label for="">Image</label>
                                     <input type="file" class="form-control" name="image">
@@ -66,5 +62,4 @@
         </div>
     </div>
     </div>
-
 @endsection

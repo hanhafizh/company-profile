@@ -32,9 +32,9 @@
 
                 <!-- Configuration -->
                 <li
-                    class="nav-item {{ Request::is('setting/*') || Request::routeIs('events.list') || Request::routeIs('organizations.list') || Request::routeIs('landing.index') || Request::routeIs('about.index') || Request::routeIs('ourfeature.index') || Request::routeIs('featurelist.index') || Request::routeIs('faq.index') || Request::routeIs('ourworks.index') ? 'menu-open' : '' }}">
+                    class="nav-item {{ Request::is('setting/*') || Request::routeIs('events.list') || Request::routeIs('organizations.list') || Request::routeIs('homesection.index') || Request::routeIs('ourworks.index') ? 'menu-open' : '' }}">
                     <a href="#"
-                        class="nav-link {{ Request::is('setting/*') || Request::routeIs('events.list') || Request::routeIs('organizations.list') || Request::routeIs('landing.index') || Request::routeIs('about.index') || Request::routeIs('ourfeature.index') || Request::routeIs('featurelist.index') || Request::routeIs('faq.index') || Request::routeIs('ourworks.index') ? 'active' : '' }}">
+                        class="nav-link {{ Request::is('setting/*') || Request::routeIs('events.list') || Request::routeIs('organizations.list') || Request::routeIs('homesection.index') || Request::routeIs('ourworks.index') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-cogs"></i>
                         <p>
                             Pengaturan Content
@@ -55,33 +55,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('landing.index') }}"
-                                class="nav-link {{ Request::routeIs('landing.index') ? 'active' : '' }}">
-                                <p>Landing</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('about.index') }}"
-                                class="nav-link {{ Request::routeIs('about.index') ? 'active' : '' }}">
-                                <p>About</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('ourfeature.index') }}"
-                                class="nav-link {{ Request::routeIs('ourfeature.index') ? 'active' : '' }}">
-                                <p>Our Feature</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('featurelist.index') }}"
-                                class="nav-link {{ Request::routeIs('featurelist.index') ? 'active' : '' }}">
-                                <p>Feature List</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('faq.index') }}"
-                                class="nav-link {{ Request::routeIs('faq.index') ? 'active' : '' }}">
-                                <p>Faq</p>
+                            <a href="{{ route('homesection.index') }}"
+                                class="nav-link {{ Request::routeIs('homesection.index') ? 'active' : '' }}">
+                                <p>Home Section</p>
                             </a>
                         </li>
                         <li class="nav-item">

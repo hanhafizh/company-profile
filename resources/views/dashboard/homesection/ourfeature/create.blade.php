@@ -1,6 +1,6 @@
 @extends('templates_dashboard.main')
 
-@section('title', 'Tambah Feature List')
+@section('title', 'Tambah Our Feature')
 
 @section('content')
 
@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Tambah Feature List</h1>
+                    <h1 class="m-0">Tambah Our Feature</h1>
                 </div>
             </div>
         </div>
@@ -22,12 +22,12 @@
                     <div class="card">
                         <div class="card-header">
                             <h5 class="card-title mb-0">
-                                Tambah Feature List Baru</h5>
+                                Tambah Our Work Baru</h5>
                         </div>
                         <div class="card-body">
-                            <a href="/admin/featurelist" class="btn btn-primary mb-2"
+                            <a href="{{ route('homesection.index') }}" class="btn btn-primary mb-2"
                                 style="margin-right: auto; ">Kembali</a>
-                            <form action="{{ route('featurelist.store') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('ourfeature.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
                                     <label for="">Title</label>
@@ -42,13 +42,6 @@
                                         placeholder="Description"></textarea>
                                 </div>
                                 @error('description')
-                                    <small style="color:red">{{ $message }}</small>
-                                @enderror
-                                <div class="form-group">
-                                    <label for="">Image</label>
-                                    <input type="file" class="form-control" name="image">
-                                </div>
-                                @error('image')
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
                                 <div class="form-group">

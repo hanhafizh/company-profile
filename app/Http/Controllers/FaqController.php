@@ -17,7 +17,7 @@ class FaqController extends Controller
         $faqs = Faq::all();
         // dd($faq);
 
-        return view('dashboard.faq.index', compact('faqs'));
+        return view('dashboard.homesection.index', compact('faqs'));
     }
 
     /**
@@ -27,7 +27,7 @@ class FaqController extends Controller
      */
     public function create()
     {
-        return view('dashboard.faq.create');
+        return view('dashboard.homesection.faq.create');
     }
 
     /**
@@ -48,7 +48,7 @@ class FaqController extends Controller
 
         Faq::create($input);
 
-        return redirect()->route('faq.index')->with('success', 'Data berhasil disimpan!');
+        return redirect()->route('homesection.index')->with('success', 'Data berhasil disimpan!');
     }
 
     /**
@@ -70,7 +70,7 @@ class FaqController extends Controller
      */
     public function edit(Faq $faq)
     {
-        return view('dashboard.faq.edit', compact('faq'));
+        return view('dashboard.homesection.faq.edit', compact('faq'));
     }
 
     /**
@@ -92,7 +92,7 @@ class FaqController extends Controller
 
         $faq->update($input);
 
-        return redirect()->route('faq.index')->with('success', 'Data berhasil diperbarui!');
+        return redirect()->route('homesection.index')->with('success', 'Data berhasil diperbarui!');
     }
 
     /**
@@ -105,6 +105,6 @@ class FaqController extends Controller
     {
         $faq->delete();
 
-        return redirect()->route('faq.index')->with('success', 'Data berhasil dihapus!');
+        return redirect()->route('homesection.index')->with('success', 'Data berhasil dihapus!');
     }
 }

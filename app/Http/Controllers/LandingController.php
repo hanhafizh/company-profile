@@ -17,7 +17,7 @@ class LandingController extends Controller
         $landings = Landing::all();
         // dd($landing);
 
-        return view('dashboard.landing.index', compact('landings'));
+        return view('dashboard.homesection.index', compact('landings'));
     }
 
     /**
@@ -27,7 +27,7 @@ class LandingController extends Controller
      */
     public function create()
     {
-        return view('dashboard.landing.create');
+        return view('dashboard.homesection.landing.create');
     }
 
     /**
@@ -58,7 +58,7 @@ class LandingController extends Controller
 
         Landing::create($input);
 
-        return redirect()->route('landing.index')->with('success', 'Data berhasil disimpan!');
+        return redirect()->route('homesection.index')->with('success', 'Data berhasil disimpan!');
     }
 
     /**
@@ -80,7 +80,7 @@ class LandingController extends Controller
      */
     public function edit(Landing $landing)
     {
-        return view('dashboard.landing.edit', compact('landing'));
+        return view('dashboard.homesection.landing.edit', compact('landing'));
     }
 
     /**
@@ -116,7 +116,7 @@ class LandingController extends Controller
 
         $landing->update($input);
 
-        return redirect()->route('landing.index')->with('success', 'Data berhasil diperbarui!');
+        return redirect()->route('homesection.index')->with('success', 'Data berhasil diperbarui!');
     }
 
     /**
@@ -134,6 +134,6 @@ class LandingController extends Controller
 
         $landing->delete();
 
-        return redirect()->route('landing.index')->with('success', 'Data berhasil dihapus!');
+        return redirect()->route('homesection.index')->with('success', 'Data berhasil dihapus!');
     }
 }

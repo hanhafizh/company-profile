@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FeaturelistController;
+use App\Http\Controllers\HomesectionController;
 use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
@@ -31,6 +32,8 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::middleware(['auth'])->group(function () {
     // Dashboard
     Route::get('admin/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::get('admin/homesection', [HomesectionController::class, 'index'])->name('homesection.index');
 
     Route::resource('admin/ourworks', OurworksController::class)->middleware('auth');
 

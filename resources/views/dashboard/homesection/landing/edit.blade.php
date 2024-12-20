@@ -1,6 +1,6 @@
 @extends('templates_dashboard.main')
 
-@section('title', 'Edit About')
+@section('title', 'Edit Landing')
 
 @section('content')
 
@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Edit About</h1>
+                    <h1 class="m-0">Edit Landing</h1>
                 </div>
             </div>
         </div>
@@ -22,18 +22,19 @@
                     <div class="card">
                         <div class="card-header">
                             <h5 class="card-title mb-0">
-                                Edit About</h5>
+                                Edit Landing</h5>
                         </div>
                         <div class="card-body">
-                            <a href="/admin/about" class="btn btn-primary mb-2" style="margin-right: auto; ">Kembali</a>
-                            <form action="{{ route('about.update', $about->id) }}" method="POST"
+                            <a href="{{ route('homesection.index') }}" class="btn btn-primary mb-2"
+                                style="margin-right: auto; ">Kembali</a>
+                            <form action="{{ route('landing.update', $landing->id) }}" method="POST"
                                 enctype="multipart/form-data">
                                 @method('PUT')
                                 @csrf
                                 <div class="form-group">
                                     <label for="">Title</label>
                                     <input type="text" class="form-control" name="title" placeholder="Title"
-                                        value="{{ $about->title }}">
+                                        value="{{ $landing->title }}">
                                 </div>
                                 @error('title')
                                     <small style="color:red">{{ $message }}</small>
@@ -41,12 +42,12 @@
                                 <div class="form-group">
                                     <label for="">Description</label>
                                     <textarea name="description" id="" cols="30" rows="10" class="form-control"
-                                        placeholder="Description">{{ $about->description }}</textarea>
+                                        placeholder="Description">{{ $landing->description }}</textarea>
                                 </div>
                                 @error('description')
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
-                                <img src="/image/about/{{ $about->image }}" alt="" class="img-fluid">
+                                <img src="/image/landing/{{ $landing->image }}" alt="" class="img-fluid">
                                 <div class="form-group">
                                     <label for="">Image</label>
                                     <input type="file" class="form-control" name="image">

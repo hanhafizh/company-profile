@@ -17,7 +17,7 @@ class AboutController extends Controller
         $abouts = About::all();
         // dd($about);
 
-        return view('dashboard.about.index', compact('abouts'));
+        return view('dashboard.homesection.index', compact('abouts'));
     }
 
     /**
@@ -27,7 +27,7 @@ class AboutController extends Controller
      */
     public function create()
     {
-        return view('dashboard.about.create');
+        return view('dashboard.homesection.about.create');
     }
 
     /**
@@ -58,7 +58,7 @@ class AboutController extends Controller
 
         About::create($input);
 
-        return redirect()->route('about.index')->with('success', 'Data berhasil disimpan!');
+        return redirect()->route('homesection.index')->with('success', 'Data berhasil disimpan!');
     }
 
     /**
@@ -80,7 +80,7 @@ class AboutController extends Controller
      */
     public function edit(About $about)
     {
-        return view('dashboard.about.edit', compact('about'));
+        return view('dashboard.homesection.about.edit', compact('about'));
     }
 
     /**
@@ -116,7 +116,7 @@ class AboutController extends Controller
 
         $about->update($input);
 
-        return redirect()->route('about.index')->with('success', 'Data berhasil diperbarui!');
+        return redirect()->route('homesection.index')->with('success', 'Data berhasil diperbarui!');
     }
 
     /**
@@ -134,6 +134,6 @@ class AboutController extends Controller
 
         $about->delete();
 
-        return redirect()->route('about.index')->with('success', 'Data berhasil dihapus!');
+        return redirect()->route('homesection.index')->with('success', 'Data berhasil dihapus!');
     }
 }
