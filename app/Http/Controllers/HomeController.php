@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Landing;
 use App\Models\Ourworks;
 use Illuminate\Http\Request;
 
@@ -10,7 +11,12 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('home.index');
+        $landings =  Landing::all();
+        // dd($landings->toArray());
+
+        return view('home.index', compact(
+            'landings',
+        ));
     }
 
     public function about()

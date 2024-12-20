@@ -17,7 +17,7 @@ class LandingController extends Controller
         $landings = Landing::all();
         // dd($landing);
 
-        return view('dashboard.home.index', compact('landings'));
+        return view('dashboard.landing.index', compact('landings'));
     }
 
     /**
@@ -27,7 +27,7 @@ class LandingController extends Controller
      */
     public function create()
     {
-        return view('dashboard.home.landing.create');
+        return view('dashboard.landing.create');
     }
 
     /**
@@ -80,7 +80,7 @@ class LandingController extends Controller
      */
     public function edit(Landing $landing)
     {
-        return view('dashboard.home.landing.edit', compact('landing'));
+        return view('dashboard.landing.edit', compact('landing'));
     }
 
     /**
