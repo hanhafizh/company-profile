@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FeaturelistController;
 use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\HomeController;
@@ -39,8 +40,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('admin/ourfeature', OurfeatureController::class)->middleware('auth');
 
-
     Route::resource('admin/featurelist', FeaturelistController::class)->middleware('auth');
+    Route::resource('admin/faq', FaqController::class)->middleware('auth');
 
 
     // Configuration Group
