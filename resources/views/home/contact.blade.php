@@ -66,15 +66,6 @@
                     <div class="d-flex align-items-center mb-4">
                         <div class="bg-light d-flex align-items-center justify-content-center mb-3"
                             style="width: 90px; height: 90px; border-radius: 50px;"><i
-                                class="fa fa-home fa-2x text-primary"></i></div>
-                        <div class="ms-4">
-                            <h4>Addresses</h4>
-                            <p class="mb-0">123 ranking Street, New York, USA</p>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="bg-light d-flex align-items-center justify-content-center mb-3"
-                            style="width: 90px; height: 90px; border-radius: 50px;"><i
                                 class="fa fa-map-marker-alt fa-2x text-primary"></i></div>
                         <div class="ms-4">
                             <h4>Addresses</h4>
