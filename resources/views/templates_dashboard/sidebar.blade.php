@@ -32,9 +32,9 @@
 
                 <!-- Configuration -->
                 <li
-                    class="nav-item {{ Request::is('setting/*') || Request::routeIs('events.list') || Request::routeIs('organizations.list') || Request::routeIs('ourworks.index') ? 'menu-open' : '' }}">
+                    class="nav-item {{ Request::is('setting/*') || Request::routeIs('events.list') || Request::routeIs('organizations.list') || Request::routeIs('landing.index') || Request::routeIs('about.index') || Request::routeIs('ourworks.index') ? 'menu-open' : '' }}">
                     <a href="#"
-                        class="nav-link {{ Request::is('setting/*') || Request::routeIs('events.list') || Request::routeIs('organizations.list') || Request::routeIs('ourworks.index') ? 'active' : '' }}">
+                        class="nav-link {{ Request::is('setting/*') || Request::routeIs('events.list') || Request::routeIs('organizations.list') || Request::routeIs('landing.index') || Request::routeIs('about.index') || Request::routeIs('ourworks.index') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-cogs"></i>
                         <p>
                             Pengaturan Content
@@ -55,15 +55,21 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('ourworks.index') }}"
-                                class="nav-link {{ Request::routeIs('ourworks.index') ? 'active' : '' }}">
-                                <p>Ourwork</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             <a href="{{ route('landing.index') }}"
                                 class="nav-link {{ Request::routeIs('landing.index') ? 'active' : '' }}">
                                 <p>Landing</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('about.index') }}"
+                                class="nav-link {{ Request::routeIs('about.index') ? 'active' : '' }}">
+                                <p>About</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('ourworks.index') }}"
+                                class="nav-link {{ Request::routeIs('ourworks.index') ? 'active' : '' }}">
+                                <p>Ourwork</p>
                             </a>
                         </li>
                     </ul>

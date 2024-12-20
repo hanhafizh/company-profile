@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\HomeController;
@@ -31,6 +32,8 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('admin/ourworks', OurworksController::class)->middleware('auth');
 
     Route::resource('admin/landing', LandingController::class)->middleware('auth');
+
+    Route::resource('admin/about', AboutController::class)->middleware('auth');
 
 
     // Configuration Group
