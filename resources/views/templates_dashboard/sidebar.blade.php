@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
-        <span class="brand-text font-weight-light" style="font-size: 20px">Karya Prima Usahatama</span>
+        <span class="brand-text font-weight-light" style="font-size: 20px"><strong>Karya Prima Usahatama</strong></span>
     </a>
 
     <!-- Sidebar -->
@@ -9,11 +9,11 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="/lte/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                <img src="/lte/dist/img/logo-karyaprima.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
                 {{-- <a href="#" class="d-block">{{ $userName }}</a> --}}
-                <a href="#" class="d-block">tes</a>
+                <a href="#" class="d-block">Admin</a>
             </div>
         </div>
 
@@ -42,7 +42,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="{{ route('events.list') }}"
                                 class="nav-link {{ Request::routeIs('events.list') ? 'active' : '' }}">
                                 <p>Acara</p>
@@ -53,7 +53,7 @@
                                 class="nav-link {{ Request::routeIs('organizations.list') ? 'active' : '' }}">
                                 <p>Organisasi</p>
                             </a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <a href="{{ route('homesection.index') }}"
                                 class="nav-link {{ Request::routeIs('homesection.index') ? 'active' : '' }}">
