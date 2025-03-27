@@ -8,6 +8,7 @@ use App\Http\Controllers\HomesectionController;
 use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\OurfeatureController;
@@ -35,15 +36,18 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('admin/homesection', [HomesectionController::class, 'index'])->name('homesection.index');
 
-    Route::resource('admin/ourworks', OurworksController::class)->middleware('auth');
-
     Route::resource('admin/landing', LandingController::class)->middleware('auth');
 
     Route::resource('admin/about', AboutController::class)->middleware('auth');
 
+    Route::resource('admin/carousel', CarouselController::class)->middleware('auth');
+
+    Route::resource('admin/ourworks', OurworksController::class)->middleware('auth');
+
     Route::resource('admin/ourfeature', OurfeatureController::class)->middleware('auth');
 
     Route::resource('admin/featurelist', FeaturelistController::class)->middleware('auth');
+
     Route::resource('admin/faq', FaqController::class)->middleware('auth');
 
 
