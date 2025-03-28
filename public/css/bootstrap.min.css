@@ -5457,6 +5457,13 @@ fieldset:disabled .btn {
     padding: 1rem 1rem;
     color: #757575;
 }
+
+.carousel-img {
+    height: 600px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
 .carousel {
     position: relative;
 }

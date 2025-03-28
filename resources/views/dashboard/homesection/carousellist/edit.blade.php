@@ -41,7 +41,8 @@
                                 @enderror
                                 <img src="/image/carousellist/{{ $carousellist->image }}" alt="" class="img-fluid">
                                 <div class="form-group">
-                                    <label for="">Gambar</label>
+                                    <label for="">Gambar <small class="text-muted">(Disarankan rasio
+                                            16:9)</small></label>
                                     <input type="file" class="form-control" name="image">
                                 </div>
                                 @error('image')
