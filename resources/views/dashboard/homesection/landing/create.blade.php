@@ -45,7 +45,8 @@
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
                                 <div class="form-group">
-                                    <label for="">Image</label>
+                                    <label for="">Gambar <small class="text-muted">(Disarankan rasio
+                                            1:1)</small></label>
                                     <input type="file" class="form-control" name="image">
                                 </div>
                                 @error('image')
