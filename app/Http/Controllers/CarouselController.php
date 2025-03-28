@@ -69,7 +69,7 @@ class CarouselController extends Controller
      */
     public function edit(Carousel $carousel)
     {
-        return view('dashboard.homesection.carousel.edit', compact('ourfeature'));
+        return view('dashboard.homesection.carousel.edit', compact('carousel'));
     }
 
     /**

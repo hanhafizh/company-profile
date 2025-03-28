@@ -51,13 +51,16 @@
     </div>
     <!-- About End -->
 
-    <!-- Carousel End -->
+    <!-- Carousel Start -->
     <!-- Hero Header Start -->
     <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
-            <h4 class="text-primary">Our Gallery</h4>
-            <h1 class="display-5 mb-4">Galeri Kami</h1>
-            <p class="mb-0">Temukan berbagai momen dan hasil karya terbaik kami yang penuh inovasi dan kreativitas.</p>
+            @foreach ($carousels as $carousel)
+                <h4 class="text-primary">{{ $carousel->title }}</h4>
+                <h1 class="display-5 mb-4">{{ $carousel->sub_title }}</h1>
+                <p class="mb-0">{{ $carousel->description }}
+                </p>
+            @endforeach
         </div>
         <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner" style="border-radius: 20px; overflow: hidden;">

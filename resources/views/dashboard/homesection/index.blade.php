@@ -127,7 +127,7 @@
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <h5 class="card-title mb-0">Daftar Carousel</h5>
-                            <a href="/admin/ourfeature/create" class="btn btn-primary btn-sm"
+                            <a href="/admin/carousel/create" class="btn btn-primary btn-sm"
                                 style="margin-left: auto;">Tambah
                                 Data</a>
                         </div>
