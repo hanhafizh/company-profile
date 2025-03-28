@@ -137,5 +137,22 @@ class CoreSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
+        // carouselist
+        DB::table('carousellist')->insert([
+
+            'description' => 'Pertamina adalah perusahaan energi milik negara Indonesia yang bergerak di bidang minyak, gas, dan energi terbarukan.',
+            'image' => 'carousellist1.jpg',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        DB::table('carousellist')->insert([
+
+            'description' => 'Sebagai BUMN terbesar di sektor energi, Pertamina berperan penting dalam menjaga ketahanan energi nasional dan mendukung pembangunan berkelanjutan.',
+            'image' => 'carousellist2.jpg',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
     }
 }
