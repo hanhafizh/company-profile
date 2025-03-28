@@ -120,6 +120,61 @@
             </div>
         </div>
         <!-- About content end -->
+        <!-- Carousel content -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="card-title mb-0">Daftar Carousel</h5>
+                            <a href="/admin/ourfeature/create" class="btn btn-primary btn-sm"
+                                style="margin-left: auto;">Tambah
+                                Data</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Judul</th>
+                                            <th>Judul Kedua</th>
+                                            <th>Description</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @php $i = 1; @endphp
+                                        @foreach ($carousels as $carousel)
+                                            <tr>
+                                                <td>{{ $i++ }}</td>
+                                                <td>{{ $carousel->title }}</td>
+                                                <td>{{ $carousel->sub_title }}</td>
+                                                <td>{{ \Illuminate\Support\Str::limit($carousel->description, 300) }}
+                                                </td>
+                                                <td>
+                                                    <a href="{{ route('carousel.edit', $carousel->id) }}"
+                                                        class="btn btn-sm btn-warning">Edit</a>
+
+                                                    <form action="{{ route('carousel.destroy', $carousel->id) }}"
+                                                        method="POST" style="display: inline-block;">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel content end -->
         <!-- Feature content -->
         <div class="container-fluid">
             <div class="row">
@@ -204,8 +259,8 @@
                                                 <td>{{ $featurelist->title }}</td>
                                                 <td>{{ \Illuminate\Support\Str::limit($featurelist->description, 300) }}
                                                 </td>
-                                                <td><img src="/image/featurelist/{{ $featurelist->image }}" alt="Image"
-                                                        class="img-fluid" width="90"></td>
+                                                <td><img src="/image/featurelist/{{ $featurelist->image }}"
+                                                        alt="Image" class="img-fluid" width="90"></td>
                                                 <td>
                                                     <a href="{{ route('featurelist.edit', $featurelist->id) }}"
                                                         class="btn btn-sm btn-warning">Edit</a>
@@ -214,7 +269,8 @@
                                                         method="POST" style="display: inline-block;">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                                        <button type="submit"
+                                                            class="btn btn-sm btn-danger">Delete</button>
                                                     </form>
                                                 </td>
                                             </tr>

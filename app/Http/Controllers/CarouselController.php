@@ -14,7 +14,9 @@ class CarouselController extends Controller
      */
     public function index()
     {
-        //
+        $carousels = Carousel::all();
+
+        return view('dashboard.homesection.index', compact('carousels'));
     }
 
     /**
@@ -24,7 +26,7 @@ class CarouselController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.homesection.carousel.create');
     }
 
     /**
@@ -35,7 +37,17 @@ class CarouselController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'sub_title' => 'required',
+            'description' => 'required',
+        ]);
+
+        $input = $request->all();
+
+        Carousel::create($input);
+
+        return redirect()->route('homesection.index')->with('success', 'Data berhasil ditambahkan!');
     }
 
     /**
@@ -57,7 +69,7 @@ class CarouselController extends Controller
      */
     public function edit(Carousel $carousel)
     {
-        //
+        return view('dashboard.homesection.carousel.edit', compact('ourfeature'));
     }
 
     /**
@@ -69,7 +81,17 @@ class CarouselController extends Controller
      */
     public function update(Request $request, Carousel $carousel)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'sub_title' => 'required',
+            'description' => 'required',
+        ]);
+
+        $input = $request->all();
+
+        $carousel->update($input);
+
+        return redirect()->route('homesection.index')->with('success', 'Data berhasil diperbarui!');
     }
 
     /**
@@ -80,6 +102,8 @@ class CarouselController extends Controller
      */
     public function destroy(Carousel $carousel)
     {
-        //
+        $carousel->delete();
+
+        return redirect()->route('homesection.index')->with('success', 'Data berhasil dihapus!');
     }
 }
