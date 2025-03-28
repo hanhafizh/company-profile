@@ -47,9 +47,11 @@
                                 @error('description')
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
-                                <img src="/image/featurelist/{{ $featurelist->image }}" alt="" class="img-fluid">
+                                <img src="/image/featurelist/{{ $featurelist->image }}" alt="" class="img-fluid"
+                                    style="width: 200px; height: 200px; object-fit: cover; border-radius: 20px;">
                                 <div class="form-group">
-                                    <label for="">Image</label>
+                                    <label for="">Gambar <small class="text-muted">(Disarankan rasio
+                                            1:1)</small></label>
                                     <input type="file" class="form-control" name="image">
                                 </div>
                                 @error('image')

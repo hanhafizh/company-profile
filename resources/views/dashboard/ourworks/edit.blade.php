@@ -48,7 +48,7 @@
                                 @enderror
                                 <img src="/image/ourworks/{{ $ourwork->image }}" alt="" class="img-fluid">
                                 <div class="form-group">
-                                    <label for="">Image</label>
+                                    <label for="">Gambar</label>
                                     <input type="file" class="form-control" name="image">
                                 </div>
                                 @error('image')

@@ -44,7 +44,7 @@
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
                                 <div class="form-group">
-                                    <label for="">Image</label>
+                                    <label for="">Gambar</label>
                                     <input type="file" class="form-control" name="image">
                                 </div>
                                 @error('image')
