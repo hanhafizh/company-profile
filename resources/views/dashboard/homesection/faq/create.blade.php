@@ -30,21 +30,21 @@
                             <form action="{{ route('faq.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
-                                    <label for="">Ask</label>
+                                    <label for="">Pertanyaan</label>
                                     <input type="text" class="form-control" name="ask" placeholder="Ask">
                                 </div>
                                 @error('ask')
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
                                 <div class="form-group">
-                                    <label for="">Title</label>
+                                    <label for="">Judul</label>
                                     <input type="text" class="form-control" name="title" placeholder="Title">
                                 </div>
                                 @error('title')
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
                                 <div class="form-group">
-                                    <label for="">Description</label>
+                                    <label for="">Deskripsi</label>
                                     <textarea name="description" id="" cols="30" rows="10" class="form-control"
                                         placeholder="Description"></textarea>
                                 </div>

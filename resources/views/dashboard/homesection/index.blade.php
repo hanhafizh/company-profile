@@ -30,10 +30,10 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Title</th>
-                                            <th>Description</th>
-                                            <th>Image</th>
-                                            <th>Actions</th>
+                                            <th>Judul</th>
+                                            <th>Deskripsi</th>
+                                            <th>Gambar</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -53,7 +53,7 @@
                                                         method="POST" style="display: inline-block;">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                                        <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
                                                     </form>
                                                 </td>
                                             </tr>
@@ -83,10 +83,10 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Title</th>
-                                            <th>Description</th>
-                                            <th>Image</th>
-                                            <th>Actions</th>
+                                            <th>Judul</th>
+                                            <th>Deskripsi</th>
+                                            <th>Gambar</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -106,7 +106,7 @@
                                                         style="display: inline-block;">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                                        <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
                                                     </form>
                                                 </td>
                                             </tr>
@@ -139,8 +139,8 @@
                                             <th>No</th>
                                             <th>Judul</th>
                                             <th>Judul Kedua</th>
-                                            <th>Description</th>
-                                            <th>Actions</th>
+                                            <th>Deskripsi</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -160,7 +160,7 @@
                                                         method="POST" style="display: inline-block;">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                                        <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
                                                     </form>
                                                 </td>
                                             </tr>
@@ -192,9 +192,9 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Description</th>
-                                            <th>Image</th>
-                                            <th>Actions</th>
+                                            <th>Deskripsi</th>
+                                            <th>Gambar</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -214,7 +214,7 @@
                                                         method="POST" style="display: inline-block;">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                                        <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
                                                     </form>
                                                 </td>
                                             </tr>
@@ -245,9 +245,9 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Title</th>
-                                            <th>Description</th>
-                                            <th>Actions</th>
+                                            <th>Judul</th>
+                                            <th>Deskripsi</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -299,10 +299,10 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Title</th>
-                                            <th>Description</th>
-                                            <th>Image</th>
-                                            <th>Actions</th>
+                                            <th>Judul</th>
+                                            <th>Deskripsi</th>
+                                            <th>Gambar</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -354,10 +354,10 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Ask</th>
-                                            <th>Title</th>
-                                            <th>Description</th>
-                                            <th>Actions</th>
+                                            <th>Pertanyaan</th>
+                                            <th>Judul</th>
+                                            <th>Deskripsi</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>

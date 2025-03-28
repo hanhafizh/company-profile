@@ -31,7 +31,7 @@
                                 @method('PUT')
                                 @csrf
                                 <div class="form-group">
-                                    <label for="">Ask</label>
+                                    <label for="">Pertanyaan</label>
                                     <input type="text" class="form-control" name="ask" placeholder="ask"
                                         value="{{ $faq->ask }}">
                                 </div>
@@ -39,7 +39,7 @@
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
                                 <div class="form-group">
-                                    <label for="">Title</label>
+                                    <label for="">Judul</label>
                                     <input type="text" class="form-control" name="title" placeholder="Title"
                                         value="{{ $faq->title }}">
                                 </div>
@@ -47,7 +47,7 @@
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
                                 <div class="form-group">
-                                    <label for="">Description</label>
+                                    <label for="">Deskripsi</label>
                                     <textarea name="description" id="" cols="30" rows="10" class="form-control"
                                         placeholder="Description">{{ $faq->description }}</textarea>
                                 </div>

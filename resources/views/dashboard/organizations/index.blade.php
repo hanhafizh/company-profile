@@ -22,7 +22,8 @@
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <h5 class="card-title mb-0">Daftar Organisasi</h5>
-                            <button onclick="window.location.href='{{ route('organizations.create') }}'" style="margin-left: auto;" class="btn btn-primary btn-sm">Tambah Jabatan</button>
+                            <button onclick="window.location.href='{{ route('organizations.create') }}'"
+                                style="margin-left: auto;" class="btn btn-primary btn-sm">Tambah Jabatan</button>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -34,7 +35,7 @@
                                             <th>Email</th>
                                             <th>Role</th>
                                             <th>Status</th>
-                                            <th>Actions</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -83,5 +84,5 @@
         </div>
         <!-- /.container-fluid -->
     </div>
-</div>
+    </div>
 @endsection

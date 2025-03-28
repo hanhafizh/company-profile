@@ -30,10 +30,10 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Title</th>
-                                            <th>Description</th>
-                                            <th>Image</th>
-                                            <th>Actions</th>
+                                            <th>Judul</th>
+                                            <th>Deskripsi</th>
+                                            <th>Gambar</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -53,7 +53,7 @@
                                                         method="POST" style="display: inline-block;">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                                        <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
                                                     </form>
                                                 </td>
                                             </tr>
