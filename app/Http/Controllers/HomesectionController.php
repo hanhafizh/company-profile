@@ -8,6 +8,7 @@ use App\Models\Faq;
 use App\Models\Featurelist;
 use App\Models\Landing;
 use App\Models\Ourfeature;
+use App\Models\Carousel;
 
 class HomesectionController extends Controller
 {
@@ -19,13 +20,15 @@ class HomesectionController extends Controller
         $ourfeatures = Ourfeature::all();
         $featurelists = Featurelist::all();
         $faqs = Faq::all();
+        $carousels = Carousel::all();
 
         return view('dashboard.homesection.index', compact(
             'landings',
             'abouts',
             'ourfeatures',
             'featurelists',
-            'faqs'
+            'faqs',
+            'carousels'
         ));
     }
 }
