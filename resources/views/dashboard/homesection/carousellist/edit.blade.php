@@ -39,7 +39,8 @@
                                 @error('description')
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
-                                <img src="/image/carousellist/{{ $carousellist->image }}" alt="" class="img-fluid">
+                                <img src="/image/carousellist/{{ $carousellist->image }}" alt="" class="img-fluid"
+                                    style="width: 356px; height: 200px;" object-fit: cover; border-radius: 20px;">
                                 <div class="form-group">
                                     <label for="">Gambar <small class="text-muted">(Disarankan rasio
                                             16:9)</small></label>
