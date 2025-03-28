@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Carousel;
+use App\Models\Carousellist;
 use App\Models\Faq;
 use App\Models\Featurelist;
 use App\Models\Landing;
@@ -22,6 +23,7 @@ class HomeController extends Controller
         $featurelists = Featurelist::all();
         $faqs = Faq::all();
         $carousels = Carousel::all();
+        $carousellists = Carousellist::all();
         // dd($landings->toArray());
 
         return view('home.index', compact(
@@ -30,7 +32,8 @@ class HomeController extends Controller
             'ourfeatures',
             'featurelists',
             'faqs',
-            'carousels'
+            'carousels',
+            'carousellists'
         ));
     }
 

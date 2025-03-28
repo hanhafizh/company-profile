@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CarousellistController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FeaturelistController;
@@ -41,6 +42,8 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('admin/about', AboutController::class)->middleware('auth');
 
     Route::resource('admin/carousel', CarouselController::class)->middleware('auth');
+
+    Route::resource('admin/carousellist', CarousellistController::class)->middleware('auth');
 
     Route::resource('admin/ourworks', OurworksController::class)->middleware('auth');
 

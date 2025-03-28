@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Carousellist;
 use Illuminate\Http\Request;
 use App\Models\About;
 use App\Models\Faq;
@@ -21,6 +22,7 @@ class HomesectionController extends Controller
         $featurelists = Featurelist::all();
         $faqs = Faq::all();
         $carousels = Carousel::all();
+        $carousellists = Carousellist::all();
 
         return view('dashboard.homesection.index', compact(
             'landings',
@@ -28,7 +30,8 @@ class HomesectionController extends Controller
             'ourfeatures',
             'featurelists',
             'faqs',
-            'carousels'
+            'carousels',
+            'carousellists'
         ));
     }
 }

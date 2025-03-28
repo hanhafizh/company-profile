@@ -175,6 +175,59 @@
             </div>
         </div>
         <!-- Carousel content end -->
+        <!-- Carousel List content end -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="card-title mb-0">Daftar Carousel List</h5>
+                            <a href="/admin/carousellist/create" class="btn btn-primary btn-sm"
+                                style="margin-left: auto;">Tambah
+                                Data</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Description</th>
+                                            <th>Image</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @php $i = 1; @endphp
+                                        @foreach ($carousellists as $carousellist)
+                                            <tr>
+                                                <td>{{ $i++ }}</td>
+                                                <td>{{ \Illuminate\Support\Str::limit($carousellist->description, 300) }}
+                                                </td>
+                                                <td><img src="/image/carousellist/{{ $carousellist->image }}"
+                                                        alt="Image" class="img-fluid" width="90"></td>
+                                                <td>
+                                                    <a href="{{ route('carousellist.edit', $carousellist->id) }}"
+                                                        class="btn btn-sm btn-warning">Edit</a>
+
+                                                    <form action="{{ route('carousellist.destroy', $carousellist->id) }}"
+                                                        method="POST" style="display: inline-block;">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel List content end -->
         <!-- Feature content -->
         <div class="container-fluid">
             <div class="row">
@@ -213,7 +266,8 @@
                                                         method="POST" style="display: inline-block;">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                                        <button type="submit"
+                                                            class="btn btn-sm btn-danger">Delete</button>
                                                     </form>
                                                 </td>
                                             </tr>
