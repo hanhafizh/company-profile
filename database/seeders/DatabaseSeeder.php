@@ -20,5 +20,9 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@gmail.com',
             'password' => Hash::make('kikiaka31')
         ]);
+
+        $this->call([
+            CoreSeeder::class,
+        ]);
     }
 }
