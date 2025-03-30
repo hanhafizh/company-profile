@@ -20,9 +20,12 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <h5 class="card-title mb-0">Daftar Landing</h5>
-                            <a href="/admin/landing/create" class="btn btn-primary btn-sm" style="margin-left: auto;">Tambah
-                                Data</a>
+                            <h5 class="card-title mb-0">Landing</h5>
+                            @if ($landings->isEmpty())
+                                <a href="/admin/landing/create" class="btn btn-primary btn-sm"
+                                    style="margin-left: auto;">Tambah
+                                    Data</a>
+                            @endif
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -73,9 +76,12 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <h5 class="card-title mb-0">Daftar About</h5>
-                            <a href="/admin/about/create" class="btn btn-primary btn-sm" style="margin-left: auto;">Tambah
-                                Data</a>
+                            <h5 class="card-title mb-0">About</h5>
+                            @if ($abouts->isEmpty())
+                                <a href="/admin/about/create" class="btn btn-primary btn-sm"
+                                    style="margin-left: auto;">Tambah
+                                    Data</a>
+                            @endif
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -128,10 +134,12 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <h5 class="card-title mb-0">Daftar Carousel</h5>
-                            <a href="/admin/carousel/create" class="btn btn-primary btn-sm"
-                                style="margin-left: auto;">Tambah
-                                Data</a>
+                            <h5 class="card-title mb-0">Judul Carousel</h5>
+                            @if ($carousels->isEmpty())
+                                <a href="/admin/carousel/create" class="btn btn-primary btn-sm"
+                                    style="margin-left: auto;">Tambah
+                                    Data</a>
+                            @endif
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -236,10 +244,11 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <h5 class="card-title mb-0">Daftar Our Feature</h5>
-                            <a href="/admin/ourfeature/create" class="btn btn-primary btn-sm"
-                                style="margin-left: auto;">Tambah
-                                Data</a>
+                            <h5 class="card-title mb-0">Judul Our Feature</h5>
+                            @if ($ourfeatures->isEmpty())
+                                <a href="/admin/ourfeature/create" class="btn btn-primary btn-sm"
+                                    style="margin-left: auto;">Tambah Data</a>
+                            @endif
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
