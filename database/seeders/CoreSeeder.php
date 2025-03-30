@@ -21,7 +21,8 @@ class CoreSeeder extends Seeder
 
         // about
         DB::table('about')->insert([
-            'title' => 'Tentang Kami',
+            'title' => 'About Us',
+            'sub_title' => 'Tentang Kami',
             'description' => 'PT Karya Prima Usahatama adalah perusahaan yang bergerak di bidang solusi bisnis terintegrasi. Perusahaan ini menawarkan layanan untuk mendukung kesuksesan operasional klien. Fokus utama mereka adalah memberikan solusi inovatif di bidang teknologi informasi, konsultasi bisnis, dan manajemen proyek.',
             'image' => 'about-core.png',
             'created_at' => now(),

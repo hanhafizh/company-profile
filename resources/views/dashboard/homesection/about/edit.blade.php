@@ -40,6 +40,14 @@
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
                                 <div class="form-group">
+                                    <label for="">Judul Kedua</label>
+                                    <input type="text" class="form-control" name="sub_title" placeholder="sub_title"
+                                        value="{{ $about->sub_title }}">
+                                </div>
+                                @error('sub_title')
+                                    <small style="color:red">{{ $message }}</small>
+                                @enderror
+                                <div class="form-group">
                                     <label for="">Deskripsi</label>
                                     <textarea name="description" id="" cols="30" rows="10" class="form-control"
                                         placeholder="Description">{{ $about->description }}</textarea>

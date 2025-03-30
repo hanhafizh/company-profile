@@ -40,6 +40,7 @@ class AboutController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'sub_title' => 'required',
             'description' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg|max:2048', // Tambahkan jenis dan ukuran gambar
         ]);
@@ -94,6 +95,7 @@ class AboutController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'sub_title' => 'required',
             'description' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg|max:2048', // Tambahkan jenis dan ukuran gambar
         ]);

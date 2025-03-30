@@ -10,8 +10,8 @@
 
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h4 class="mb-1 text-primary">About Us</h4>
-                    <h1 class="display-5 mb-4">{{ $about->title }}</h1>
+                    <h4 class="mb-1 text-primary">{{ $about->title }}</h4>
+                    <h1 class="display-5 mb-4">{{ $about->sub_title }}</h1>
                     <p class="mb-4">{{ $about->description }}
                     </p>
                     <a href="/about" class="btn btn-primary rounded-pill py-3 px-5">About More</a>

@@ -84,6 +84,7 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Judul</th>
+                                            <th>Judul Kedua</th>
                                             <th>Deskripsi</th>
                                             <th>Gambar</th>
                                             <th>Aksi</th>
@@ -95,6 +96,7 @@
                                             <tr>
                                                 <td>{{ $i++ }}</td>
                                                 <td>{{ $about->title }}</td>
+                                                <td>{{ $about->sub_title }}</td>
                                                 <td>{{ \Illuminate\Support\Str::limit($about->description, 300) }}</td>
                                                 <td><img src="/image/about/{{ $about->image }}" alt="Image"
                                                         class="img-fluid" width="90"></td>
