@@ -22,7 +22,7 @@
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <h5 class="card-title mb-0">Landing</h5>
                             @if ($landings->isEmpty())
-                                <a href="/admin/landing/create" class="btn btn-primary btn-sm"
+                                <a href="{{ route('landing.create') }}" class="btn btn-primary btn-sm"
                                     style="margin-left: auto;">Tambah
                                     Data</a>
                             @endif
@@ -78,7 +78,7 @@
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <h5 class="card-title mb-0">About</h5>
                             @if ($abouts->isEmpty())
-                                <a href="/admin/about/create" class="btn btn-primary btn-sm"
+                                <a href="{{ route('about.create') }}" class="btn btn-primary btn-sm"
                                     style="margin-left: auto;">Tambah
                                     Data</a>
                             @endif
@@ -136,7 +136,7 @@
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <h5 class="card-title mb-0">Judul Carousel</h5>
                             @if ($carousels->isEmpty())
-                                <a href="/admin/carousel/create" class="btn btn-primary btn-sm"
+                                <a href="{{ route('carousel.create') }}" class="btn btn-primary btn-sm"
                                     style="margin-left: auto;">Tambah
                                     Data</a>
                             @endif
@@ -192,7 +192,7 @@
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <h5 class="card-title mb-0">Daftar Carousel List</h5>
-                            <a href="/admin/carousellist/create" class="btn btn-primary btn-sm"
+                            <a href="{{ route('carousellist.create') }}" class="btn btn-primary btn-sm"
                                 style="margin-left: auto;">Tambah
                                 Data</a>
                         </div>
@@ -246,7 +246,7 @@
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <h5 class="card-title mb-0">Judul Our Feature</h5>
                             @if ($ourfeatures->isEmpty())
-                                <a href="/admin/ourfeature/create" class="btn btn-primary btn-sm"
+                                <a href="{{ route('ourfeature.create') }}" class="btn btn-primary btn-sm"
                                     style="margin-left: auto;">Tambah Data</a>
                             @endif
                         </div>
@@ -302,7 +302,7 @@
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <h5 class="card-title mb-0">Daftar Feature List</h5>
-                            <a href="/admin/featurelist/create" class="btn btn-primary btn-sm"
+                            <a href="{{ route('featurelist.create') }}" class="btn btn-primary btn-sm"
                                 style="margin-left: auto;">Tambah
                                 Data</a>
                         </div>
@@ -358,7 +358,8 @@
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <h5 class="card-title mb-0">Daftar Faq</h5>
-                            <a href="/admin/faq/create" class="btn btn-primary btn-sm" style="margin-left: auto;">Tambah
+                            <a href="{{ route('faq.create') }}" class="btn btn-primary btn-sm"
+                                style="margin-left: auto;">Tambah
                                 Data</a>
                         </div>
                         <div class="card-body">
