@@ -40,6 +40,7 @@ class OurfeatureController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'sub_title' => 'required',
             'description' => 'required',
         ]);
 
@@ -83,6 +84,7 @@ class OurfeatureController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'sub_title' => 'required',
             'description' => 'required',
         ]);
 

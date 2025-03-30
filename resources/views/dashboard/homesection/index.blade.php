@@ -248,6 +248,7 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Judul</th>
+                                            <th>Judul Kedua</th>
                                             <th>Deskripsi</th>
                                             <th>Aksi</th>
                                         </tr>
@@ -258,6 +259,7 @@
                                             <tr>
                                                 <td>{{ $i++ }}</td>
                                                 <td>{{ $ourfeature->title }}</td>
+                                                <td>{{ $ourfeature->sub_title }}</td>
                                                 <td>{{ \Illuminate\Support\Str::limit($ourfeature->description, 300) }}
                                                 </td>
                                                 <td>

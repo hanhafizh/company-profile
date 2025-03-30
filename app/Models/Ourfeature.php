@@ -13,6 +13,7 @@ class Ourfeature extends Model
 
     protected $fillable = [
         'title',
+        'sub_title',
         'description',
     ];
 }

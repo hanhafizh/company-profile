@@ -66,7 +66,8 @@ class CoreSeeder extends Seeder
 
         // ourfeature
         DB::table('ourfeature')->insert([
-            'title' => 'Solusi Inovatif',
+            'title' => 'Our Feature',
+            'sub_title' => 'Solusi Inovatif',
             'description' => 'Kami menawarkan solusi inovatif untuk setiap kebutuhan bisnis Anda, dengan pendekatan yang disesuaikan untuk memastikan kesuksesan jangka panjang. Tim kami berdedikasi untuk memberikan layanan yang tidak hanya efektif, tetapi juga memberikan nilai tambah yang dapat meningkatkan efisiensi operasional serta membantu perusahaan Anda tumbuh secara berkelanjutan.',
             'created_at' => now(),
             'updated_at' => now()
