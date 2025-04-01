@@ -166,5 +166,18 @@ class CoreSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
+        DB::table('visionmission')->insert([
+
+            'title' => 'Vision & Mission',
+            'sub_title' => 'Visi & Misi',
+            'description' => 'Kami berkomitmen untuk memberikan inovasi terbaik demi mencapai tujuan dan nilai-nilai yang kami junjung tinggi.',
+            'vision_title' => 'Visi Perusahaan',
+            'vision_description' => 'Menjadi perusahaan swasta profesional yang dapat mendukung PT. Perusahaan Gas Negara (Persero) Tbk dalam mewujudkan cita-cita menjadi infrastruktur nasional di bidang transmisi dan distribusi gas.',
+            'mission_title' => 'Misi Perusahaan',
+            'mission_description' => 'Mendayagunakan segala potensi permodalan, pensiunan, serta sumber daya lain untuk memberikan manfaat optimal dalam menunjang misi Yayasan Kesejahteraan Pegawai dan Pensiunan Gas Negara, serta memberikan kontribusi kesejahteraan bagi pensiunan.',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
     }
 }

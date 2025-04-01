@@ -23,6 +23,10 @@
         @include('dashboard.aboutsection.photogroup.index')
         <!-- Photogroup content end -->
 
+        <!-- Photogroup content -->
+        @include('dashboard.aboutsection.vision-mission.index')
+        <!-- Photogroup content end -->
+
     </div>
 
     </div>
