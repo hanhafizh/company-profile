@@ -7,7 +7,8 @@
     <!-- Hero Header End -->
 
     <!-- About Start -->
-    @include('components.view.home.about.about')
+    @include('components.view.about.about')
+    {{-- @include('components.view.home.about.about') --}}
     <!-- About End -->
 
     <!-- Carousel Start -->
