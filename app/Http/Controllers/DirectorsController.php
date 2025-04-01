@@ -67,9 +67,9 @@ class DirectorsController extends Controller
      * @param  \App\Models\Directors  $directors
      * @return \Illuminate\Http\Response
      */
-    public function edit(Directors $directors)
+    public function edit(Directors $director)
     {
-        return view('dashboard.aboutsection.directors.edit', compact('directors'));
+        return view('dashboard.aboutsection.directors.edit', compact('director'));
     }
 
     /**
@@ -79,8 +79,9 @@ class DirectorsController extends Controller
      * @param  \App\Models\Directors  $directors
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Directors $directors)
+    public function update(Request $request, Directors $director)
     {
+        // dd($request->all());
         $request->validate([
             'title' => 'required',
             'sub_title' => 'required',
@@ -89,7 +90,7 @@ class DirectorsController extends Controller
 
         $input = $request->all();
 
-        $directors->update($input);
+        $director->update($input);
 
         return redirect()->route('aboutsection.index')->with('success', 'Data berhasil diperbarui!');
     }
@@ -100,9 +101,9 @@ class DirectorsController extends Controller
      * @param  \App\Models\Directors  $directors
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Directors $directors)
+    public function destroy(Directors $director)
     {
-        $directors->delete();
+        $director->delete();
 
         return redirect()->route('aboutsection.index')->with('success', 'Data berhasil dihapus!');
     }

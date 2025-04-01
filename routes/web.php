@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AboutsectionController;
 use App\Http\Controllers\CarousellistController;
+use App\Http\Controllers\DirectorsController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FeaturelistController;
@@ -66,7 +67,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('admin/visionmission', VisionmissionController::class)->middleware('auth');
 
-    Route::resource('admin/directors', VisionmissionController::class)->middleware('auth');
+    Route::resource('admin/directors', DirectorsController::class)->middleware('auth');
 
 
     // Configuration Group
