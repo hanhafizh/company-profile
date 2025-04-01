@@ -18,7 +18,7 @@
         @include('components.admin.home.landing')
         <!-- Landing content end -->
         <!-- About content -->
-        @include('components.admin.about.about')
+        {{-- @include('components.admin.about.about') --}}
         <!-- About content end -->
         <!-- Carousel content -->
         @include('components.admin.home.carousel')
