@@ -14,7 +14,7 @@
     <!-- Visi & Misi End -->
 
     <!-- Jajaran Direksi Start -->
-
+    @include('components.view.about.directors')
     <!-- Jajaran Direksi End -->
 
     <!-- Sertifikat Iso Start -->
