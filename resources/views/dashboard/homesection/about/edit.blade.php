@@ -25,7 +25,7 @@
                                 Edit About</h5>
                         </div>
                         <div class="card-body">
-                            <a href="{{ route('homesection.index') }}" class="btn btn-primary mb-2"
+                            <a href="{{ url()->previous() }}" class="btn btn-primary mb-2"
                                 style="margin-right: auto; ">Kembali</a>
                             <form action="{{ route('about.update', $about->id) }}" method="POST"
                                 enctype="multipart/form-data">
