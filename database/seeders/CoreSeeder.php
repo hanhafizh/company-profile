@@ -133,9 +133,9 @@ class CoreSeeder extends Seeder
 
         // carousel
         DB::table('carousel')->insert([
-            'title' => 'Our Gallery',
-            'sub_title' => 'Galeri Kami',
-            'description' => 'Temukan berbagai momen dan hasil karya terbaik kami yang penuh inovasi dan kreativitas.',
+            'title' => 'Our Moments',
+            'sub_title' => 'Menampilkan Momen Terbaik',
+            'description' => 'Jelajahi koleksi foto kami yang penuh inspirasi, inovasi, dan kreativitas.',
             'created_at' => now(),
             'updated_at' => now()
         ]);
