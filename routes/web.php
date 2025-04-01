@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AboutsectionController;
 use App\Http\Controllers\CarousellistController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\FaqController;
@@ -35,6 +36,8 @@ Route::middleware(['auth'])->group(function () {
     // Dashboard
     Route::get('admin/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
+    // homesection
+
     Route::get('admin/homesection', [HomesectionController::class, 'index'])->name('homesection.index');
 
     Route::resource('admin/landing', LandingController::class)->middleware('auth');
@@ -52,6 +55,10 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('admin/featurelist', FeaturelistController::class)->middleware('auth');
 
     Route::resource('admin/faq', FaqController::class)->middleware('auth');
+
+    // aboutsection
+
+    Route::get('admin/aboutsection', [AboutsectionController::class, 'index'])->name('aboutsection.index');
 
 
     // Configuration Group
