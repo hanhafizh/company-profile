@@ -11,11 +11,8 @@ class AboutsectionController extends Controller
 {
     public function index()
     {
-
-
         $abouts = About::all();
         $photogroups = Photogroup::all();
-
 
         return view('dashboard.aboutsection.index', compact(
 
