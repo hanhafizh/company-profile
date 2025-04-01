@@ -11,7 +11,7 @@
 
         {{-- List Start --}}
         <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner" style="border-radius: 20px; overflow: hidden;">
+            <div class="carousel-inner mb-5" style="border-radius: 20px; overflow: hidden;">
                 <div class="carousel-item}">
                     <img src="/image/photogroup/{{ $photogroup->image }}" class="d-block w-100 carousel-img"
                         alt="Slide">

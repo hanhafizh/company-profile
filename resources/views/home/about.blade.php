@@ -9,8 +9,16 @@
     @include('components.view.about.photogroup')
     <!-- Photogroup End -->
 
-    <!-- Feature Start -->
-    @include('components.view.home.ourfeature.ourfeature')
-    <!-- Feature End -->
+    <!-- Visi & Misi Start -->
+    @include('components.view.about.visionmission')
+    <!-- Visi & Misi End -->
+
+    <!-- Jajaran Direksi Start -->
+
+    <!-- Jajaran Direksi End -->
+
+    <!-- Sertifikat Iso Start -->
+
+    <!-- Sertifikat Iso End -->
 
 @endsection
