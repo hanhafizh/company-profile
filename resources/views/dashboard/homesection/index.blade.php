@@ -15,25 +15,25 @@
     <!-- Main content -->
     <div class="content">
         <!-- Landing content -->
-        @include('components.admin.home.landing')
+        @include('dashboard.homesection.landing.index')
         <!-- Landing content end -->
         <!-- About content -->
         {{-- @include('components.admin.about.about') --}}
         <!-- About content end -->
         <!-- Carousel content -->
-        @include('components.admin.home.carousel')
+        @include('dashboard.homesection.carousel.index')
         <!-- Carousel content end -->
         <!-- Carousel List content end -->
-        @include('components.admin.home.carousel-list')
+        @include('dashboard.homesection.carousellist.index')
         <!-- Carousel List content end -->
         <!-- Feature content -->
-        @include('components.admin.home.ourfeature')
+        @include('dashboard.homesection.ourfeature.index')
         <!-- Feature content end -->
         <!-- Feature List content end -->
-        @include('components.admin.home.ourfeature-list')
+        @include('dashboard.homesection.featurelist.index')
         <!-- Feature List content end -->
         <!-- Faq content -->
-        @include('components.admin.home.faq')
+        @include('dashboard.homesection.faq.index')
         <!-- Faq content end -->
     </div>
 
