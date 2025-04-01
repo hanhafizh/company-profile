@@ -1,13 +1,13 @@
 {{-- start tittle --}}
-
-<div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
-    <h4 class="text-primary">Board of Directors</h4>
-    <h1 class="display-5 mb-4">Jajaran Direksi</h1>
-    <p class="mb-0">
-        Tim direksi kami berkomitmen untuk memajukan perusahaan dengan kepemimpinan yang profesional dan inovatif.
-    </p>
-</div>
-
+@foreach ($directors as $director)
+    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
+        <h4 class="text-primary">{{ $director->title }}</h4>
+        <h1 class="display-5 mb-4">{{ $director->sub_title }}</h1>
+        <p class="mb-0">
+            {{ $director->description }}
+        </p>
+    </div>
+@endforeach
 {{-- end tittle --}}
 
 <div class="container">

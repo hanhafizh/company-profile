@@ -27,6 +27,10 @@
         @include('dashboard.aboutsection.vision-mission.index')
         <!-- Photogroup content end -->
 
+        <!-- Direksi content -->
+        @include('dashboard.aboutsection.directors.index')
+        <!-- Direksi content end -->
+
     </div>
 
     </div>

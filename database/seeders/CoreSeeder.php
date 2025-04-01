@@ -179,5 +179,14 @@ class CoreSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
+        // directors
+        DB::table('directors')->insert([
+            'title' => 'Board of Directors',
+            'sub_title' => 'Jajaran Direksi',
+            'description' => 'Tim direksi kami berkomitmen untuk memajukan perusahaan dengan kepemimpinan yang profesional dan inovatif.',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
     }
 }

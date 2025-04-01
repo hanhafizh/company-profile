@@ -66,6 +66,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('admin/visionmission', VisionmissionController::class)->middleware('auth');
 
+    Route::resource('admin/directors', VisionmissionController::class)->middleware('auth');
+
 
     // Configuration Group
     Route::prefix('setting')->group(function () {

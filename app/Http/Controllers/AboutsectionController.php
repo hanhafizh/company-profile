@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Directors;
 use App\Models\Photogroup;
 use App\Models\Visionmission;
 use Illuminate\Http\Request;
@@ -15,12 +16,14 @@ class AboutsectionController extends Controller
         $abouts = About::all();
         $photogroups = Photogroup::all();
         $visionmissions = Visionmission::all();
+        $directors = Directors::all();
 
         return view('dashboard.aboutsection.index', compact(
 
             'abouts',
             'photogroups',
             'visionmissions',
+            'directors',
         ));
     }
 }

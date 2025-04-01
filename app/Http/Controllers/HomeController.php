@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Carousel;
 use App\Models\Carousellist;
+use App\Models\Directors;
 use App\Models\Faq;
 use App\Models\Featurelist;
 use App\Models\Landing;
@@ -46,6 +47,7 @@ class HomeController extends Controller
         $featurelists = Featurelist::all();
         $photogroups = Photogroup::all();
         $visionmissions = Visionmission::all();
+        $directors = Directors::all();
 
         return view('home.about', compact(
             'abouts',
@@ -53,6 +55,7 @@ class HomeController extends Controller
             'featurelists',
             'photogroups',
             'visionmissions',
+            'directors'
         ));
     }
 
