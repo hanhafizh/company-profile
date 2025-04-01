@@ -5,6 +5,10 @@
     @include('components.view.about.about')
     <!-- About End -->
 
+    <!-- Photogroup Start -->
+    @include('components.view.about.photogroup')
+    <!-- Photogroup End -->
+
     <!-- Feature Start -->
     @include('components.view.home.ourfeature.ourfeature')
     <!-- Feature End -->
