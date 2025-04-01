@@ -14,7 +14,10 @@
                     <h1 class="display-5 mb-4">{{ $about->sub_title }}</h1>
                     <p class="mb-4">{{ $about->description }}
                     </p>
-                    <a href="/about" class="btn btn-primary rounded-pill py-3 px-5">About More</a>
+                    @if (!Request::is('about'))
+                        <a href="/about" class="btn btn-primary rounded-pill py-3 px-5">About More</a>
+                    @endif
+
                 </div>
             </div>
         @endforeach
