@@ -10,6 +10,7 @@ use App\Models\Featurelist;
 use App\Models\Landing;
 use App\Models\Ourfeature;
 use App\Models\Ourworks;
+use App\Models\Photogroup;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -42,10 +43,12 @@ class HomeController extends Controller
         $abouts = About::all();
         $ourfeatures = Ourfeature::all();
         $featurelists = Featurelist::all();
+        $photogroups = Photogroup::all();
         return view('home.about', compact(
             'abouts',
             'ourfeatures',
             'featurelists',
+            'photogroups',
         ));
     }
 

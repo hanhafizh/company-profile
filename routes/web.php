@@ -15,6 +15,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\OurfeatureController;
 use App\Http\Controllers\OurworksController;
+use App\Http\Controllers\PhotogroupController;
 use Illuminate\Support\Facades\Route;
 
 // Page
@@ -59,6 +60,8 @@ Route::middleware(['auth'])->group(function () {
     // aboutsection
 
     Route::get('admin/aboutsection', [AboutsectionController::class, 'index'])->name('aboutsection.index');
+
+    Route::resource('admin/photogroup', PhotogroupController::class)->middleware('auth');
 
 
     // Configuration Group

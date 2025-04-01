@@ -19,6 +19,10 @@
         @include('components.admin.about.about')
         <!-- About content end -->
 
+        <!-- Photogroup content -->
+        @include('components.admin.about.photogroup')
+        <!-- Photogroup content end -->
+
     </div>
 
     </div>

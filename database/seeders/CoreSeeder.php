@@ -156,5 +156,15 @@ class CoreSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
+        DB::table('photogroup')->insert([
+
+            'title' => 'Our Photo',
+            'sub_title' => 'Foto Bersama',
+            'description' => 'Menangkap setiap momen berharga dan mengabadikannya menjadi kenangan yang tak terlupakan.',
+            'image' => 'photogroup.jpg',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
     }
 }
