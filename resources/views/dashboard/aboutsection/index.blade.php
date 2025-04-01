@@ -16,11 +16,11 @@
     <div class="content">
 
         <!-- About content -->
-        @include('components.admin.about.about')
+        @include('dashboard.aboutsection.about.index')
         <!-- About content end -->
 
         <!-- Photogroup content -->
-        @include('components.admin.about.photogroup')
+        @include('dashboard.aboutsection.photogroup.index')
         <!-- Photogroup content end -->
 
     </div>
