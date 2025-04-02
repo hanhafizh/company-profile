@@ -18,7 +18,7 @@
     <!-- Jajaran Direksi End -->
 
     <!-- Sertifikat Iso Start -->
-
+    @include('components.view.about.certificate')
     <!-- Sertifikat Iso End -->
 
 @endsection
