@@ -192,7 +192,7 @@ class CoreSeeder extends Seeder
         DB::table('directorslist')->insert([
             'name' => 'Sugito',
             'position' => 'Direktur Utama',
-            'image' => 'sugito.jpg',
+            'image' => 'sugito.png',
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -200,7 +200,7 @@ class CoreSeeder extends Seeder
         DB::table('directorslist')->insert([
             'name' => 'Sutaryo',
             'position' => 'Direktur Keuangan dan Administrasi',
-            'image' => 'sutaryo.jpg',
+            'image' => 'sutaryo.png',
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -208,7 +208,7 @@ class CoreSeeder extends Seeder
         DB::table('directorslist')->insert([
             'name' => 'Uji Subroto Santoso',
             'position' => 'Komisaris',
-            'image' => 'ujisubroto.jpg',
+            'image' => 'ujisubroto.png',
             'created_at' => now(),
             'updated_at' => now()
         ]);
