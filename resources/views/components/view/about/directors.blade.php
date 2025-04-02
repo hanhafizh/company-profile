@@ -10,8 +10,7 @@
 @endforeach
 {{-- end tittle --}}
 
-
-
+{{-- Direktur List Start --}}
 <div class="container">
     <div class="row g-4 justify-content-center text-center mb-5">
         @foreach ($directorslist as $list)
@@ -30,3 +29,4 @@
         @endforeach
     </div>
 </div>
+{{-- Direktur List End --}}
