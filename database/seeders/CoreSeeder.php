@@ -190,6 +190,14 @@ class CoreSeeder extends Seeder
         ]);
 
         DB::table('directorslist')->insert([
+            'name' => 'Uji Subroto Santoso',
+            'position' => 'Komisaris',
+            'image' => 'ujisubroto.png',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        DB::table('directorslist')->insert([
             'name' => 'Sugito',
             'position' => 'Direktur Utama',
             'image' => 'sugito.png',
@@ -205,13 +213,7 @@ class CoreSeeder extends Seeder
             'updated_at' => now()
         ]);
 
-        DB::table('directorslist')->insert([
-            'name' => 'Uji Subroto Santoso',
-            'position' => 'Komisaris',
-            'image' => 'ujisubroto.png',
-            'created_at' => now(),
-            'updated_at' => now()
-        ]);
+
 
         DB::table('certificate')->insert([
             'title' => 'Our Certificate',
