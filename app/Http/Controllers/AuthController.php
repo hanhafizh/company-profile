@@ -13,6 +13,27 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
+    // public function authenticated(Request $request)
+    // {
+    //     $request->validate([
+    //         'email' => 'required|email',
+    //         'password' => 'required'
+    //     ]);
+
+    //     $credentials = $request->only('email', 'password');
+
+    //     if (Auth::attempt($credentials)) {
+    //         $request->session()->regenerate();
+
+    //         return redirect()->intended('/admin/dashboard');
+    //     }
+
+
+    //     return back()->withErrors([
+    //         'loginError' => 'Email atau Password Salah'
+    //     ]);
+    // }
+
     public function authenticated(Request $request)
     {
         $request->validate([
@@ -20,14 +41,10 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
 
-        $credentials = $request->only('email', 'password');
-
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt($request->only('email', 'password'))) {
             $request->session()->regenerate();
-
-            return redirect()->intended('/admin/dashboard');
+            return redirect()->intended(route('dashboard'));
         }
-
 
         return back()->withErrors([
             'loginError' => 'Email atau Password Salah'

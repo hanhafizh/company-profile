@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AboutsectionController;
 use App\Http\Controllers\CarousellistController;
@@ -18,7 +21,8 @@ use App\Http\Controllers\OurfeatureController;
 use App\Http\Controllers\OurworksController;
 use App\Http\Controllers\PhotogroupController;
 use App\Http\Controllers\VisionmissionController;
-use Illuminate\Support\Facades\Route;
+
+
 
 // Page
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -91,4 +95,11 @@ Route::middleware(['auth'])->group(function () {
 
     // Logout
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+});
+
+Route::fallback(function () {
+    if (Auth::check()) {
+        return redirect()->route('dashboard');
+    }
+    return view('404');
 });
