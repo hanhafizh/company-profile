@@ -1,6 +1,6 @@
 @extends('templates_dashboard.main')
 
-@section('title', 'Edit Directors')
+@section('title', 'Edit Sertifikat')
 
 @section('content')
 
@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Edit Directors</h1>
+                    <h1 class="m-0">Edit Sertifikat</h1>
                 </div>
             </div>
         </div>
@@ -22,19 +22,19 @@
                     <div class="card">
                         <div class="card-header">
                             <h5 class="card-title mb-0">
-                                Edit Directors</h5>
+                                Edit Sertifikat</h5>
                         </div>
                         <div class="card-body">
-                            <a href="{{ route('directors.index') }}" class="btn btn-primary mb-2"
+                            <a href="{{ url()->previous() }}" class="btn btn-primary mb-2"
                                 style="margin-right: auto; ">Kembali</a>
-                            <form action="{{ route('directors.update', $director->id) }}" method="POST"
+                            <form action="{{ route('certificate.update', $certificate->id) }}" method="POST"
                                 enctype="multipart/form-data">
                                 @method('PUT')
                                 @csrf
                                 <div class="form-group">
                                     <label for="">Judul</label>
                                     <input type="text" class="form-control" name="title" placeholder="Masukkan judul"
-                                        value="{{ $director->title }}">
+                                        value="{{ $certificate->title }}">
                                 </div>
                                 @error('title')
                                     <small style="color:red">{{ $message }}</small>
@@ -42,7 +42,7 @@
                                 <div class="form-group">
                                     <label for="">Judul Kedua</label>
                                     <input type="text" class="form-control" name="sub_title"
-                                        placeholder="Masukkan judul kedua" value="{{ $director->sub_title }}">
+                                        placeholder="Masukkan judul kedua" value="{{ $certificate->sub_title }}">
                                 </div>
                                 @error('title')
                                     <small style="color:red">{{ $message }}</small>
@@ -50,7 +50,7 @@
                                 <div class="form-group">
                                     <label for="">Deskripsi</label>
                                     <textarea name="description" id="" cols="30" rows="10" class="form-control"
-                                        placeholder="Masukkan Deskripsi">{{ $director->description }}</textarea>
+                                        placeholder="Masukkan Deskripsi">{{ $certificate->description }}</textarea>
                                 </div>
                                 @error('description')
                                     <small style="color:red">{{ $message }}</small>

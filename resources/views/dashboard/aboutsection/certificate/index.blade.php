@@ -3,9 +3,9 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="card-title mb-0">Judul Direksi</h5>
-                    @if ($directors->isEmpty())
-                        <a href="{{ route('directors.create') }}" class="btn btn-primary btn-sm"
+                    <h5 class="card-title mb-0">Judul Sertifikat</h5>
+                    @if ($certificates->isEmpty())
+                        <a href="{{ route('certificate.create') }}" class="btn btn-primary btn-sm"
                             style="margin-left: auto;">Tambah
                             Data</a>
                     @endif
@@ -24,18 +24,18 @@
                             </thead>
                             <tbody>
                                 @php $i = 1; @endphp
-                                @foreach ($directors as $director)
+                                @foreach ($certificates as $certificate)
                                     <tr>
                                         <td>{{ $i++ }}</td>
-                                        <td>{{ $director->title }}</td>
-                                        <td>{{ $director->sub_title }}</td>
-                                        <td>{{ \Illuminate\Support\Str::limit($director->description, 300) }}
+                                        <td>{{ $certificate->title }}</td>
+                                        <td>{{ $certificate->sub_title }}</td>
+                                        <td>{{ \Illuminate\Support\Str::limit($certificate->description, 300) }}
                                         </td>
                                         <td>
-                                            <a href="{{ route('directors.edit', $director->id) }}"
+                                            <a href="{{ route('certificate.edit', $certificate->id) }}"
                                                 class="btn btn-sm btn-warning">Edit</a>
 
-                                            <form action="{{ route('directors.destroy', $director->id) }}"
+                                            <form action="{{ route('certificate.destroy', $certificate->id) }}"
                                                 method="POST" style="display: inline-block;">
                                                 @csrf
                                                 @method('DELETE')

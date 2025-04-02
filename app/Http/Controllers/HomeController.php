@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Carousel;
 use App\Models\Carousellist;
+use App\Models\Certificate;
 use App\Models\Directors;
 use App\Models\Directorslist;
 use App\Models\Faq;
@@ -50,6 +51,7 @@ class HomeController extends Controller
         $visionmissions = Visionmission::all();
         $directors = Directors::all();
         $directorslist = Directorslist::all();
+        $certificates = Certificate::all();
 
         return view('home.about', compact(
             'abouts',
@@ -59,6 +61,7 @@ class HomeController extends Controller
             'visionmissions',
             'directors',
             'directorslist',
+            'certificates',
         ));
     }
 

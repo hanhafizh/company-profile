@@ -1,12 +1,14 @@
 <div class="container-fluid feature overflow-hidden py-5">
     <div class="container py-5">
         {{-- tittle start --}}
-        <div class="text-center mx-auto mb-2 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
-            <h4 class="text-primary">Our Certificate</h4>
-            <h1 class="display-5 mb-4">Sertifikat ISO</h1>
-            <p class="mb-0">Berikut ini adalah kumpulan sertifikat dari PT Karya Prima Usahatama.</p>
-            </p>
-        </div>
+        @foreach ($certificates as $certificate)
+            <div class="text-center mx-auto mb-2 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
+                <h4 class="text-primary">{{ $certificate->title }}</h4>
+                <h1 class="display-5 mb-4">{{ $certificate->sub_title }}</h1>
+                <p class="mb-0">{{ \Illuminate\Support\Str::limit($certificate->description, 300) }}</p>
+                </p>
+            </div>
+        @endforeach
         {{-- tittle end --}}
 
         <div class="row g-4 justify-content-center text-center mb-2">

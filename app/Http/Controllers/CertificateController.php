@@ -14,7 +14,9 @@ class CertificateController extends Controller
      */
     public function index()
     {
-        //
+        $certificate = Certificate::all();
+
+        return view('dashboard.aboutsection.index', compact('certificate'));
     }
 
     /**
@@ -24,7 +26,7 @@ class CertificateController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.aboutsection.certificate.create');
     }
 
     /**
@@ -35,7 +37,17 @@ class CertificateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'sub_title' => 'required',
+            'description' => 'required',
+        ]);
+
+        $input = $request->all();
+
+        Certificate::create($input);
+
+        return redirect()->route('aboutsection.index')->with('success', 'Data berhasil disimpan!');
     }
 
     /**
@@ -57,7 +69,7 @@ class CertificateController extends Controller
      */
     public function edit(Certificate $certificate)
     {
-        //
+        return view('dashboard.aboutsection.certificate.edit', compact('certificate'));
     }
 
     /**
@@ -69,7 +81,18 @@ class CertificateController extends Controller
      */
     public function update(Request $request, Certificate $certificate)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'sub_title' => 'required',
+            'description' => 'required',
+        ]);
+
+
+        $input = $request->all();
+
+        $certificate->update($input);
+
+        return redirect()->route('aboutsection.index')->with('success', 'Data berhasil diperbarui!');
     }
 
     /**
@@ -80,6 +103,8 @@ class CertificateController extends Controller
      */
     public function destroy(Certificate $certificate)
     {
-        //
+        $certificate->delete();
+
+        return redirect()->route('aboutsection.index')->with('success', 'Data berhasil dihapus!');
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\DirectorslistController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -75,6 +76,8 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('admin/directors', DirectorsController::class)->middleware('auth');
 
     Route::resource('admin/directorslist', DirectorslistController::class)->middleware('auth');
+
+    Route::resource('admin/certificate', CertificateController::class)->middleware('auth');
 
 
     // Configuration Group

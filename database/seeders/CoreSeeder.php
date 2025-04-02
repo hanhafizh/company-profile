@@ -212,5 +212,13 @@ class CoreSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
+        DB::table('certificate')->insert([
+            'title' => 'Our Certificate',
+            'sub_title' => 'Sertifikat ISO',
+            'description' => 'Berikut ini adalah kumpulan sertifikat dari PT Karya Prima Usahatama.',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
     }
 }

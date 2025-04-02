@@ -35,6 +35,10 @@
         @include('dashboard.aboutsection.directorslist.index')
         <!-- Direksi List content end -->
 
+        <!-- sertifikat content -->
+        @include('dashboard.aboutsection.certificate.index')
+        <!-- sertifikat content end -->
+
     </div>
 
     </div>
