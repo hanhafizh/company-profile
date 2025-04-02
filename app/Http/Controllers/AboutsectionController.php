@@ -7,6 +7,7 @@ use App\Models\Photogroup;
 use App\Models\Visionmission;
 use Illuminate\Http\Request;
 use App\Models\About;
+use App\Models\Directorslist;
 
 
 class AboutsectionController extends Controller
@@ -17,6 +18,7 @@ class AboutsectionController extends Controller
         $photogroups = Photogroup::all();
         $visionmissions = Visionmission::all();
         $directors = Directors::all();
+        $directorslist = Directorslist::all();
 
         return view('dashboard.aboutsection.index', compact(
 
@@ -24,6 +26,7 @@ class AboutsectionController extends Controller
             'photogroups',
             'visionmissions',
             'directors',
+            'directorslist',
         ));
     }
 }

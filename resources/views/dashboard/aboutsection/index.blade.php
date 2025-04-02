@@ -31,6 +31,10 @@
         @include('dashboard.aboutsection.directors.index')
         <!-- Direksi content end -->
 
+        <!-- Direksi List content -->
+        @include('dashboard.aboutsection.directorslist.index')
+        <!-- Direksi List content end -->
+
     </div>
 
     </div>

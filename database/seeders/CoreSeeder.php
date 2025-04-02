@@ -188,5 +188,29 @@ class CoreSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
+        DB::table('directorslist')->insert([
+            'name' => 'Sugito',
+            'position' => 'Direktur Utama',
+            'image' => 'sugito.jpg',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        DB::table('directorslist')->insert([
+            'name' => 'Sutaryo',
+            'position' => 'Direktur Keuangan dan Administrasi',
+            'image' => 'sutaryo.jpg',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        DB::table('directorslist')->insert([
+            'name' => 'Uji Subroto Santoso',
+            'position' => 'Komisaris',
+            'image' => 'ujisubroto.jpg',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
     }
 }
