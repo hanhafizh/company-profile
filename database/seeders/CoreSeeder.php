@@ -224,11 +224,34 @@ class CoreSeeder extends Seeder
         ]);
 
         DB::table('certificatelist')->insert([
-            'title' => 'Sertifikat ISO - asas',
-            'description' => 'Sertifikat ISO Adalah',
-            'image' => '',
-            'created_at' => now(),
-            'updated_at' => now()
+            [
+                'title' => 'Sertifikat ISO - keamanan',
+                'description' => 'Sertifikat ISO untuk standar keamanan',
+                'image' => 'sertifikatlist-1.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Sertifikat ISO - kualitas',
+                'description' => 'Sertifikat ISO untuk standar kualitas',
+                'image' => 'sertifikatlist-2.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Sertifikat ISO - lingkungan',
+                'description' => 'Sertifikat ISO untuk standar lingkungan',
+                'image' => 'sertifikatlist-3.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Sertifikat ISO - manajemen',
+                'description' => 'Sertifikat ISO untuk standar manajemen',
+                'image' => 'sertifikatlist-4.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }
