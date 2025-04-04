@@ -15,8 +15,9 @@
             </div>
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                    {{-- <h2 class="display-5 mb-2">Formulir Kontak Kami</h2> --}}
-                    <form action="{{ route('contact.send') }}" method="POST">
+                    <h2 class="display-5 mb-2">Formulir Kontak Kami</h2>
+                    {{-- form start --}}
+                    <form id="contactForm">
                         @csrf
                         <div class="row g-3">
                             <div class="col-lg-12 col-xl-6">
@@ -51,6 +52,7 @@
                             </div>
                         </div>
                     </form>
+                    {{-- form end --}}
 
                 </div>
                 <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
@@ -114,3 +116,23 @@
     </div>
     <!-- Contact End -->
 @endsection
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById("contactForm");
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const subject = document.getElementById("subject").value;
+            const message = document.getElementById("message").value;
+
+            const text =
+                `Halo, saya ${name}%0AEmail: ${email}%0ASubject: ${subject}%0APesan: ${message}`;
+            const phone = "6281234567890";
+
+            window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
+        });
+    });
+</script>
