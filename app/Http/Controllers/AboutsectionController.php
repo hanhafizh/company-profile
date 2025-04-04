@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Certificatelist;
 use App\Models\Directors;
 use App\Models\Photogroup;
 use App\Models\Visionmission;
@@ -21,6 +22,7 @@ class AboutsectionController extends Controller
         $directors = Directors::all();
         $directorslist = Directorslist::all();
         $certificates = Certificate::all();
+        $certificatelist = Certificatelist::all();
 
         return view('dashboard.aboutsection.index', compact(
 
@@ -30,6 +32,7 @@ class AboutsectionController extends Controller
             'directors',
             'directorslist',
             'certificates',
+            'certificatelist',
         ));
     }
 }

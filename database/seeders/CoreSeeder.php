@@ -222,5 +222,13 @@ class CoreSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
+        DB::table('certificatelist')->insert([
+            'title' => 'Sertifikat ISO - asas',
+            'description' => 'Sertifikat ISO Adalah',
+            'image' => '',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
     }
 }

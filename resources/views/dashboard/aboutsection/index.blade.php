@@ -39,6 +39,10 @@
         @include('dashboard.aboutsection.certificate.index')
         <!-- sertifikat content end -->
 
+        <!-- sertifikat list content -->
+        @include('dashboard.aboutsection.certificatelist.index')
+        <!-- sertifikat list content end -->
+
     </div>
 
     </div>

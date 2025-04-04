@@ -15,6 +15,7 @@ use App\Models\Ourfeature;
 use App\Models\Ourworks;
 use App\Models\Photogroup;
 use App\Models\Visionmission;
+use App\Models\Certificatelist;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -52,6 +53,7 @@ class HomeController extends Controller
         $directors = Directors::all();
         $directorslist = Directorslist::all();
         $certificates = Certificate::all();
+        $certificatelist = Certificatelist::all();
 
         return view('home.about', compact(
             'abouts',
@@ -62,6 +64,7 @@ class HomeController extends Controller
             'directors',
             'directorslist',
             'certificates',
+            'certificatelist',
         ));
     }
 
