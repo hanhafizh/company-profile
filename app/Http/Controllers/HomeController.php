@@ -17,6 +17,7 @@ use App\Models\Photogroup;
 use App\Models\Visionmission;
 use App\Models\Certificatelist;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -104,5 +105,22 @@ class HomeController extends Controller
     public function tes()
     {
         return view('dashboard');
+    }
+
+    public function send(Request $request)
+    {
+        $data = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'subject' => 'required',
+            'message' => 'required',
+        ]);
+
+        Mail::raw("Message from {$data['name']} ({$data['email']}):\n\n{$data['message']}", function ($mail) use ($data) {
+            $mail->to('farhanhafizh77@gmail.com') // ganti dengan email tujuan
+                ->subject($data['subject']);
+        });
+
+        return back()->with('success', 'Pesan berhasil dikirim!');
     }
 }
