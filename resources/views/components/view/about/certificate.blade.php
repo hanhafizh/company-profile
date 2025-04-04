@@ -10,99 +10,60 @@
             </div>
         @endforeach
         {{-- tittle end --}}
-
+        {{-- dinamis --}}
         <div class="row g-4 justify-content-center text-center mb-2">
-            {{-- sertifikat start --}}
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="text-center p-4">
-                    <div class="text-center mb-4">
-                        <!-- Tambahkan data-bs-toggle dan data-bs-target untuk modal -->
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#certificateModal">
-                            <img src="https://pjm.mercubuana.ac.id/wp-content/uploads/2022/11/ISO-2022-2025-768x1087.jpg"
-                                class="img-fluid"
-                                style="height: 250px; width: 180px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-                                alt="Sertifikat ISO">
-                        </a>
-                    </div>
-                    <div class="feature-content">
-                        <h1 class="h4">Sertifikat ISO 1</h1>
-                        <p class="mt-4 mb-0">Sertifikat ISO Adalah</p>
+            @foreach ($certificatelist as $key => $certificate)
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="text-center p-4">
+                        <div class="text-center mb-4">
+                            <!-- Gunakan $key untuk membuat ID modal unik -->
+                            <a href="#" data-bs-toggle="modal"
+                                data-bs-target="#certificateModal{{ $key }}">
+                                <img src="/image/certificatelist/{{ $certificate->image }}" class="img-fluid"
+                                    style="height: 250px; width: 180px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
+                                    alt="{{ $certificate['title'] }}">
+                            </a>
+                        </div>
+                        <div class="feature-content">
+                            <h1 class="h4">{{ $certificate['title'] }}</h1>
+                            <p class="mt-4 mb-0">{{ $certificate['description'] }}</p>
+                            <!-- Tombol View -->
+                            <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="modal"
+                                data-bs-target="#certificateModal{{ $key }}">
+                                View Certificate
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            {{-- sertifikat end --}}
+            @endforeach
         </div>
 
         <!-- Modal untuk zoom sertifikat -->
-        <div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="certificateModalLabel">Sertifikat ISO</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-center">
-                        <img src="https://pjm.mercubuana.ac.id/wp-content/uploads/2022/11/ISO-2022-2025-768x1087.jpg"
-                            class="img-fluid shadow" alt="Sertifikat ISO">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        @foreach ($certificatelist as $key => $certificate)
+            <div class="modal fade" id="certificateModal{{ $key }}" tabindex="-1"
+                aria-labelledby="certificateModalLabel{{ $key }}" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="certificateModalLabel{{ $key }}">
+                                {{ $certificate['title'] }}
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="/image/certificatelist/{{ $certificate->image }}" class="img-fluid"
+                                alt="{{ $certificate['title'] }}">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        @endforeach
         <!-- Modal untuk zoom sertifikat end -->
+        {{-- dinamis end --}}
     </div>
 </div>
 </div>
-
-{{-- dinamis --}}
-{{-- <div class="row g-4 justify-content-center text-center mb-2">
-    @foreach ($certificates as $key => $certificate)
-        <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="text-center p-4">
-                <div class="text-center mb-4">
-                    <!-- Gunakan $key untuk membuat ID modal unik -->
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#certificateModal{{ $key }}">
-                        <img src="{{ $certificate['image_url'] }}" class="img-fluid"
-                            style="height: 250px; width: 180px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-                            alt="{{ $certificate['title'] }}">
-                    </a>
-                </div>
-                <div class="feature-content">
-                    <h1 class="h4">{{ $certificate['title'] }}</h1>
-                    <p class="mt-4 mb-0">{{ $certificate['description'] }}</p>
-                    <!-- Tombol View -->
-                    <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="modal"
-                        data-bs-target="#certificateModal{{ $key }}">
-                        View Certificate
-                    </button>
-                </div>
-            </div>
-        </div>
-    @endforeach
-</div>
-
-
-@foreach ($certificates as $key => $certificate)
-    <div class="modal fade" id="certificateModal{{ $key }}" tabindex="-1"
-        aria-labelledby="certificateModalLabel{{ $key }}" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="certificateModalLabel{{ $key }}">{{ $certificate['title'] }}
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body text-center">
-                    <img src="{{ $certificate['image_url'] }}" class="img-fluid" alt="{{ $certificate['title'] }}">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-@endforeach --}}
-{{-- dinamis end --}}

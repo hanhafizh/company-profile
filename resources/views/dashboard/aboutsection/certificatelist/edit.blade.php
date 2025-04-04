@@ -48,8 +48,9 @@
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
                                 <img src="/image/certificatelist/{{ $certificatelist->image }}" alt=""
-                                    class="img-fluid" style="width: 356px; height: 200px;" object-fit: cover; border-radius:
-                                    20px;">
+                                    class="img-fluid"
+                                    style="height: 250px; width: 180px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
+                                    object-fit: cover; border-radius: 20px;">
                                 <div class="form-group">
                                     <label for="">Gambar <small class="text-muted">(Disarankan ukuran
                                             A4)</small></label>
