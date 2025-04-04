@@ -52,7 +52,8 @@
                                 aria-label="Close"></button>
                         </div>
                         <div class="modal-body text-center">
-                            <img src="/image/certificatelist/{{ $certificate->image }}" class="img-fluid"
+                            <img src="/image/certificatelist/{{ $certificate->image }}"
+                                style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" class="img-fluid"
                                 alt="{{ $certificate['title'] }}">
                         </div>
                         <div class="modal-footer">
