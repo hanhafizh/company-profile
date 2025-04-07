@@ -32,9 +32,9 @@
 
                 <!-- Configuration -->
                 <li
-                    class="nav-item {{ Request::is('setting/*') || Request::routeIs('events.list') || Request::routeIs('organizations.list') || Request::routeIs('homesection.index') || Request::routeIs('homesection.index') || Request::routeIs('aboutsection.index') || Request::routeIs('servicesection.index') || Request::routeIs('ourworks.index') ? 'menu-open' : '' }}">
+                    class="nav-item {{ Request::is('setting/*') || Request::routeIs('events.list') || Request::routeIs('organizations.list') || Request::routeIs('homesection.index') || Request::routeIs('homesection.index') || Request::routeIs('aboutsection.index') || Request::routeIs('eventsection.index') || Request::routeIs('servicesection.index') || Request::routeIs('ourworks.index') ? 'menu-open' : '' }}">
                     <a href="#"
-                        class="nav-link {{ Request::is('setting/*') || Request::routeIs('events.list') || Request::routeIs('organizations.list') || Request::routeIs('homesection.index') || Request::routeIs('aboutsection.index') || Request::routeIs('servicesection.index') || Request::routeIs('ourworks.index') ? 'active' : '' }}">
+                        class="nav-link {{ Request::is('setting/*') || Request::routeIs('events.list') || Request::routeIs('organizations.list') || Request::routeIs('homesection.index') || Request::routeIs('aboutsection.index') || Request::routeIs('eventsection.index') || Request::routeIs('servicesection.index') || Request::routeIs('ourworks.index') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-cogs"></i>
                         <p>
                             Pengaturan Content
@@ -70,6 +70,12 @@
                             <a href="{{ route('servicesection.index') }}"
                                 class="nav-link {{ Request::routeIs('servicesection.index') ? 'active' : '' }}">
                                 <p>Service Section</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('eventsection.index') }}"
+                                class="nav-link {{ Request::routeIs('eventsection.index') ? 'active' : '' }}">
+                                <p>Event Section</p>
                             </a>
                         </li>
                         {{-- <li class="nav-item">

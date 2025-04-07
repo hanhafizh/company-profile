@@ -3,6 +3,7 @@
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\CertificatelistController;
 use App\Http\Controllers\DirectorslistController;
+use App\Http\Controllers\EventsectionController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ServicelistController;
 use App\Http\Controllers\ServicesectionController;
@@ -97,7 +98,14 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('admin/servicelist', ServicelistController::class)->middleware('auth');
 
     // ourworks
+
     Route::resource('admin/ourworks', OurworksController::class)->middleware('auth');
+
+    // Event
+
+    Route::get('admin/eventsection', [EventsectionController::class, 'index'])->name('eventsection.index');
+
+    Route::resource('admin/event', ServiceController::class)->middleware('auth');
 
 
     // Configuration Group
@@ -108,14 +116,6 @@ Route::middleware(['auth'])->group(function () {
             Route::post('store', [OrganizationController::class, 'store'])->name('organizations.store');
             Route::get('edit/{id}', [OrganizationController::class, 'edit'])->name('organizations.edit');
             Route::put('update/{id}', [OrganizationController::class, 'update'])->name('organizations.update');
-        });
-
-        Route::prefix('events')->group(function () {
-            Route::get('list', [EventController::class, 'index'])->name('events.list');
-            Route::get('create', [EventController::class, 'create'])->name('events.create');
-            Route::post('store', [EventController::class, 'store'])->name('events.store');
-            Route::get('edit/{id}', [EventController::class, 'edit'])->name('events.edit');
-            Route::put('update/{id}', [EventController::class, 'update'])->name('events.update');
         });
     });
 
