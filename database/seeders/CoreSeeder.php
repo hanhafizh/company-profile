@@ -257,7 +257,7 @@ class CoreSeeder extends Seeder
         DB::table('service')->insert([
             'title' => 'Our Service',
             'sub_title' => 'Layanan Kami',
-            'description' => 'KPU Ushatama menyediakan berbagai layanan profesional untuk mendukung kebutuhan usaha Anda, mulai dari konsultasi pengembangan usaha, pelatihan kewirausahaan, hingga pendampingan UMKM agar dapat tumbuh dan bersaing secara berkelanjutan.',
+            'description' => 'KPU Usahatama menyediakan berbagai layanan profesional untuk mendukung kebutuhan usaha Anda, mulai dari konsultasi pengembangan usaha, pelatihan kewirausahaan, hingga pendampingan UMKM agar dapat tumbuh dan bersaing secara berkelanjutan.',
             'created_at' => now(),
             'updated_at' => now()
         ]);

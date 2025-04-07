@@ -68,8 +68,7 @@
                         Prima Usahatama</a>, All right reserved.</span>
             </div>
             <div class="col-md-6 text-center text-md-end text-white">
-                Designed By <a target="_blank" class="border-bottom" href="https://kikiaka.id">KIKIAKA DIGITAL
-                    PROJECT</a>
+                Designed By <a target="_blank" class="border-bottom" href="https://kikiaka.id">JENDELA KODE</a>
             </div>
         </div>
     </div>
