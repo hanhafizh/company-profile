@@ -34,8 +34,10 @@ use App\Http\Controllers\VisionmissionController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/service', [HomeController::class, 'services'])->name('services');
+
 Route::get('/ourwork', [HomeController::class, 'ourwork'])->name('ourwork');
 Route::get('ourwork/{id}', [HomeController::class, 'ourworkDetail'])->name('ourworksDetail');
+
 Route::get('/event', [HomeController::class, 'event'])->name('event');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/contact/send', [HomeController::class, 'send'])->name('contact.send');
@@ -61,8 +63,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('admin/carousel', CarouselController::class)->middleware('auth');
 
     Route::resource('admin/carousellist', CarousellistController::class)->middleware('auth');
-
-    Route::resource('admin/ourworks', OurworksController::class)->middleware('auth');
 
     Route::resource('admin/ourfeature', OurfeatureController::class)->middleware('auth');
 
@@ -93,6 +93,9 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('admin/service', ServiceController::class)->middleware('auth');
 
     Route::resource('admin/servicelist', ServicelistController::class)->middleware('auth');
+
+    // Events
+    Route::resource('admin/ourworks', OurworksController::class)->middleware('auth');
 
 
     // Configuration Group
