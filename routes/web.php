@@ -39,6 +39,8 @@ Route::get('/ourwork', [HomeController::class, 'ourwork'])->name('ourwork');
 Route::get('ourwork/{id}', [HomeController::class, 'ourworkDetail'])->name('ourworksDetail');
 
 Route::get('/event', [HomeController::class, 'event'])->name('event');
+Route::get('event/{id}', [HomeController::class, 'eventDetail'])->name('eventsDetail');
+
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/contact/send', [HomeController::class, 'send'])->name('contact.send');
 

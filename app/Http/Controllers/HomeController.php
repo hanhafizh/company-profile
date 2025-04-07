@@ -108,6 +108,12 @@ class HomeController extends Controller
         return view('home.event');
     }
 
+    public function eventDetail($id)
+    {
+
+        return view('home.event-detail');
+    }
+
     public function contact()
     {
         return view('home.contact');
