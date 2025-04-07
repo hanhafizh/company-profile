@@ -105,7 +105,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('admin/eventsection', [EventsectionController::class, 'index'])->name('eventsection.index');
 
-    Route::resource('admin/event', ServiceController::class)->middleware('auth');
+    Route::resource('admin/event', EventController::class)->middleware('auth');
 
 
     // Configuration Group

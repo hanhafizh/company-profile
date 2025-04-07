@@ -292,5 +292,13 @@ class CoreSeeder extends Seeder
                 'updated_at' => now(),
             ],
         ]);
+
+        DB::table('event')->insert([
+            'title' => 'Our Events',
+            'sub_title' => 'Kumpulan Event Kami',
+            'description' => 'Temukan berbagai kegiatan dan program unggulan dari KPU Usahatama yang dirancang membangun jejaring usaha, serta mendorong kolaborasi melalui pelatihan, seminar, dan pendampingan yang inspiratif.',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
     }
 }

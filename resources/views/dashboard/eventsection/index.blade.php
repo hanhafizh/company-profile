@@ -14,9 +14,9 @@
     </div>
     <!-- Main content -->
     <div class="content">
-        <!-- Landing content -->
-        {{-- @include('dashboard.homesection.landing.index') --}}
-        <!-- Landing content end -->
+        <!-- Events content -->
+        @include('dashboard.eventsection.events.index')
+        <!-- Events content end -->
     </div>
     </div>
 @endsection

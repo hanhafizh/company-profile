@@ -19,11 +19,12 @@ use App\Models\Certificate;
 use App\Models\Certificatelist;
 use App\Models\Directors;
 use App\Models\Directorslist;
-
 use App\Models\Service;
 use App\Models\Servicelist;
 
 use App\Models\Ourworks;
+
+use App\Models\Event;
 
 class HomeController extends Controller
 {
@@ -105,7 +106,9 @@ class HomeController extends Controller
 
     public function event()
     {
-        return view('home.event');
+        $events = Event::all();
+
+        return view('home.event', compact('event'));
     }
 
     public function eventDetail($id)
