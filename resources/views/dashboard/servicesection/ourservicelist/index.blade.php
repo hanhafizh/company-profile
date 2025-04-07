@@ -30,7 +30,7 @@
                                         <td>{{ $list->title }}</td>
                                         <td>{{ \Illuminate\Support\Str::limit($list->description, 300) }}</td>
                                         <td><img src="/image/servicelist/{{ $list->image }}" alt="Image"
-                                                class="img-fluid" width="90"></td>
+                                                class="img-fluid" width="50"></td>
                                         <td>
                                             <a href="{{ route('servicelist.edit', $list->id) }}"
                                                 class="btn btn-sm btn-warning">Edit</a>

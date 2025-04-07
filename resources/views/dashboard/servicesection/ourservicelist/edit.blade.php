@@ -47,9 +47,9 @@
                                 @error('description')
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
-                                <img src="/image/certificatelist/{{ $servicelist->image }}" alt="" class="img-fluid"
-                                    style="height: 180px; width: 180px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-                                    object-fit: cover; border-radius: 20px;">
+                                <img src="/image/servicelist/{{ $servicelist->image }}" alt="" class="img-fluid"
+                                    style="height: 70px; width: 70px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" object-fit:
+                                    cover; border-radius: 20px;">
                                 <div class="form-group">
                                     <label for="">Gambar <small class="text-muted">(Disarankan ukuran
                                             1:1)</small></label>
