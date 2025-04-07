@@ -108,7 +108,7 @@ class HomeController extends Controller
     {
         $events = Event::all();
 
-        return view('home.event', compact('event'));
+        return view('home.event', compact('events'));
     }
 
     public function eventDetail($id)
