@@ -16,7 +16,7 @@
     <div class="content">
 
         <!-- Services Tittle content -->
-        {{-- @include('dashboard.servicesection.ourservice.index') --}}
+        @include('dashboard.servicesection.ourservice.index')
         <!-- Services Tittle content end -->
 
         <!-- Services list content -->
