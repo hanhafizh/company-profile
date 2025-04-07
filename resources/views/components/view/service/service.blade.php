@@ -11,55 +11,23 @@
          @endforeach
 
          <div class="row g-4 justify-content-center">
-             <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                 <div class="service-item text-center rounded p-4">
-                     <div class="service-icon d-inline-block bg-light rounded p-4 mb-4"><i
-                             class="fas fa-mail-bulk fa-5x text-secondary"></i></div>
-                     <div class="service-content">
-                         <h4 class="mb-4">Email Newsletters</h4>
-                         <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.consectetur
-                             adipisicing elit
-                         </p>
+             @foreach ($servicelists as $list)
+                 <div class="col-md-6 col-lg-4 col-xl-3 d-flex align-items-stretch wow fadeInUp" data-wow-delay="0.1s">
+                     <div class="service-item text-center rounded p-4 w-100">
+                         <div class="service-icon d-inline-block bg-light rounded p-4 mb-4">
+                             <img src="/image/servicelist/{{ $list->image }}" alt="Image"
+                                 class="img-fluid rounded-circle" style="width: 90px; height: 90px; object-fit: cover;">
+                         </div>
+
+                         <div class="service-content">
+                             <h4 class="mb-4">{{ $list->title }}</h4>
+                             <p class="mb-4">{{ $list->description }}</p>
+                         </div>
                      </div>
                  </div>
-             </div>
-             <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                 <div class="service-item text-center rounded p-4">
-                     <div class="service-icon d-inline-block bg-light rounded p-4 mb-4"><i
-                             class="fas fa-thumbs-up fa-5x text-secondary"></i></div>
-                     <div class="service-content">
-                         <h4 class="mb-4">Acquistion Emails </h4>
-                         <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.consectetur
-                             adipisicing elit
-                         </p>
-                     </div>
-                 </div>
-             </div>
-             <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                 <div class="service-item text-center rounded p-4">
-                     <div class="service-icon d-inline-block bg-light rounded p-4 mb-4"><i
-                             class="fa fa-subway fa-5x text-secondary"></i></div>
-                     <div class="service-content">
-                         <h4 class="mb-4">Retention Emails</h4>
-                         <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.consectetur
-                             adipisicing elit
-                         </p>
-                     </div>
-                 </div>
-             </div>
-             <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                 <div class="service-item text-center rounded p-4">
-                     <div class="service-icon d-inline-block bg-light rounded p-4 mb-4"><i
-                             class="fas fa-sitemap fa-5x text-secondary"></i></div>
-                     <div class="service-content">
-                         <h4 class="mb-4">Promotional Emails</h4>
-                         <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.consectetur
-                             adipisicing elit
-                         </p>
-                     </div>
-                 </div>
-             </div>
+             @endforeach
          </div>
+
      </div>
  </div>
  <!-- Service End -->
