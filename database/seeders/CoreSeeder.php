@@ -300,5 +300,37 @@ class CoreSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
+        DB::table('eventlist')->insert([
+            'title' => 'Pembangunan Jalan Raya Pulau Jawa',
+            'description' => 'Proyek pembangunan jalan raya sepanjang 100 km di Pulau Jawa bertujuan meningkatkan konektivitas antara kota-kota besar, seperti Jakarta, Surabaya, dan Semarang. Jalur ini dirancang untuk memperlancar distribusi barang dan mobilitas masyarakat guna mendukung pertumbuhan ekonomi, khususnya di sektor perdagangan, transportasi, dan pariwisata. Proyek ini melibatkan berbagai aspek konstruksi, termasuk pembangunan jembatan untuk melintasi area sulit, sistem drainase untuk mencegah banjir, serta instalasi penerangan jalan yang ramah lingkungan. Selain itu, proyek ini menggunakan teknologi modern untuk memastikan kualitas infrastruktur yang tahan lama dan aman bagi pengguna jalan. Proses pembangunan melibatkan kolaborasi dengan masyarakat lokal untuk menciptakan peluang kerja sementara sekaligus mengurangi dampak sosial. Sebagai bagian dari tanggung jawab lingkungan, proyek ini meminimalkan dampak negatif terhadap ekosistem sekitarnya dengan melibatkan ahli lingkungan dalam perencanaan dan implementasi. Dengan adanya jalan raya ini, Pulau Jawa diharapkan menjadi model transportasi terintegrasi yang efisien, mendukung pertumbuhan wilayah perkotaan maupun pedesaan.',
+            'image' => 'ourwork1.png',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        DB::table('eventlist')->insert([
+            'title' => 'Energi Terbarukan Berkelanjutan di NTT',
+            'description' => 'Proyek ini bertujuan mengembangkan sumber energi terbarukan di kawasan Nusa Tenggara Timur (NTT), khususnya pembangkit listrik tenaga surya dan angin. Dengan memanfaatkan potensi alam yang melimpah, proyek ini menjadi solusi untuk mengurangi ketergantungan pada energi fosil yang tidak ramah lingkungan. Energi yang dihasilkan dari proyek ini dirancang untuk mencakup kebutuhan masyarakat lokal, terutama di daerah terpencil yang selama ini sulit dijangkau oleh jaringan listrik konvensional. Selain itu, proyek ini mendukung pembangunan berkelanjutan dengan memanfaatkan teknologi ramah lingkungan, seperti panel surya efisien dan turbin angin yang dirancang untuk meminimalkan dampak terhadap satwa liar. Proyek ini juga menciptakan peluang ekonomi melalui pelatihan masyarakat lokal dalam pengelolaan fasilitas energi terbarukan, sehingga meningkatkan keterampilan dan menciptakan lapangan kerja. Dengan keberhasilan proyek ini, NTT diharapkan menjadi pelopor dalam penggunaan energi terbarukan di Indonesia dan menjadi contoh bagi daerah lain dalam menghadapi tantangan energi global.',
+            'image' => 'ourwork2.png',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        DB::table('eventlist')->insert([
+            'title' => 'Restorasi Hutan Tropis di Kalimantan',
+            'description' => 'Proyek restorasi hutan tropis di Kalimantan ini merupakan inisiatif untuk memulihkan kawasan hutan yang telah terdegradasi akibat aktivitas manusia seperti deforestasi, illegal logging, dan ekspansi lahan pertanian. Upaya restorasi meliputi penanaman kembali pohon-pohon asli yang berfungsi sebagai habitat satwa liar dan penyerap karbon dioksida alami. Proyek ini juga mencakup rehabilitasi lahan kritis dengan teknik modern untuk memastikan keberhasilan pertumbuhan vegetasi baru. Selain aspek lingkungan, proyek ini melibatkan pemberdayaan masyarakat lokal melalui edukasi dan pelatihan terkait pelestarian hutan. Masyarakat diajak untuk berperan aktif sebagai penjaga hutan dan diberikan alternatif mata pencaharian yang tidak merusak lingkungan, seperti budidaya tanaman lokal atau ekowisata. Restorasi ini bertujuan melindungi keberagaman hayati Kalimantan, yang merupakan salah satu pusat ekosistem tropis terkaya di dunia. Dengan keberhasilan proyek ini, diharapkan kawasan hutan dapat kembali berfungsi sebagai paru-paru dunia dan sumber kehidupan bagi generasi mendatang.',
+            'image' => 'ourwork3.png',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        DB::table('eventlist')->insert([
+            'title' => 'Pendidikan Keterampilan Terpadu Papua',
+            'description' => 'Program ini bertujuan untuk meningkatkan kualitas hidup masyarakat Papua melalui pendidikan keterampilan yang terpadu. Pelatihan yang diberikan mencakup berbagai bidang, seperti kerajinan tangan tradisional, teknologi informasi, keterampilan industri, dan kewirausahaan. Pendekatan program ini adalah memberikan pendidikan berbasis kebutuhan lokal untuk memastikan masyarakat dapat langsung memanfaatkan keterampilan yang diperoleh dalam kehidupan sehari-hari maupun di dunia kerja. Selain itu, program ini berupaya membuka akses pelatihan kepada seluruh lapisan masyarakat, termasuk pemuda, perempuan, dan kelompok rentan. Pelatihan teknologi informasi, misalnya, dirancang untuk membantu masyarakat memahami dan memanfaatkan teknologi dalam menciptakan peluang usaha baru. Di sisi lain, pelatihan kerajinan tangan berfokus pada produk-produk khas Papua untuk mendukung pelestarian budaya lokal sekaligus meningkatkan nilai ekonomi. Dengan adanya program ini, diharapkan masyarakat Papua tidak hanya memiliki keterampilan yang relevan dengan kebutuhan pasar kerja tetapi juga mampu menciptakan lapangan kerja baru secara mandiri, sehingga meningkatkan kesejahteraan daerah secara menyeluruh.',
+            'image' => 'ourwork4.png',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
     }
 }

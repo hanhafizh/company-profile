@@ -3,6 +3,7 @@
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\CertificatelistController;
 use App\Http\Controllers\DirectorslistController;
+use App\Http\Controllers\EventlistController;
 use App\Http\Controllers\EventsectionController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ServicelistController;
@@ -106,6 +107,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('admin/eventsection', [EventsectionController::class, 'index'])->name('eventsection.index');
 
     Route::resource('admin/event', EventController::class)->middleware('auth');
+
+    Route::resource('admin/eventlist', EventlistController::class)->middleware('auth');
 
 
     // Configuration Group

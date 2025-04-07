@@ -17,6 +17,9 @@
         <!-- Events content -->
         @include('dashboard.eventsection.events.index')
         <!-- Events content end -->
+        <!-- Events content -->
+        @include('dashboard.eventsection.eventslist.index')
+        <!-- Events content end -->
     </div>
     </div>
 @endsection

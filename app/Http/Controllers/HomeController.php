@@ -25,6 +25,7 @@ use App\Models\Servicelist;
 use App\Models\Ourworks;
 
 use App\Models\Event;
+use App\Models\Eventlist;
 
 class HomeController extends Controller
 {
@@ -107,8 +108,9 @@ class HomeController extends Controller
     public function event()
     {
         $events = Event::all();
+        $eventlists = Eventlist::all();
 
-        return view('home.event', compact('events'));
+        return view('home.event', compact('events', 'eventlists'));
     }
 
     public function eventDetail($id)
