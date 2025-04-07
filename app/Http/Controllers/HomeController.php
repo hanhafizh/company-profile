@@ -115,8 +115,9 @@ class HomeController extends Controller
 
     public function eventDetail($id)
     {
+        $eventlists = Eventlist::findOrFail($id);
 
-        return view('home.event-detail');
+        return view('home.event-detail', compact('eventlists'));
     }
 
     public function contact()

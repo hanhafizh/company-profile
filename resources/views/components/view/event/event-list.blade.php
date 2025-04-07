@@ -4,18 +4,18 @@
         <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item"><a href="/ourwork">Our Work</a></li>
-                <li class="breadcrumb-item active" aria-current="page">{{ $ourworks->title }}</li>
+                <li class="breadcrumb-item"><a href="/event">Event</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ $eventlists->title }}</li>
             </ol>
         </nav>
 
         <!-- Content -->
         <div class="row">
             <div class="col-md-12">
-                <h2 class="display-6 mb-4 text-center">{{ $ourworks->title }}</h2>
-                <img src="/image/ourworks/{{ $ourworks->image }}" class="img-fluid w-70 mb-4 mx-auto d-block"
-                    alt="{{ $ourworks->title }}">
-                <p class="mb-4">{{ $ourworks->description }}</p>
+                <h2 class="display-6 mb-4 text-center">{{ $eventlists->title }}</h2>
+                <img src="/image/eventlist/{{ $eventlists->image }}" class="img-fluid w-70 mb-4 mx-auto d-block"
+                    alt="{{ $eventlists->title }}">
+                <p class="mb-4">{{ $eventlists->description }}</p>
             </div>
         </div>
     </div>
