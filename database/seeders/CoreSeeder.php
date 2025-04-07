@@ -261,5 +261,36 @@ class CoreSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
+        DB::table('servicelist')->insert([
+            [
+                'title' => 'Pendampingan UMKM',
+                'description' => 'Layanan pendampingan untuk membantu UMKM tumbuh dan berkembang secara berkelanjutan.',
+                'image' => 'pendampingan-umkm.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Pelatihan Kewirausahaan',
+                'description' => 'Program pelatihan yang dirancang untuk meningkatkan keterampilan wirausaha pelaku UMKM.',
+                'image' => 'pelatihan-kewirausahaan.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Konsultasi Bisnis',
+                'description' => 'Layanan konsultasi strategi bisnis bagi pelaku usaha mikro dan kecil.',
+                'image' => 'konsultasi-bisnis.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Sertifikasi Produk',
+                'description' => 'Bantuan dalam proses sertifikasi produk agar dapat memenuhi standar pasar.',
+                'image' => 'sertifikasi-produk.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
     }
 }

@@ -4,6 +4,7 @@ use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\CertificatelistController;
 use App\Http\Controllers\DirectorslistController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\ServicelistController;
 use App\Http\Controllers\ServicesectionController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -90,6 +91,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('admin/servicesection', [ServicesectionController::class, 'index'])->name('servicesection.index');
 
     Route::resource('admin/service', ServiceController::class)->middleware('auth');
+
+    Route::resource('admin/servicelist', ServicelistController::class)->middleware('auth');
 
 
     // Configuration Group

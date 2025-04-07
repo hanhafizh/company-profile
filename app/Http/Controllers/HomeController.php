@@ -5,21 +5,25 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
-use App\Models\About;
-use App\Models\Carousel;
-use App\Models\Carousellist;
-use App\Models\Certificate;
-use App\Models\Directors;
-use App\Models\Directorslist;
-use App\Models\Faq;
-use App\Models\Featurelist;
 use App\Models\Landing;
 use App\Models\Ourfeature;
-use App\Models\Ourworks;
+use App\Models\Featurelist;
+use App\Models\Faq;
+use App\Models\Carousel;
+use App\Models\Carousellist;
+
+use App\Models\About;
 use App\Models\Photogroup;
 use App\Models\Visionmission;
+use App\Models\Certificate;
 use App\Models\Certificatelist;
+use App\Models\Directors;
+use App\Models\Directorslist;
+
 use App\Models\Service;
+use App\Models\Servicelist;
+
+use App\Models\Ourworks;
 
 class HomeController extends Controller
 {
@@ -75,9 +79,12 @@ class HomeController extends Controller
     {
         $faqs = Faq::all();
         $services = Service::all();
+        $servicelists = Servicelist::all();
+
         return view('home.service', compact(
             'faqs',
-            'services'
+            'services',
+            'servicelists'
         ));
     }
 

@@ -20,7 +20,7 @@
         <!-- Services Tittle content end -->
 
         <!-- Services list content -->
-        {{-- @include('dashboard.servicesection.ourservicelist.index') --}}
+        @include('dashboard.servicesection.ourservicelist.index')
         <!-- Services list content end -->
 
 
