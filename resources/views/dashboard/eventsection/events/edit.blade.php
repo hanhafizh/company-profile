@@ -25,7 +25,7 @@
                                 Edit Events</h5>
                         </div>
                         <div class="card-body">
-                            <a href="{{ route('event.index') }}" class="btn btn-primary mb-2"
+                            <a href="/admin/eventsection" class="btn btn-primary mb-2"
                                 style="margin-right: auto; ">Kembali</a>
                             <form action="{{ route('event.update', $event->id) }}" method="POST"
                                 enctype="multipart/form-data">

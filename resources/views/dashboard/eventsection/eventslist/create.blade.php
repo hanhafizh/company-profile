@@ -25,7 +25,8 @@
                                 Tambah Event List Baru</h5>
                         </div>
                         <div class="card-body">
-                            <a href="/admin/ourworks" class="btn btn-primary mb-2" style="margin-right: auto; ">Kembali</a>
+                            <a href="/admin/eventsection" class="btn btn-primary mb-2"
+                                style="margin-right: auto; ">Kembali</a>
                             <form action="{{ route('eventlist.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
@@ -44,7 +45,8 @@
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
                                 <div class="form-group">
-                                    <label for="">Gambar</label>
+                                    <label for="">Gambar <small class="text-muted">(Disarankan rasio
+                                            16:9)</small></label>
                                     <input type="file" class="form-control" name="image">
                                 </div>
                                 @error('image')
