@@ -94,7 +94,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('admin/servicelist', ServicelistController::class)->middleware('auth');
 
-    // Events
+    // ourworks
     Route::resource('admin/ourworks', OurworksController::class)->middleware('auth');
 
 

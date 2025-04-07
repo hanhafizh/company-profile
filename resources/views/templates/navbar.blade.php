@@ -31,12 +31,12 @@
                         Services
                     </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="{{ route('ourwork') }}"
                         class="nav-link {{ Request::routeIs('ourwork') ? 'active' : '' }}">
                         Our Works
                     </a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a href="{{ route('event') }}" class="nav-link {{ Request::routeIs('event') ? 'active' : '' }}">
                         Events

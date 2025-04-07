@@ -72,12 +72,12 @@
                                 <p>Service Section</p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="{{ route('ourworks.index') }}"
                                 class="nav-link {{ Request::routeIs('ourworks.index') ? 'active' : '' }}">
                                 <p>Ourwork Section</p>
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </li>
 
