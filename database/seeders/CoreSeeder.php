@@ -332,5 +332,13 @@ class CoreSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
+        DB::table('partner')->insert([
+            'title' => 'Our Partner',
+            'sub_title' => 'Trusted by over 786+ clients.',
+            'description' => 'Our clients are our top priority, and we are committed to providing them with the highest level of service.',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
     }
 }
