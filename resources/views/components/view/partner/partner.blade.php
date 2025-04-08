@@ -1,16 +1,16 @@
    <!-- Partner Start -->
    <div class="container mt-5">
        <section class="py-3 py-md-5 py-xl-8">
-           <div class="container">
-               <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
-                   <h4 class="text-primary">Our Clients</h4>
-                   <h1 class="display-5 mb-4">Trusted by over 786+ clients.</h1>
-                   <p class="mb-0">Our clients are our top priority, and we are committed to providing them with the
-                       highest level of service.
-                   </p>
+           @foreach ($partners as $partner)
+               <div class="container">
+                   <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
+                       <h4 class="text-primary">{{ $partner->title }}</h4>
+                       <h1 class="display-5 mb-4">{{ $partner->sub_title }}</h1>
+                       <p class="mb-0">{{ $partner->description }}
+                       </p>
+                   </div>
                </div>
-           </div>
-
+           @endforeach
            <div class="container overflow-hidden">
                <div class="row gy-4">
                    <div class="col-6 col-md-4 col-xl-3 text-center">
