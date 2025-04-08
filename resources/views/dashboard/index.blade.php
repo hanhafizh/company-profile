@@ -14,7 +14,7 @@
     </div>
 
     <!-- Main content -->
-    <div class="content">
+    {{-- <div class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6">
@@ -46,7 +46,7 @@
                     </div><!-- /.card -->
                 </div>
                 <!-- /.col-md-6 -->
-                {{-- <div class="col-lg-6">
+                <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
                             <h5 class="m-0">Featured</h5>
@@ -70,12 +70,12 @@
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
-                </div> --}}
+                </div>
                 <!-- /.col-md-6 -->
             </div>
             <!-- /.row -->
         </div><!-- /.container-fluid -->
-    </div>
+    </div> --}}
     <!-- /.content -->
     </div>
 @endsection
