@@ -120,10 +120,17 @@ class HomeController extends Controller
         return view('home.event-detail', compact('eventlists'));
     }
 
+
+    public function partner()
+    {
+        return view('home.partner');
+    }
+
     public function contact()
     {
         return view('home.contact');
     }
+
 
     public function tes()
     {

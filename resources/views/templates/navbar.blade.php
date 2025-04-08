@@ -42,6 +42,12 @@
                         Events
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('partner') }}"
+                        class="nav-link {{ Request::routeIs('partner') ? 'active' : '' }}">
+                        Our Partners
+                    </a>
+                </li>
             </ul>
             <a href="{{ route('contact') }}" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-lg-3">
                 Contact
