@@ -15,6 +15,9 @@
     <!-- Main content -->
     <div class="content">
 
+        <!-- Partner content -->
+        @include('dashboard.partnersection.partner.index')
+        <!-- Partner content end -->
 
     </div>
 

@@ -3,9 +3,9 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="card-title mb-0">Judul Sertifikat</h5>
-                    @if ($certificates->isEmpty())
-                        <a href="{{ route('certificate.create') }}" class="btn btn-primary btn-sm"
+                    <h5 class="card-title mb-0">Judul Partner</h5>
+                    @if ($partners->isEmpty())
+                        <a href="{{ route('partner.create') }}" class="btn btn-primary btn-sm"
                             style="margin-left: auto;">Tambah
                             Data</a>
                     @endif
@@ -24,19 +24,19 @@
                             </thead>
                             <tbody>
                                 @php $i = 1; @endphp
-                                @foreach ($certificates as $certificate)
+                                @foreach ($partners as $partner)
                                     <tr>
                                         <td>{{ $i++ }}</td>
-                                        <td>{{ $certificate->title }}</td>
-                                        <td>{{ $certificate->sub_title }}</td>
-                                        <td>{{ \Illuminate\Support\Str::limit($certificate->description, 300) }}
+                                        <td>{{ $partner->title }}</td>
+                                        <td>{{ $partner->sub_title }}</td>
+                                        <td>{{ \Illuminate\Support\Str::limit($partner->description, 300) }}
                                         </td>
                                         <td>
-                                            <a href="{{ route('certificate.edit', $certificate->id) }}"
+                                            <a href="{{ route('partner.edit', $partner->id) }}"
                                                 class="btn btn-sm btn-warning">Edit</a>
 
-                                            <form action="{{ route('certificate.destroy', $certificate->id) }}"
-                                                method="POST" style="display: inline-block;">
+                                            <form action="{{ route('partner.destroy', $partner->id) }}" method="POST"
+                                                style="display: inline-block;">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-sm btn-danger">Hapus</button>

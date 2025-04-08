@@ -1,6 +1,6 @@
 @extends('templates_dashboard.main')
 
-@section('title', 'Tambah Sertifikat')
+@section('title', 'Tambah Partner')
 
 @section('content')
 
@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Tambah Judul Sertifikat</h1>
+                    <h1 class="m-0">Tambah Judul Partner</h1>
                 </div>
             </div>
         </div>
@@ -22,12 +22,12 @@
                     <div class="card">
                         <div class="card-header">
                             <h5 class="card-title mb-0">
-                                Tambah Judul Sertifikat Baru</h5>
+                                Tambah Judul Partner Baru</h5>
                         </div>
                         <div class="card-body">
-                            <a href="{{ route('homesection.index') }}" class="btn btn-primary mb-2"
+                            <a href="{{ route('partnersection.index') }}" class="btn btn-primary mb-2"
                                 style="margin-right: auto; ">Kembali</a>
-                            <form action="{{ route('certificate.store') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('partner.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
                                     <label for="">Judul</label>
