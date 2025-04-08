@@ -335,10 +335,37 @@ class CoreSeeder extends Seeder
 
         DB::table('partner')->insert([
             'title' => 'Our Partner',
-            'sub_title' => 'Trusted by over 786+ clients.',
-            'description' => 'Our clients are our top priority, and we are committed to providing them with the highest level of service.',
+            'sub_title' => 'Partner Kami',
+            'description' => 'Klien kami adalah prioritas utama, dan kami berkomitmen untuk memberikan layanan terbaik kepada mereka.',
             'created_at' => now(),
             'updated_at' => now()
+        ]);
+
+        DB::table('partnerlist')->insert([
+            [
+                'title' => 'Perusahaan Gas Negara (PGN)',
+                'image' => 'partner1.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Pertamina Hulu Energi (PHE)',
+                'image' => 'partner2.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'PT Badak NGL',
+                'image' => 'partner3.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Pertamina Power Indonesia (PPI)',
+                'image' => 'partner4.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }
