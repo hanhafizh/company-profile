@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Partner;
+use App\Models\Partnerlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -125,7 +126,9 @@ class HomeController extends Controller
     public function partner()
     {
         $partners = Partner::all();
-        return view('home.partner', compact('partners'));
+        $partnerlists = Partnerlist::all();
+
+        return view('home.partner', compact('partners', 'partnerlists'));
     }
 
     public function contact()

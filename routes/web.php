@@ -6,6 +6,7 @@ use App\Http\Controllers\DirectorslistController;
 use App\Http\Controllers\EventlistController;
 use App\Http\Controllers\EventsectionController;
 use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\PartnerlistController;
 use App\Http\Controllers\PartnersectionController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ServicelistController;
@@ -119,6 +120,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('admin/partnersection', [PartnersectionController::class, 'index'])->name('partnersection.index');
 
     Route::resource('admin/partner', PartnerController::class)->middleware('auth');
+    Route::resource('admin/partnerlist', PartnerlistController::class)->middleware('auth');
 
     // Configuration Group
     Route::prefix('setting')->group(function () {

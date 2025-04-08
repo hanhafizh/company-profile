@@ -1,6 +1,6 @@
 @extends('templates_dashboard.main')
 
-@section('title', 'Tambah Sertifikat List')
+@section('title', 'Tambah Partner List')
 
 @section('content')
 
@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Tambah Sertifikat List</h1>
+                    <h1 class="m-0">Tambah Partner List</h1>
                 </div>
             </div>
         </div>
@@ -22,13 +22,12 @@
                     <div class="card">
                         <div class="card-header">
                             <h5 class="card-title mb-0">
-                                Tambah Sertifikat List Baru</h5>
+                                Tambah Partner List Baru</h5>
                         </div>
                         <div class="card-body">
-                            <a href="{{ route('aboutsection.index') }}" class="btn btn-primary mb-2"
+                            <a href="{{ route('partnersection.index') }}" class="btn btn-primary mb-2"
                                 style="margin-right: auto; ">Kembali</a>
-                            <form action="{{ route('certificatelist.store') }}" method="POST"
-                                enctype="multipart/form-data">
+                            <form action="{{ route('partnerlist.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
                                     <label for="">Judul</label>
@@ -38,16 +37,8 @@
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
                                 <div class="form-group">
-                                    <label for="">Deskripsi</label>
-                                    <textarea name="description" id="" cols="30" rows="10" class="form-control"
-                                        placeholder="Description"></textarea>
-                                </div>
-                                @error('description')
-                                    <small style="color:red">{{ $message }}</small>
-                                @enderror
-                                <div class="form-group">
                                     <label for="">Gambar <small class="text-muted">(Disarankan ukuran
-                                            A4)</small></label>
+                                            1:1)</small></label>
                                     <input type="file" class="form-control" name="image">
                                 </div>
                                 @error('image')

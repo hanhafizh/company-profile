@@ -19,6 +19,10 @@
         @include('dashboard.partnersection.partner.index')
         <!-- Partner content end -->
 
+        <!-- Partner list content -->
+        @include('dashboard.partnersection.partnerlist.index')
+        <!-- Partner list content end -->
+
     </div>
 
     </div>
