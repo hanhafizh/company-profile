@@ -127,8 +127,9 @@ class HomeController extends Controller
     {
         $partners = Partner::all();
         $partnerlists = Partnerlist::all();
+        $faqs = Faq::all();
 
-        return view('home.partner', compact('partners', 'partnerlists'));
+        return view('home.partner', compact('partners', 'partnerlists', 'faqs'));
     }
 
     public function contact()
