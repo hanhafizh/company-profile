@@ -13,8 +13,9 @@
         <div class="row">
             <div class="col-md-12">
                 <h2 class="display-6 mb-4 text-center">{{ $eventlists->title }}</h2>
-                <img src="/image/eventlist/{{ $eventlists->image }}" class="img-fluid w-70 mb-4 mx-auto d-block"
-                    alt="{{ $eventlists->title }}">
+                <img src="/image/eventlist/{{ $eventlists->image }}" class="img-fluid mb-4 mx-auto d-block"
+                    style="width: 60%;" alt="{{ $eventlists->title }}">
+
                 <p class="mb-4">{{ $eventlists->description }}</p>
             </div>
         </div>
