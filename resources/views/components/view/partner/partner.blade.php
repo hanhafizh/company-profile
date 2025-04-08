@@ -13,14 +13,17 @@
            @endforeach
            <div class="container overflow-hidden">
                <div class="row gy-4">
-                   @foreach ($partnerlists as $lists)
-                       <div class="col-6 col-md-4 col-xl-3 text-center">
-                           <div class="text-secondary bg-light px-4 py-3 px-md-6 py-md-4 px-lg-8 py-lg-5">
-                               <img src="/image/partnerlist/{{ $lists->image }}" class="img-fluid w-50 h-50"
-                                   alt="{{ $lists->title }}">
+                   <div class="row justify-content-center">
+                       @foreach ($partnerlists as $lists)
+                           <div class="col-6 col-md-4 col-xl-3 text-center mt-4">
+                               <div class="text-secondary bg-light px-4 py-3 px-md-6 py-md-4 px-lg-8 py-lg-5">
+                                   <img src="/image/partnerlist/{{ $lists->image }}" class="img-fluid w-50 h-50"
+                                       alt="{{ $lists->title }}">
+                               </div>
                            </div>
-                       </div>
-                   @endforeach
+                       @endforeach
+                   </div>
+
                </div>
            </div>
        </section>
