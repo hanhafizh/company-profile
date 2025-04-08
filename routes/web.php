@@ -5,6 +5,7 @@ use App\Http\Controllers\CertificatelistController;
 use App\Http\Controllers\DirectorslistController;
 use App\Http\Controllers\EventlistController;
 use App\Http\Controllers\EventsectionController;
+use App\Http\Controllers\PartnersectionController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ServicelistController;
 use App\Http\Controllers\ServicesectionController;
@@ -112,6 +113,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('admin/eventlist', EventlistController::class)->middleware('auth');
 
+    // Partner
+
+    Route::get('admin/partnersection', [PartnersectionController::class, 'index'])->name('partnersection.index');
 
     // Configuration Group
     Route::prefix('setting')->group(function () {
