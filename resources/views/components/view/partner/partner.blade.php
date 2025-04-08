@@ -13,26 +13,14 @@
            @endforeach
            <div class="container overflow-hidden">
                <div class="row gy-4">
-                   <div class="col-6 col-md-4 col-xl-3 text-center">
-                       <div class="text-secondary bg-light px-4 py-3 px-md-6 py-md-4 px-lg-8 py-lg-5">
-                           <img src="/image/featurelist/feature1.png" class="img-fluid w-50 h-50" alt="feature1">
+                   @foreach ($partnerlists as $lists)
+                       <div class="col-6 col-md-4 col-xl-3 text-center">
+                           <div class="text-secondary bg-light px-4 py-3 px-md-6 py-md-4 px-lg-8 py-lg-5">
+                               <img src="/image/partnerlist/{{ $lists->image }}" class="img-fluid w-50 h-50"
+                                   alt="{{ $lists->title }}">
+                           </div>
                        </div>
-                   </div>
-                   <div class="col-6 col-md-4 col-xl-3 text-center">
-                       <div class="text-secondary bg-light px-4 py-3 px-md-6 py-md-4 px-lg-8 py-lg-5">
-                           <img src="/image/featurelist/feature2.png" class="img-fluid w-50 h-50" alt="feature2">
-                       </div>
-                   </div>
-                   <div class="col-6 col-md-4 col-xl-3 text-center">
-                       <div class="text-secondary bg-light px-4 py-3 px-md-6 py-md-4 px-lg-8 py-lg-5">
-                           <img src="/image/featurelist/feature3.png" class="img-fluid w-50 h-50" alt="feature3">
-                       </div>
-                   </div>
-                   <div class="col-6 col-md-4 col-xl-3 text-center">
-                       <div class="text-secondary bg-light px-4 py-3 px-md-6 py-md-4 px-lg-8 py-lg-5">
-                           <img src="/image/featurelist/feature4.png" class="img-fluid w-50 h-50" alt="feature4">
-                       </div>
-                   </div>
+                   @endforeach
                </div>
            </div>
        </section>
