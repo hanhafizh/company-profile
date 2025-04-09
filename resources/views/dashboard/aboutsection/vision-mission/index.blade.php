@@ -15,7 +15,7 @@
                         <table class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>No</th>
+                                    <th style="width: 2%;">No</th>
                                     <th>Judul</th>
                                     <th>Judul Kedua</th>
                                     <th>Deskripsi</th>
@@ -23,7 +23,7 @@
                                     <th>Deskripsi Visi</th>
                                     <th>Judul Misi</th>
                                     <th>Deskripsi Misi</th>
-                                    <th>Aksi</th>
+                                    <th style="width: 11%;">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>

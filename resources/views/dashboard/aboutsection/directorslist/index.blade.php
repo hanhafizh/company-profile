@@ -15,11 +15,11 @@
                         <table class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>No</th>
+                                    <th style="width: 2%;">No</th>
                                     <th>Nama</th>
                                     <th>Posisi</th>
                                     <th>Gambar</th>
-                                    <th>Aksi</th>
+                                    <th style="width: 11%;">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
