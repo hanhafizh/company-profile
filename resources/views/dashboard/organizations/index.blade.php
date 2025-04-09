@@ -47,7 +47,7 @@
                                             <td><span class="badge bg-success">Active</span></td>
                                             <td>
                                                 <button class="btn btn-sm btn-primary">Edit</button>
-                                                <button class="btn btn-sm btn-danger">Delete</button>
+                                                <button class="btn btn-sm btn-danger mt-2">Hapus</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -58,7 +58,7 @@
                                             <td><span class="badge bg-warning">Pending</span></td>
                                             <td>
                                                 <button class="btn btn-sm btn-primary">Edit</button>
-                                                <button class="btn btn-sm btn-danger">Delete</button>
+                                                <button class="btn btn-sm btn-danger mt-2">Hapus</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -69,7 +69,7 @@
                                             <td><span class="badge bg-danger">Inactive</span></td>
                                             <td>
                                                 <button class="btn btn-sm btn-primary">Edit</button>
-                                                <button class="btn btn-sm btn-danger">Delete</button>
+                                                <button class="btn btn-sm btn-danger mt-2">Hapus</button>
                                             </td>
                                         </tr>
                                     </tbody>
