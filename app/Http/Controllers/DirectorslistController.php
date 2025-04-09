@@ -95,7 +95,7 @@ class DirectorslistController extends Controller
         $request->validate([
             'name' => 'required',
             'position' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg|max:2048', // Tambahkan jenis dan ukuran gambar
+            'image' => 'image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
         $input = $request->all();

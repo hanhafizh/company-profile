@@ -97,7 +97,7 @@ class PhotogroupController extends Controller
             'title' => 'required',
             'sub_title' => 'required',
             'description' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'image' => 'image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
         $input = $request->all();
