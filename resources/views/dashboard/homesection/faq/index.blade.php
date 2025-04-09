@@ -29,7 +29,7 @@
                                         <td>{{ \Illuminate\Support\Str::limit($faq->description, 300) }}</td>
                                         <td>
                                             <a href="{{ route('faq.edit', $faq->id) }}"
-                                                class="btn btn-sm btn-warning">Edit</a>
+                                                class="btn btn-sm btn-warning mt-2">Edit</a>
 
                                             <form action="{{ route('faq.destroy', $faq->id) }}" method="POST"
                                                 style="display: inline-block;">

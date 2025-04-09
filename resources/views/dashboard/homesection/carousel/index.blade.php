@@ -33,13 +33,13 @@
                                         </td>
                                         <td>
                                             <a href="{{ route('carousel.edit', $carousel->id) }}"
-                                                class="btn btn-sm btn-warning">Edit</a>
+                                                class="btn btn-sm btn-warning mt-2">Edit</a>
 
                                             <form action="{{ route('carousel.destroy', $carousel->id) }}" method="POST"
                                                 style="display: inline-block;">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
+                                                <button type="submit" class="btn btn-sm btn-danger mt-2">Hapus</button>
                                             </form>
                                         </td>
                                     </tr>

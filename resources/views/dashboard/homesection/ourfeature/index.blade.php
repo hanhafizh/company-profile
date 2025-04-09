@@ -32,7 +32,7 @@
                                         </td>
                                         <td>
                                             <a href="{{ route('ourfeature.edit', $ourfeature->id) }}"
-                                                class="btn btn-sm btn-warning">Edit</a>
+                                                class="btn btn-sm btn-warning mt-2">Edit</a>
 
                                             <form action="{{ route('ourfeature.destroy', $ourfeature->id) }}"
                                                 method="POST" style="display: inline-block;">
