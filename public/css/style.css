@@ -1020,7 +1020,7 @@
     border: 60px solid rgba(102, 16, 242, 0.05);
     background: transparent;
     animation: ContactMoveLeft 50s linear infinite;
-    z-index: 1;
+    z-index: -1;
 }
 
 @keyframes ContactMoveLeft {
@@ -1052,7 +1052,7 @@
     border: 60px solid rgba(102, 16, 242, 0.05);
     background: transparent;
     animation: ContactMoveRight 50s linear infinite;
-    z-index: 1;
+    z-index: -1;
 }
 
 @keyframes ContactMoveRight {
