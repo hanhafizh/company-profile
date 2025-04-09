@@ -15,11 +15,11 @@
                         <table class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>No</th>
-                                    <th>Judul</th>
-                                    <th>Deskripsi</th>
-                                    <th>Gambar</th>
-                                    <th>Aksi</th>
+                                    <th style="width: 2%;">No</th>
+                                    <th style="width: 25%;">Judul</th>
+                                    <th style="width: 45%;">Deskripsi</th>
+                                    <th style="width: 20%;">Gambar</th>
+                                    <th style="width: 8%;">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
