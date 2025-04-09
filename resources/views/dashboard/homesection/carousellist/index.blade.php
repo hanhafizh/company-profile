@@ -15,8 +15,8 @@
                                 <tr>
                                     <th style="width: 2%;">No</th>
                                     <th>Deskripsi</th>
-                                    <th style="width: 20%;">Gambar</th>
-                                    <th style="width: 8%;">Aksi</th>
+                                    <th>Gambar</th>
+                                    <th style="width: 11%;">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
