@@ -7,13 +7,25 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Dashboard</h1>
+                    {{-- <h1 class="m-0">Dashboard</h1> --}}
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner mb-5" style="border-radius: 20px; overflow: hidden;">
+                @foreach ($photogroup as $index => $photo)
+                    <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+                        <img src="/image/photogroup/{{ $photo->image }}" class="d-block w-100 carousel-img" alt="Slide">
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
 
     <!-- Main content -->
+
     {{-- <div class="content">
         <div class="container-fluid">
             <div class="row">
