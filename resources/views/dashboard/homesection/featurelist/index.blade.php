@@ -14,8 +14,8 @@
                             <thead>
                                 <tr>
                                     <th style="width: 2%;">No</th>
-                                    <th>Judul</th>
-                                    <th>Deskripsi</th>
+                                    <th style="width: 11%;">Judul</th>
+                                    <th style="width: 65%;">Deskripsi</th>
                                     <th>Gambar</th>
                                     <th style="width: 11%;">Aksi</th>
                                 </tr>
