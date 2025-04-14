@@ -19,9 +19,17 @@
                             <!-- Gunakan $key untuk membuat ID modal unik -->
                             <a href="#" data-bs-toggle="modal"
                                 data-bs-target="#certificateModal{{ $key }}">
-                                <img src="/image/certificatelist/{{ $certificate->image }}" class="img-fluid"
-                                    style="height: 250px; width: 180px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
-                                    alt="{{ $certificate['title'] }}">
+                                <div style="position: relative; display: inline-block; height: 250px; width: 180px;">
+                                    <img src="/image/certificatelist/{{ $certificate->image }}" class="img-fluid"
+                                        style="height: 250px; width: 180px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
+                                        alt="{{ $certificate['title'] }}">
+
+                                    <img src="{{ asset('image/watermark/watermark-kpu.png') }}"
+                                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+                                               width: 80%; opacity: 0.2; pointer-events: none;">
+
+                                </div>
+
                             </a>
                         </div>
                         <div class="feature-content">
@@ -52,10 +60,17 @@
                                 aria-label="Close"></button>
                         </div>
                         <div class="modal-body text-center">
-                            <img src="/image/certificatelist/{{ $certificate->image }}"
-                                style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" class="img-fluid"
-                                alt="{{ $certificate['title'] }}">
+                            <div style="position: relative; display: inline-block;">
+                                <img src="/image/certificatelist/{{ $certificate->image }}"
+                                    style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" class="img-fluid"
+                                    alt="{{ $certificate['title'] }}">
+
+                                <img src="{{ asset('image/watermark/watermark-kpu.png') }}"
+                                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+                                            width: 80%; opacity: 0.2; pointer-events: none;">
+                            </div>
                         </div>
+
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         </div>
