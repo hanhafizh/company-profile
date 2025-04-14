@@ -71,6 +71,7 @@
                                                 - Hapus
                                             </button>
                                         </div>
+                                        <hr>
                                     @endforeach
                                 </div>
 
