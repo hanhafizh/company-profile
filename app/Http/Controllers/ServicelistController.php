@@ -41,25 +41,49 @@ class ServicelistController extends Controller
             'title' => 'required',
             'description' => 'required',
             'image' => 'required|mimes:jpeg,png,jpg,svg+xml|max:2048',
-
+            'details.*.title' => 'required',
+            'details.*.subtitle' => 'nullable',
+            'details.*.image' => 'nullable|image|mimes:jpg,jpeg,png',
         ]);
 
-        $input = $request->all();
-
+        // Simpan gambar utama
+        $imageName = null;
         if ($request->hasFile('image')) {
-            $destinationPath = 'image/servicelist/';
             $image = $request->file('image');
             $imageName = date('YmdHis') . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path($destinationPath), $imageName);
-            $input['image'] = $imageName;
-        } else {
-            return redirect()->back()->with('error', 'Gambar wajib diunggah!');
+            $image->move(public_path('image/servicelist/'), $imageName);
         }
 
-        Servicelist::create($input);
+        // Buat ServiceList
+        $serviceList = Servicelist::create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'image' => $imageName,
+        ]);
+
+        // Loop dan simpan detail
+        if ($request->has('details')) {
+            foreach ($request->details as $detail) {
+                $detailImage = null;
+
+                if (isset($detail['image']) && $detail['image']) {
+                    $detailImg = $detail['image'];
+                    $detailImageName = date('YmdHis') . '_' . uniqid() . '.' . $detailImg->getClientOriginalExtension();
+                    $detailImg->move(public_path('image/servicelist/details/'), $detailImageName);
+                    $detailImage = $detailImageName;
+                }
+
+                $serviceList->details()->create([
+                    'title' => $detail['title'],
+                    'subtitle' => $detail['subtitle'] ?? null,
+                    'image' => $detailImage,
+                ]);
+            }
+        }
 
         return redirect()->route('servicesection.index')->with('success', 'Data berhasil disimpan!');
     }
+
 
     /**
      * Display the specified resource.

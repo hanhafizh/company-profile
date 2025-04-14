@@ -8,53 +8,66 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Tambah Service List</h1>
+                    <h1 class="m-0">Tambah Sertifikat List</h1>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="card-title mb-0">
-                                Tambah Service List Baru</h5>
+                            <h4>Tambah Service List</h4>
                         </div>
                         <div class="card-body">
-                            <a href="{{ route('aboutsection.index') }}" class="btn btn-primary mb-2"
-                                style="margin-right: auto; ">Kembali</a>
                             <form action="{{ route('servicelist.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                <div class="form-group">
-                                    <label for="">Judul</label>
-                                    <input type="text" class="form-control" name="title" placeholder="Title">
+
+                                <!-- ServiceList utama -->
+                                <div class="mb-3">
+                                    <label>Judul</label>
+                                    <input type="text" name="title" class="form-control" required>
                                 </div>
-                                @error('title')
-                                    <small style="color:red">{{ $message }}</small>
-                                @enderror
-                                <div class="form-group">
-                                    <label for="">Deskripsi</label>
-                                    <textarea name="description" id="" cols="30" rows="10" class="form-control"
-                                        placeholder="Description"></textarea>
+
+                                <div class="mb-3">
+                                    <label>Deskripsi</label>
+                                    <textarea name="description" class="form-control" required></textarea>
                                 </div>
-                                @error('description')
-                                    <small style="color:red">{{ $message }}</small>
-                                @enderror
-                                <div class="form-group">
-                                    <label for="">Gambar <small class="text-muted">(Disarankan ukuran
-                                            1:1)</small></label>
-                                    <input type="file" class="form-control" name="image">
+
+                                <div class="mb-3">
+                                    <label>Gambar</label>
+                                    <input type="file" name="image" class="form-control" required>
                                 </div>
-                                @error('image')
-                                    <small style="color:red">{{ $message }}</small>
-                                @enderror
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                                <hr>
+
+                                {{-- service list details --}}
+                                <h5>Service List Detail</h5>
+                                <!-- Container Detail -->
+                                <div id="detail-container">
+                                    <div class="detail-item mb-3 border p-3 position-relative">
+                                        <label>Title Detail</label>
+                                        <input type="text" name="details[0][title]" class="form-control mb-2" required>
+
+                                        <label>Subtitle</label>
+                                        <input type="text" name="details[0][subtitle]" class="form-control mb-2">
+
+                                        <label>Gambar</label>
+                                        <input type="file" name="details[0][image]" class="form-control">
+
+                                        <button type="button" class="btn btn-danger btn-sm mt-2 remove-detail"
+                                            style="position: absolute; top: 10px; right: 10px;">
+                                            Hapus
+                                        </button>
+
+                                    </div>
                                 </div>
+
+                                <!-- Tombol tambah -->
+                                <button type="button" id="add-detail" class="btn btn-success mb-3">+ Tambah Detail</button>
+                                <button type="submit" class="btn btn-primary mb-3">Simpan</button>
                             </form>
                         </div>
                     </div>
@@ -63,4 +76,41 @@
         </div>
     </div>
     </div>
+
+
+    <script>
+        let detailIndex = 1;
+
+        // Fungsi tambah detail
+        document.getElementById('add-detail').addEventListener('click', function() {
+            const container = document.getElementById('detail-container');
+            const html = `
+    <div class="detail-item mb-3 border p-3 position-relative">
+        <label>Title Detail</label>
+        <input type="text" name="details[${detailIndex}][title]" class="form-control mb-2" required>
+
+        <label>Subtitle</label>
+        <input type="text" name="details[${detailIndex}][subtitle]" class="form-control mb-2">
+
+        <label>Gambar</label>
+        <input type="file" name="details[${detailIndex}][image]" class="form-control">
+        <button type="button" class="btn btn-danger btn-sm mt-2 remove-detail"
+            style="position: absolute; top: 10px; right: 10px;">
+            Hapus
+        </button>
+
+    </div>
+            `;
+            container.insertAdjacentHTML('beforeend', html);
+            detailIndex++;
+        });
+
+        // Fungsi hapus detail
+        document.addEventListener('click', function(e) {
+            if (e.target && e.target.classList.contains('remove-detail')) {
+                e.target.closest('.detail-item').remove();
+            }
+        });
+    </script>
+
 @endsection
