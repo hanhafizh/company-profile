@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Servicelist;
+use App\Models\ServiceListDetails;
 use Illuminate\Http\Request;
 
 class ServicelistController extends Controller
@@ -114,34 +115,77 @@ class ServicelistController extends Controller
      * @param  \App\Models\Servicelist  $servicelist
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Servicelist $servicelist)
+    public function update(Request $request, $id)
     {
         $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'image' => 'mimes:jpeg,png,jpg,svg+xml|max:2048',
+            'image' => 'nullable|mimes:jpeg,png,jpg,svg+xml|max:2048',
+            'details.*.title' => 'required',
+            'details.*.subtitle' => 'nullable',
+            'details.*.image' => 'nullable|image|mimes:jpg,jpeg,png',
         ]);
 
-        $input = $request->all();
+        $serviceList = Servicelist::findOrFail($id);
+        $serviceList->title = $request->title;
+        $serviceList->description = $request->description;
 
         if ($request->hasFile('image')) {
-            $destinationPath = 'image/servicelist/';
             $image = $request->file('image');
             $imageName = date('YmdHis') . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path($destinationPath), $imageName);
-
-            // Hapus gambar lama jika ada
-            if ($servicelist->image && file_exists(public_path('image/servicelist/' . $servicelist->image))) {
-                unlink(public_path('image/servicelist/' . $servicelist->image));
-            }
-
-            $input['image'] = $imageName;
+            $image->move(public_path('image/servicelist/'), $imageName);
+            $serviceList->image = $imageName;
         }
 
-        $servicelist->update($input);
+        $serviceList->save();
+
+        // Update atau tambah detail
+        $existingDetailIds = $serviceList->details()->pluck('id')->toArray();
+        $incomingDetailIds = [];
+
+        foreach ($request->input('details', []) as $detail) {
+            if (isset($detail['id'])) {
+                // Update existing detail
+                $existingDetail = ServiceListDetails::find($detail['id']);
+                if ($existingDetail) {
+                    $existingDetail->title = $detail['title'];
+                    $existingDetail->subtitle = $detail['subtitle'] ?? null;
+
+                    if (isset($detail['image']) && $detail['image']) {
+                        $img = $detail['image'];
+                        $imgName = date('YmdHis') . '_' . uniqid() . '.' . $img->getClientOriginalExtension();
+                        $img->move(public_path('image/servicelist/details/'), $imgName);
+                        $existingDetail->image = $imgName;
+                    }
+
+                    $existingDetail->save();
+                    $incomingDetailIds[] = $existingDetail->id;
+                }
+            } else {
+                // Create new detail
+                $imgName = null;
+                if (isset($detail['image']) && $detail['image']) {
+                    $img = $detail['image'];
+                    $imgName = date('YmdHis') . '_' . uniqid() . '.' . $img->getClientOriginalExtension();
+                    $img->move(public_path('image/servicelist/details/'), $imgName);
+                }
+
+                $newDetail = $serviceList->details()->create([
+                    'title' => $detail['title'],
+                    'subtitle' => $detail['subtitle'] ?? null,
+                    'image' => $imgName,
+                ]);
+                $incomingDetailIds[] = $newDetail->id;
+            }
+        }
+
+        // Hapus detail yang tidak dikirim (dianggap dihapus user)
+        $toDelete = array_diff($existingDetailIds, $incomingDetailIds);
+        ServiceListDetails::destroy($toDelete);
 
         return redirect()->route('servicesection.index')->with('success', 'Data berhasil diperbarui!');
     }
+
 
     /**
      * Remove the specified resource from storage.

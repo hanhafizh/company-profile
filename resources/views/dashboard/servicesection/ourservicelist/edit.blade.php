@@ -4,63 +4,75 @@
 
 @section('content')
 
-    <div class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1 class="m-0">Edit Service List</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="card-title mb-0">
-                                Edit Service List</h5>
+                            <h4>Edit Service List</h4>
                         </div>
                         <div class="card-body">
-                            <a href="{{ route('aboutsection.index') }}" class="btn btn-primary mb-2"
-                                style="margin-right: auto; ">Kembali</a>
                             <form action="{{ route('servicelist.update', $servicelist->id) }}" method="POST"
                                 enctype="multipart/form-data">
-                                @method('PUT')
                                 @csrf
-                                <div class="form-group">
-                                    <label for="">Judul</label>
-                                    <input type="text" class="form-control" name="title" placeholder="Title"
-                                        value="{{ $servicelist->title }}">
+                                @method('PUT')
+
+                                <!-- Data utama -->
+                                <div class="mb-3">
+                                    <label>Judul</label>
+                                    <input type="text" name="title" value="{{ $servicelist->title }}"
+                                        class="form-control" required>
                                 </div>
-                                @error('title')
-                                    <small style="color:red">{{ $message }}</small>
-                                @enderror
-                                <div class="form-group">
-                                    <label for="">Deskripsi</label>
-                                    <textarea name="description" id="" cols="30" rows="10" class="form-control"
-                                        placeholder="Description">{{ $servicelist->description }}</textarea>
+
+                                <div class="mb-3">
+                                    <label>Deskripsi</label>
+                                    <textarea name="description" class="form-control" required>{{ $servicelist->description }}</textarea>
                                 </div>
-                                @error('description')
-                                    <small style="color:red">{{ $message }}</small>
-                                @enderror
-                                <img src="/image/servicelist/{{ $servicelist->image }}" alt="" class="img-fluid"
-                                    style="height: 70px; width: 70px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" object-fit:
-                                    cover; border-radius: 20px;">
-                                <div class="form-group">
-                                    <label for="">Gambar <small class="text-muted">(Disarankan ukuran
-                                            1:1)</small></label>
-                                    <input type="file" class="form-control" name="image">
+
+                                <div class="mb-3">
+                                    <label>Gambar</label><br>
+                                    @if ($servicelist->image)
+                                        <img src="{{ asset('image/servicelist/' . $servicelist->image) }}" width="120"
+                                            class="mb-2">
+                                    @endif
+                                    <input type="file" name="image" class="form-control">
                                 </div>
-                                @error('image')
-                                    <small style="color:red">{{ $message }}</small>
-                                @enderror
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+
+                                <hr>
+
+                                <h5>Detail Service</h5>
+                                <div id="detail-container">
+                                    @foreach ($servicelist->details as $index => $detail)
+                                        <div class="detail-item mb-3 border p-3 position-relative">
+                                            <input type="hidden" name="details[{{ $index }}][id]"
+                                                value="{{ $detail->id }}">
+                                            <label>Title Detail</label>
+                                            <input type="text" name="details[{{ $index }}][title]"
+                                                value="{{ $detail->title }}" class="form-control mb-2" required>
+
+                                            <label>Subtitle</label>
+                                            <input type="text" name="details[{{ $index }}][subtitle]"
+                                                value="{{ $detail->subtitle }}" class="form-control mb-2">
+
+                                            <label>Gambar</label><br>
+                                            @if ($detail->image)
+                                                <img src="{{ asset('image/servicelist/details/' . $detail->image) }}"
+                                                    width="100" class="mb-2">
+                                            @endif
+                                            <input type="file" name="details[{{ $index }}][image]"
+                                                class="form-control">
+
+                                            <button type="button" class="btn btn-danger btn-sm mt-2 remove-detail"
+                                                style="position: absolute; top: 10px; right: 10px;">
+                                                - Hapus
+                                            </button>
+                                        </div>
+                                    @endforeach
                                 </div>
+
+                                <button type="button" id="add-detail" class="btn btn-success mb-3">+ Tambah Detail</button>
+                                <button type="submit" class="btn btn-primary mb-3">Simpan Perubahan</button>
                             </form>
                         </div>
                     </div>
@@ -70,4 +82,35 @@
     </div>
     </div>
 
+    <script>
+        let detailIndex = {{ $servicelist->details->count() }};
+
+        document.getElementById('add-detail').addEventListener('click', function() {
+            const container = document.getElementById('detail-container');
+            const html = `
+            <div class="detail-item mb-3 border p-3 position-relative">
+                <label>Title Detail</label>
+                <input type="text" name="details[${detailIndex}][title]" class="form-control mb-2" required>
+
+                <label>Subtitle</label>
+                <input type="text" name="details[${detailIndex}][subtitle]" class="form-control mb-2">
+
+                <label>Gambar</label>
+                <input type="file" name="details[${detailIndex}][image]" class="form-control">
+
+                <button type="button" class="btn btn-danger btn-sm mt-2 remove-detail" style="position: absolute; top: 10px; right: 10px;">
+                    - Hapus
+                </button>
+            </div>
+        `;
+            container.insertAdjacentHTML('beforeend', html);
+            detailIndex++;
+        });
+
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('remove-detail')) {
+                e.target.closest('.detail-item').remove();
+            }
+        });
+    </script>
 @endsection
