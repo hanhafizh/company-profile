@@ -38,7 +38,9 @@ use App\Http\Controllers\VisionmissionController;
 // Page
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
+
 Route::get('/service', [HomeController::class, 'services'])->name('services');
+Route::get('service/{id}', [HomeController::class, 'serviceDetail'])->name('serviceDetail');
 
 Route::get('/ourwork', [HomeController::class, 'ourwork'])->name('ourwork');
 Route::get('ourwork/{id}', [HomeController::class, 'ourworkDetail'])->name('ourworksDetail');

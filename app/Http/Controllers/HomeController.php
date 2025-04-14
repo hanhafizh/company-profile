@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Partner;
 use App\Models\Partnerlist;
+use App\Models\ServiceListDetails;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -90,6 +91,13 @@ class HomeController extends Controller
             'services',
             'servicelists'
         ));
+    }
+
+    public function serviceDetail($id)
+    {
+        $servicelist = ServiceList::with('details')->findOrFail($id);
+
+        return view('home.service-detail', compact('servicelist'));
     }
 
     public function ourwork()

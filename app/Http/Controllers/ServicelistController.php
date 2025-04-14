@@ -94,7 +94,9 @@ class ServicelistController extends Controller
      */
     public function show(Servicelist $servicelist)
     {
-        //
+        $servicelist->load('details');
+
+        return view('servicelist.show', compact('servicelist'));
     }
 
     /**

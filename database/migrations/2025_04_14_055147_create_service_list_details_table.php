@@ -16,7 +16,7 @@ class CreateServiceListDetailsTable extends Migration
         Schema::create('servicelist_details', function (Blueprint $table) {
             $table->id();
             $table->foreignId('servicelist_id')->constrained('servicelist')->onDelete('cascade');
-            $table->string('title')->nullable();;
+            $table->string('title');
             $table->string('subtitle')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();

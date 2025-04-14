@@ -12,7 +12,10 @@
                         <div class="card-header">
                             <h4>Edit Service List</h4>
                         </div>
+
                         <div class="card-body">
+                            <a href="{{ url()->previous() }}" class="btn btn-primary mb-2"
+                                style="margin-right: auto; ">Kembali</a>
                             <form action="{{ route('servicelist.update', $servicelist->id) }}" method="POST"
                                 enctype="multipart/form-data">
                                 @csrf
