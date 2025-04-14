@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Servicelist;
 use App\Models\ServiceListDetails;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class ServicelistController extends Controller
 {
@@ -183,7 +184,14 @@ class ServicelistController extends Controller
 
         // Hapus detail yang tidak dikirim (dianggap dihapus user)
         $toDelete = array_diff($existingDetailIds, $incomingDetailIds);
-        ServiceListDetails::destroy($toDelete);
+
+        $detailsToDelete = ServiceListDetails::whereIn('id', $toDelete)->get();
+        foreach ($detailsToDelete as $detail) {
+            if ($detail->image && File::exists(public_path('image/servicelist/details/' . $detail->image))) {
+                File::delete(public_path('image/servicelist/details/' . $detail->image));
+            }
+            $detail->delete();
+        }
 
         return redirect()->route('servicesection.index')->with('success', 'Data berhasil diperbarui!');
     }
