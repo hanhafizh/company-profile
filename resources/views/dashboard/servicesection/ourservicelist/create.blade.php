@@ -29,12 +29,13 @@
                                 <!-- ServiceList utama -->
                                 <div class="mb-3">
                                     <label>Judul</label>
-                                    <input type="text" name="title" class="form-control" required>
+                                    <input type="text" name="title" class="form-control" placeholder="Masukkan Judul"
+                                        required>
                                 </div>
 
                                 <div class="mb-3">
                                     <label>Deskripsi</label>
-                                    <textarea name="description" class="form-control" required></textarea>
+                                    <textarea name="description" class="form-control" placeholder="Masukkan Deskripsi" required></textarea>
                                 </div>
 
                                 <div class="mb-3">
@@ -49,10 +50,12 @@
                                 <div id="detail-container">
                                     <div class="detail-item mb-3 border p-3 position-relative">
                                         <label>Title Detail</label>
-                                        <input type="text" name="details[0][title]" class="form-control mb-2" required>
+                                        <input type="text" name="details[0][title]" class="form-control mb-2"
+                                            placeholder="Masukkan Judul Detail" required>
 
                                         <label>Subtitle</label>
-                                        <input type="text" name="details[0][subtitle]" class="form-control mb-2">
+                                        <input type="text" name="details[0][subtitle]" class="form-control mb-2"
+                                            placeholder="Masukkan Subttile">
 
                                         <label>Gambar</label>
                                         <input type="file" name="details[0][image]" class="form-control">
