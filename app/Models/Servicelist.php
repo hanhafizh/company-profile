@@ -16,4 +16,9 @@ class Servicelist extends Model
         'description',
         'image',
     ];
+
+    public function details()
+    {
+        return $this->hasMany(ServiceListDetails::class, 'servicelist_id');
+    }
 }
