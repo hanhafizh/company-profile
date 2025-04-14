@@ -21,13 +21,12 @@
                                 data-bs-target="#certificateModal{{ $key }}">
                                 <div style="position: relative; display: inline-block; height: 250px; width: 180px;">
                                     <img src="/image/certificatelist/{{ $certificate->image }}" class="img-fluid"
-                                        style="height: 250px; width: 180px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
+                                        style="height: 250px; width: 180px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); user-select: none; pointer-events: none;"
                                         alt="{{ $certificate['title'] }}">
 
                                     <img src="{{ asset('image/watermark/watermark-kpu.png') }}"
                                         style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
                                                width: 80%; opacity: 0.2; pointer-events: none;">
-
                                 </div>
 
                             </a>
@@ -62,8 +61,8 @@
                         <div class="modal-body text-center">
                             <div style="position: relative; display: inline-block;">
                                 <img src="/image/certificatelist/{{ $certificate->image }}"
-                                    style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" class="img-fluid"
-                                    alt="{{ $certificate['title'] }}">
+                                    style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 94%; user-select: none; pointer-events: none;"
+                                    class="img-fluid" alt="{{ $certificate['title'] }}">
 
                                 <img src="{{ asset('image/watermark/watermark-kpu.png') }}"
                                     style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
