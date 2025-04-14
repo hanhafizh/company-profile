@@ -24,7 +24,7 @@
                     @forelse ($servicelist->details as $detail)
                         <div class="mb-4">
                             <h5 class="text-center">{{ $detail->title }}</h5>
-                            <p>{{ $detail->subtitle }}</p>
+                            <p class="text-center">{{ $detail->subtitle }}</p>
                             @if ($detail->image)
                                 <div class="text-center">
                                     <img src="{{ asset('image/servicelist/details/' . $detail->image) }}" width="100%">

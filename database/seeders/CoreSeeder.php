@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -292,6 +293,90 @@ class CoreSeeder extends Seeder
                 'updated_at' => now(),
             ],
         ]);
+
+        $details = [
+            [
+                'servicelist_id' => 1,
+                'title' => 'Manpower Solution',
+                'subtitle' => 'Penyediaan tenaga kerja terampil sesuai kebutuhan proyek',
+                'image' => 'servicedetail1.png',
+            ],
+            [
+                'servicelist_id' => 1,
+                'title' => 'B2B Recruitment Process',
+                'subtitle' => 'Proses perekrutan tenaga kerja antar perusahaan (business to business)',
+                'image' => 'servicedetail2.png',
+            ],
+            [
+                'servicelist_id' => 1,
+                'title' => 'Manpower Coverage',
+                'subtitle' => 'Layanan penempatan tenaga kerja di berbagai sektor industri',
+                'image' => 'servicedetail3.png',
+            ],
+            [
+                'servicelist_id' => 2,
+                'title' => 'Manpower Solution',
+                'subtitle' => 'Penyediaan tenaga kerja terampil sesuai kebutuhan proyek',
+                'image' => 'servicedetail1.png',
+            ],
+            [
+                'servicelist_id' => 2,
+                'title' => 'B2B Recruitment Process',
+                'subtitle' => 'Proses perekrutan tenaga kerja antar perusahaan (business to business)',
+                'image' => 'servicedetail2.png',
+            ],
+            [
+                'servicelist_id' => 2,
+                'title' => 'Manpower Coverage',
+                'subtitle' => 'Layanan penempatan tenaga kerja di berbagai sektor industri',
+                'image' => 'servicedetail3.png',
+            ],
+            [
+                'servicelist_id' => 3,
+                'title' => 'Manpower Solution',
+                'subtitle' => 'Penyediaan tenaga kerja terampil sesuai kebutuhan proyek',
+                'image' => 'servicedetail1.png',
+            ],
+            [
+                'servicelist_id' => 3,
+                'title' => 'B2B Recruitment Process',
+                'subtitle' => 'Proses perekrutan tenaga kerja antar perusahaan (business to business)',
+                'image' => 'servicedetail2.png',
+            ],
+            [
+                'servicelist_id' => 3,
+                'title' => 'Manpower Coverage',
+                'subtitle' => 'Layanan penempatan tenaga kerja di berbagai sektor industri',
+                'image' => 'servicedetail3.png',
+            ],
+            [
+                'servicelist_id' => 4,
+                'title' => 'Manpower Solution',
+                'subtitle' => 'Penyediaan tenaga kerja terampil sesuai kebutuhan proyek',
+                'image' => 'servicedetail1.png',
+            ],
+            [
+                'servicelist_id' => 4,
+                'title' => 'B2B Recruitment Process',
+                'subtitle' => 'Proses perekrutan tenaga kerja antar perusahaan (business to business)',
+                'image' => 'servicedetail2.png',
+            ],
+            [
+                'servicelist_id' => 4,
+                'title' => 'Manpower Coverage',
+                'subtitle' => 'Layanan penempatan tenaga kerja di berbagai sektor industri',
+                'image' => 'servicedetail3.png',
+            ],
+
+        ];
+
+        foreach ($details as &$detail) {
+            $detail['created_at'] = Carbon::now();
+            $detail['updated_at'] = Carbon::now();
+        }
+
+        DB::table('servicelist_details')->insert($details);
+
 
         DB::table('event')->insert([
             'title' => 'Our Events',
