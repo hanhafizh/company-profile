@@ -14,7 +14,9 @@ class CareerlistController extends Controller
      */
     public function index()
     {
-        //
+        $careerlists = Careerlist::all();
+
+        return view('dashboard.careersection.index', compact('careerlists'));
     }
 
     /**
@@ -24,7 +26,7 @@ class CareerlistController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.careersection.careerlist.create');
     }
 
     /**
@@ -35,7 +37,23 @@ class CareerlistController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title_career' => 'required',
+            'description_career' => 'required',
+            'company_name' => 'required',
+            'location' => 'required',
+            'category' => 'required',
+            'job_type' => 'required',
+            'requirements' => 'required',
+            'responsibilities' => 'required',
+            'deadline' => 'required|date',
+        ]);
+
+        $input = $request->all();
+
+        Careerlist::create($input);
+
+        return redirect()->route('careersection.index')->with('success', 'Data berhasil disimpan!');
     }
 
     /**
@@ -57,7 +75,7 @@ class CareerlistController extends Controller
      */
     public function edit(Careerlist $careerlist)
     {
-        //
+        return view('dashboard.careersection.careerlist.edit', compact('careerlist'));
     }
 
     /**
@@ -69,7 +87,23 @@ class CareerlistController extends Controller
      */
     public function update(Request $request, Careerlist $careerlist)
     {
-        //
+        $request->validate([
+            'title_career' => 'required',
+            'description_career' => 'required',
+            'company_name' => 'required',
+            'location' => 'required',
+            'category' => 'required',
+            'job_type' => 'required',
+            'requirements' => 'required',
+            'responsibilities' => 'required',
+            'deadline' => 'required|date',
+        ]);
+
+        $input = $request->all();
+
+        $careerlist->update($input);
+
+        return redirect()->route('careersection.index')->with('success', 'Data berhasil diperbarui!');
     }
 
     /**
@@ -80,6 +114,8 @@ class CareerlistController extends Controller
      */
     public function destroy(Careerlist $careerlist)
     {
-        //
+        $careerlist->delete();
+
+        return redirect()->route('careersection.index')->with('success', 'Data berhasil dihapus!');
     }
 }

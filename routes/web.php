@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CareerController;
+use App\Http\Controllers\CareerlistController;
 use App\Http\Controllers\CareersectionController;
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\CertificatelistController;
@@ -114,6 +115,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('admin/careersection', [CareersectionController::class, 'index'])->name('careersection.index');
 
     Route::resource('admin/career', CareerController::class)->middleware('auth');
+    Route::resource('admin/careerlist', CareerlistController::class)->middleware('auth');
 
     // Configuration Group
     Route::prefix('setting')->group(function () {

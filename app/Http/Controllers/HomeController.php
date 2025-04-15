@@ -150,7 +150,9 @@ class HomeController extends Controller
 
     public function careerDetail($id)
     {
-        return view('home.career-detail');
+        $careers = Career::all();
+
+        return view('home.career-detail', compact('careers'));
     }
 
     public function contact()

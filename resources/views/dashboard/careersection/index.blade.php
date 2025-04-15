@@ -17,6 +17,9 @@
         <!-- career content -->
         @include('dashboard.careersection.career.index')
         <!-- career content end -->
+        <!-- career list content -->
+        @include('dashboard.careersection.careerlist.index')
+        <!-- career list content end -->
     </div>
     </div>
 @endsection
