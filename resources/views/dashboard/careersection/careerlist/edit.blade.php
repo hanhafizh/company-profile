@@ -117,7 +117,7 @@
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
 
-                                <div class="form-group col-md-6">
+                                <div class="form-group">
                                     <label for="">Link</label>
                                     <input type="text" class="form-control" name="link" placeholder="link"
                                         value="{{ $careerlist->link }}">
