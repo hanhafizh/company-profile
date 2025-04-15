@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Career;
+use App\Models\Careerlist;
 use App\Models\Partner;
 use App\Models\Partnerlist;
 use App\Models\ServiceListDetails;
@@ -144,15 +145,17 @@ class HomeController extends Controller
     public function career()
     {
         $careers = Career::all();
+        $careerslist = Careerlist::all();
 
-        return view('home.career', compact('careers'));
+        return view('home.career', compact('careers', 'careerslist'));
     }
 
     public function careerDetail($id)
     {
         $careers = Career::all();
+        $careerslist = Careerlist::findOrFail($id);
 
-        return view('home.career-detail', compact('careers'));
+        return view('home.career-detail', compact('careers', 'careerslist'));
     }
 
     public function contact()
