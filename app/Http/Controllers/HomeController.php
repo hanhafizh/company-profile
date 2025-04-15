@@ -140,6 +140,16 @@ class HomeController extends Controller
         return view('home.partner', compact('partners', 'partnerlists', 'faqs'));
     }
 
+    public function career()
+    {
+        return view('home.career');
+    }
+
+    public function careerDetail($id)
+    {
+        return view('home.career-detail');
+    }
+
     public function contact()
     {
         return view('home.contact');

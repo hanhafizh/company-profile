@@ -45,7 +45,12 @@
                 <li class="nav-item">
                     <a href="{{ route('partner') }}"
                         class="nav-link {{ Request::routeIs('partner') ? 'active' : '' }}">
-                        Our Partners
+                        Partners
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('career') }}" class="nav-link {{ Request::routeIs('career') ? 'active' : '' }}">
+                        Careers
                     </a>
                 </li>
             </ul>

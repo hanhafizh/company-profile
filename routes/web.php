@@ -50,6 +50,9 @@ Route::get('event/{id}', [HomeController::class, 'eventDetail'])->name('eventsDe
 
 Route::get('/partner', [HomeController::class, 'partner'])->name('partner');
 
+Route::get('/career', [HomeController::class, 'career'])->name('career');
+Route::get('career/{id}', [HomeController::class, 'careerDetail'])->name('careersDetail');
+
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/contact/send', [HomeController::class, 'send'])->name('contact.send');
 
