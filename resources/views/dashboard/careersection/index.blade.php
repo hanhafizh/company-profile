@@ -14,7 +14,9 @@
     </div>
     <!-- Main content -->
     <div class="content">
-
+        <!-- career content -->
+        @include('dashboard.careersection.career.index')
+        <!-- career content end -->
     </div>
     </div>
 @endsection

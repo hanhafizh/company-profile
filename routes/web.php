@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CareerController;
 use App\Http\Controllers\CareersectionController;
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\CertificatelistController;
@@ -68,69 +69,51 @@ Route::middleware(['auth'])->group(function () {
     Route::get('admin/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     // homesection
-
     Route::get('admin/homesection', [HomesectionController::class, 'index'])->name('homesection.index');
 
     Route::resource('admin/landing', LandingController::class)->middleware('auth');
-
     Route::resource('admin/about', AboutController::class)->middleware('auth');
-
     Route::resource('admin/carousel', CarouselController::class)->middleware('auth');
-
     Route::resource('admin/carousellist', CarousellistController::class)->middleware('auth');
-
     Route::resource('admin/ourfeature', OurfeatureController::class)->middleware('auth');
-
     Route::resource('admin/featurelist', FeaturelistController::class)->middleware('auth');
-
     Route::resource('admin/faq', FaqController::class)->middleware('auth');
 
     // aboutsection
-
     Route::get('admin/aboutsection', [AboutsectionController::class, 'index'])->name('aboutsection.index');
 
     Route::resource('admin/photogroup', PhotogroupController::class)->middleware('auth');
-
     Route::resource('admin/visionmission', VisionmissionController::class)->middleware('auth');
-
     Route::resource('admin/directors', DirectorsController::class)->middleware('auth');
-
     Route::resource('admin/directorslist', DirectorslistController::class)->middleware('auth');
-
     Route::resource('admin/certificate', CertificateController::class)->middleware('auth');
-
     Route::resource('admin/certificatelist', CertificatelistController::class)->middleware('auth');
 
     // service
-
     Route::get('admin/servicesection', [ServicesectionController::class, 'index'])->name('servicesection.index');
 
     Route::resource('admin/service', ServiceController::class)->middleware('auth');
-
     Route::resource('admin/servicelist', ServicelistController::class)->middleware('auth');
 
     // ourworks
-
     Route::resource('admin/ourworks', OurworksController::class)->middleware('auth');
 
     // Event
-
     Route::get('admin/eventsection', [EventsectionController::class, 'index'])->name('eventsection.index');
 
     Route::resource('admin/event', EventController::class)->middleware('auth');
-
     Route::resource('admin/eventlist', EventlistController::class)->middleware('auth');
 
     // Partner
-
     Route::get('admin/partnersection', [PartnersectionController::class, 'index'])->name('partnersection.index');
 
     Route::resource('admin/partner', PartnerController::class)->middleware('auth');
     Route::resource('admin/partnerlist', PartnerlistController::class)->middleware('auth');
 
     // Career
-
     Route::get('admin/careersection', [CareersectionController::class, 'index'])->name('careersection.index');
+
+    Route::resource('admin/career', CareerController::class)->middleware('auth');
 
     // Configuration Group
     Route::prefix('setting')->group(function () {

@@ -452,5 +452,13 @@ class CoreSeeder extends Seeder
                 'updated_at' => now(),
             ],
         ]);
+
+        DB::table('career')->insert([
+            'title' => 'Our Careers',
+            'sub_title' => 'Karier Kami',
+            'description' => 'Bergabunglah dengan tim kami dan kembangkan kariermu di lingkungan kerja yang dinamis, kolaboratif, dan penuh peluang. Kami percaya bahwa setiap individu memiliki potensi untuk tumbuh dan memberikan dampak positif.',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
     }
 }
