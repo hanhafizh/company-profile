@@ -460,5 +460,19 @@ class CoreSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
+        DB::table('careerlist')->insert([
+            'title_career' => 'ADMIN. FC ACADEMY',
+            'description_career' => 'Bertanggung jawab atas administrasi akademi dan membantu kebutuhan tim.',
+            'company_name' => 'PT. Karya Prima Usahatama',
+            'location' => 'Tangerang, Banten',
+            'category' => 'Administrasi & Dukungan Perkantoran',
+            'job_type' => 'Full Time',
+            'requirements' => 'Pendidikan minimal SMA , Pengalaman minimal 1 tahun di posisi yang sama , Pengalaman minimal 1 tahun di bidang Sports , Dapat berbahasa Inggris aktif , Mahir menggunakan komputer , Dapat segera bergabung',
+            'responsibilities' => 'Menerima pendaftaran murid baru , Menginformasikan jadwal akademi , Mendata absensi murid , Surat-menyurat , Realisasi kegiatan tim , Siap membantu tim Pro , Dan lainnya',
+            'deadline' => Carbon::now()->addDays(30),
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
     }
 }

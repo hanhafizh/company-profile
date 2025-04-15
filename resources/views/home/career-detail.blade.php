@@ -27,6 +27,10 @@
                 Posted: 30+ hari yang lalu
             </div>
 
+            <div class="mb-5 alert alert-danger d-inline-block py-1 px-2" role="alert" style="font-size: 0.875rem;">
+                Deadline: 15 Mei 2025
+            </div>
+
             <div class="row">
                 <div class="col-12 mb-4">
                     <h5 class="mb-2">Requirement:</h5>
