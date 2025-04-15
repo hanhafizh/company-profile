@@ -24,6 +24,7 @@ class CreateCareerlistTable extends Migration
             $table->string('requirements');
             $table->string('responsibilities');
             $table->dateTime('deadline');
+            $table->string('link');
             $table->timestamps();
         });
     }

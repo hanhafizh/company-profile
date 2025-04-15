@@ -63,7 +63,7 @@
                 </div>
             </div>
 
-            <a href="#" class="btn btn-primary btn-xl">Lamar Kerja</a>
+            <a href="https://{{ $careerslist->link }}" class="btn btn-primary btn-xl" target="_blank">Lamar Kerja</a>
         </div>
     </div>
 @endsection

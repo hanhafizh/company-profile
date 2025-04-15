@@ -21,5 +21,6 @@ class Careerlist extends Model
         'requirements',
         'responsibilities',
         'deadline',
+        'link',
     ];
 }

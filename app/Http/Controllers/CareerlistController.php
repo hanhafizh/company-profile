@@ -47,6 +47,7 @@ class CareerlistController extends Controller
             'requirements' => 'required',
             'responsibilities' => 'required',
             'deadline' => 'required|date',
+            'link' => 'required',
         ]);
 
         $input = $request->all();
@@ -97,6 +98,7 @@ class CareerlistController extends Controller
             'requirements' => 'required',
             'responsibilities' => 'required',
             'deadline' => 'required|date',
+            'link' => 'required',
         ]);
 
         $input = $request->all();

@@ -119,6 +119,14 @@
                                     @enderror
                                 </div>
 
+                                <div class="form-group col-md-6">
+                                    <label for="">Link</label>
+                                    <input type="text" class="form-control" name="link" placeholder="Masukkan link">
+                                    @error('link')
+                                        <small style="color:red">{{ $message }}</small>
+                                    @enderror
+                                </div>
+
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary btn-block">Tambah Data</button>
                                 </div>
