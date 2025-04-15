@@ -11,7 +11,7 @@
         @endforeach
 
         <div class="row g-4 justify-content-center">
-            @foreach ($careerslist as $list)
+            @forelse ($careerslist as $list)
                 <div class="col-md-6 col-lg-3 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                     {{-- start card lowongan --}}
                     <div class="blog-item">
@@ -37,7 +37,12 @@
                     </div>
                     {{-- end card lowongan --}}
                 </div>
-            @endforeach
+            @empty
+                <div class="col-12 text-center">
+                    <p>Mohon maaf lowongan dari PT. Karya Prima Usahatama belum ada.</p>
+                </div>
+            @endforelse
+
         </div>
 
 
