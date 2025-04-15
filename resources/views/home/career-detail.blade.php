@@ -53,6 +53,7 @@
                     </ul>
                 </div>
             </div>
+            <a href="#" class="btn btn-primary btn-xl">Lamar Kerja</a>
         </div>
     </div>
 @endsection
