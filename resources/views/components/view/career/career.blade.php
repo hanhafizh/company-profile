@@ -1,15 +1,14 @@
 <!-- Blog Start -->
 <div class="container-fluid blog py-5">
     <div class="container py-5">
-
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
-            <h4 class="text-primary">Our Careers</h4>
-            <h1 class="display-5 mb-4">Karier Kami</h1>
-            <p class="mb-0">Bergabunglah dengan tim kami dan kembangkan kariermu di lingkungan kerja yang dinamis,
-                kolaboratif, dan penuh peluang. Kami percaya bahwa setiap individu memiliki potensi untuk tumbuh dan
-                memberikan dampak positif.
-            </p>
-        </div>
+        @foreach ($careers as $career)
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
+                <h4 class="text-primary">{{ $career->title }}</h4>
+                <h1 class="display-5 mb-4">{{ $career->sub_title }}</h1>
+                <p class="mb-0">{{ $career->description }}
+                </p>
+            </div>
+        @endforeach
 
         <div class="row g-4 justify-content-center">
 
