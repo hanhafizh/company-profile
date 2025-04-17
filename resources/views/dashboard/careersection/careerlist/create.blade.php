@@ -122,6 +122,7 @@
                                 <div class="form-group">
                                     <label for="">Link</label>
                                     <input type="text" class="form-control" name="link" placeholder="Masukkan link">
+                                    <small class="form-text text-muted">Contoh: subsiditepat.mypertamina.id</small>
                                     @error('link')
                                         <small style="color:red">{{ $message }}</small>
                                     @enderror

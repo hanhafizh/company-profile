@@ -93,7 +93,10 @@
                                 <div class="form-group">
                                     <label for="">Persyaratan</label>
                                     <textarea class="form-control" name="requirements" rows="4" placeholder="requirements">{{ $careerlist->requirements }}</textarea>
+                                    <small class="form-text text-muted">Gunakan tanda koma (,) untuk memisahkan setiap
+                                        persyaratan.</small>
                                 </div>
+
                                 @error('requirements')
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
@@ -101,7 +104,10 @@
                                 <div class="form-group">
                                     <label for="">Tanggung Jawab</label>
                                     <textarea class="form-control" name="responsibilities" rows="4" placeholder="responsibilities">{{ $careerlist->responsibilities }}</textarea>
+                                    <small class="form-text text-muted">Gunakan tanda koma (,) untuk memisahkan setiap
+                                        tanggung jawab.</small>
                                 </div>
+
                                 @error('responsibilities')
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
@@ -121,6 +127,7 @@
                                     <label for="">Link</label>
                                     <input type="text" class="form-control" name="link" placeholder="link"
                                         value="{{ $careerlist->link }}">
+                                    <small class="form-text text-muted">Contoh: subsiditepat.mypertamina.id</small>
                                     @error('link')
                                         <small style="color:red">{{ $message }}</small>
                                     @enderror
