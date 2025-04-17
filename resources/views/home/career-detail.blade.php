@@ -63,7 +63,16 @@
                 </div>
             </div>
 
-            <a href="https://{{ $careerslist->link }}" class="btn btn-primary btn-xl" target="_blank">Lamar Kerja</a>
+            @php
+                $now = \Carbon\Carbon::now();
+                $deadline = \Carbon\Carbon::parse($careerslist->deadline);
+            @endphp
+
+            @if ($now->gt($deadline))
+                <a href="#" class="btn btn-primary btn-xl disabled" tabindex="-1" aria-disabled="true">Expired</a>
+            @else
+                <a href="https://{{ $careerslist->link }}" class="btn btn-primary btn-xl" target="_blank">Lamar Kerja</a>
+            @endif
         </div>
     </div>
 @endsection
