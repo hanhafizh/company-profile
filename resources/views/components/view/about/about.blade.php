@@ -4,10 +4,10 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="RotateMoveLeft">
-                        <img src="/image/about/{{ $about->image }}" class="img-fluid"
-                            style="width: 500px; height: 500px; object-fit: cover; border-radius: 20px;" alt="">
+                        <img src="/image/about/{{ $about->image }}" class="img-fluid w-100"
+                            style="max-width: 500px; height: auto; object-fit: cover; border-radius: 20px;"
+                            alt="">
                     </div>
-
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h4 class="mb-1 text-primary">{{ $about->title }}</h4>
