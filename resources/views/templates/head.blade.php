@@ -1,6 +1,6 @@
 <head>
     <meta charset="utf-8">
-    <title>Karya Prima Usahatama</title>
+    <title>PT. Karya Prima Usahatama</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Karya Prima Usahatama, layanan, perusahaan, jasa">
     <meta name="description"
