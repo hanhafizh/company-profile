@@ -5458,6 +5458,15 @@ fieldset:disabled .btn {
     color: #757575;
 }
 
+@media (max-width: 767.98px) {
+    #heroCarousel .carousel-inner {
+        height: auto !important;
+    }
+    #heroCarousel .carousel-item {
+        height: auto !important;
+    }
+}
+
 .carousel-img {
     height: 600px;
     object-fit: cover;
