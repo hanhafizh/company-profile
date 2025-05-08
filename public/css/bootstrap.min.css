@@ -10092,9 +10092,9 @@ fieldset:disabled .btn {
 
 /* Menampilkan logo dan menyembunyikan teks pada tampilan kecil */
 .logo {
-    width: 40px; /* Ukuran logo */
-    height: auto;
+    max-height: none !important;
 }
+
 
 /* Menyembunyikan teks pada tampilan kecil */
 .d-none {
