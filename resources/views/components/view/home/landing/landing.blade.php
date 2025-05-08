@@ -14,9 +14,10 @@
                     Started</a> --}}
                 </div>
                 <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
-                    <img src="/image/landing/{{ $landing->image }}" class="img-fluid w-100"
-                        style="max-width: 650px; height: auto; object-fit: cover; border-radius: 20px;"
-                        alt="{{ $landing->title }}">
+                    <div style="width: 100%; max-width: 500px; aspect-ratio: 1/1;">
+                        <img src="/image/landing/{{ $landing->image }}" class="img-fluid w-100 h-100"
+                            style="object-fit: cover; border-radius: 20px;" alt="{{ $landing->title }}">
+                    </div>
                 </div>
 
             </div>
