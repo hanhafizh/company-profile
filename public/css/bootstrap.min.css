@@ -5458,11 +5458,15 @@ fieldset:disabled .btn {
     color: #757575;
 }
 
+/* Hanya mempengaruhi tampilan mobile */
 @media (max-width: 767.98px) {
-    #heroCarousel .carousel-inner {
+    .carousel-img {
         height: auto !important;
+        max-height: 50vh;
+        object-fit: contain !important;
     }
-    #heroCarousel .carousel-item {
+
+    .carousel-inner {
         height: auto !important;
     }
 }
@@ -10103,7 +10107,6 @@ fieldset:disabled .btn {
 .logo {
     max-height: none !important;
 }
-
 
 /* Menyembunyikan teks pada tampilan kecil */
 .d-none {

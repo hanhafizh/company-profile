@@ -2,9 +2,8 @@
     <div class="carousel-inner" style="border-radius: 20px; overflow: hidden;">
         @foreach ($carousellists as $key => $carousellist)
             <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                <img src="/image/carousellist/{{ $carousellist->image }}" class="d-block w-100"
-                    style="width: 100% !important; height: auto !important; max-height: 50vh; object-fit: contain; border-radius: 20px;"
-                    alt="Slide {{ $key + 1 }}">
+                <img src="/image/carousellist/{{ $carousellist->image }}" class="d-block w-100 carousel-img"
+                    style="height: 600px; object-fit: cover; border-radius: 20px;" alt="Slide {{ $key + 1 }}">
                 <div class="carousel-caption d-none d-md-block">
                     <p>"{{ $carousellist->description }}"</p>
                 </div>
