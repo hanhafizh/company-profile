@@ -60,7 +60,8 @@
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
                                 <div class="form-group">
-                                    <label for="">Deskripsi Visi</label>
+                                    <label for="">Deskripsi Visi <small class="text-muted">(Gunakan * untuk membuat
+                                            menjadi poin-poin.)</label>
                                     <textarea name="vision_description" id="" cols="30" rows="10" class="form-control"
                                         placeholder="vision_description"></textarea>
                                 </div>
@@ -76,7 +77,8 @@
                                     <small style="color:red">{{ $message }}</small>
                                 @enderror
                                 <div class="form-group">
-                                    <label for="">Deskripsi Misi</label>
+                                    <label for="">Deskripsi Misi <small class="text-muted">(Gunakan * untuk membuat
+                                            menjadi poin-poin.)</label>
                                     <textarea name="mission_description" id="" cols="30" rows="10" class="form-control"
                                         placeholder="mission_description"></textarea>
                                 </div>
