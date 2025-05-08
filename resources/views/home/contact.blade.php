@@ -62,7 +62,8 @@
                                 class="fa fa-map-marker-alt fa-2x text-primary"></i></div>
                         <div class="ms-4">
                             <h4>Alamat</h4>
-                            <p class="mb-0">Jl. Kyai Haji Zainul Arifin No.8 Blok A2/8, Jakarta Barat, 11140.
+                            <p class="mb-0">
+                                Ruko Ketapang Indah A2/8 Jakarta Barat 11140
                             </p>
                         </div>
                     </div>
@@ -83,7 +84,7 @@
                         <div class="ms-4">
                             <h4>Email</h4>
                             <p class="mb-0"></p>
-                            <p class="mb-0">kpu@kaprima.com</p>
+                            <p class="mb-0">contact@pt-kpusahatama.com</p>
                         </div>
                     </div>
                     <div class="d-flex align-items-center">
@@ -130,7 +131,7 @@
 
             const text =
                 `Halo, saya ${name}%0AEmail: ${email}%0ASubject: ${subject}%0APesan: ${message}`;
-            const phone = "6281234567890";
+            const phone = "6281319472121";
 
             window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
         });

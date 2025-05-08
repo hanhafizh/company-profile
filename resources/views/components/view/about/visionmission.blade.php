@@ -16,9 +16,22 @@
                 <div class="card border-0 shadow p-4 h-100">
                     <div class="card-body d-flex flex-column">
                         <h1 class="h4 text-primary">{{ $visionmission->vision_title }}</h1>
-                        <p class="mt-4 mb-0 flex-grow-1">
-                            {{ $visionmission->vision_description }}
-                        </p>
+                        <div class="mt-4 mb-0 flex-grow-1 text-start">
+                            @if (str_contains($visionmission->vision_description, '*'))
+                                @php
+                                    $items = array_filter(explode('*', $visionmission->vision_description));
+                                @endphp
+                                <ul>
+                                    @foreach ($items as $item)
+                                        @if (trim($item) != '')
+                                            <li>{{ trim($item) }}</li>
+                                        @endif
+                                    @endforeach
+                                </ul>
+                            @else
+                                <p>{{ $visionmission->vision_description }}</p>
+                            @endif
+                        </div>
                     </div>
                 </div>
             </div>
@@ -28,9 +41,22 @@
                 <div class="card border-0 shadow p-4 h-100">
                     <div class="card-body d-flex flex-column">
                         <h1 class="h4 text-primary">{{ $visionmission->mission_title }}</h1>
-                        <p class="mt-4 mb-0 flex-grow-1">
-                            {{ $visionmission->mission_description }}
-                        </p>
+                        <div class="mt-4 mb-0 flex-grow-1 text-start">
+                            @if (str_contains($visionmission->mission_description, '*'))
+                                @php
+                                    $items = array_filter(explode('*', $visionmission->mission_description));
+                                @endphp
+                                <ul>
+                                    @foreach ($items as $item)
+                                        @if (trim($item) != '')
+                                            <li>{{ trim($item) }}</li>
+                                        @endif
+                                    @endforeach
+                                </ul>
+                            @else
+                                <p>{{ $visionmission->mission_description }}</p>
+                            @endif
+                        </div>
                     </div>
                 </div>
             </div>

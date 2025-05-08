@@ -3,7 +3,7 @@
         @foreach ($carousellists as $key => $carousellist)
             <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
                 <img src="/image/carousellist/{{ $carousellist->image }}" class="d-block w-100 carousel-img"
-                    alt="Slide {{ $key + 1 }}">
+                    style="height: 600px; object-fit: cover; border-radius: 20px;" alt="Slide {{ $key + 1 }}">
                 <div class="carousel-caption d-none d-md-block">
                     <p>"{{ $carousellist->description }}"</p>
                 </div>

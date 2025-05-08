@@ -5458,6 +5458,19 @@ fieldset:disabled .btn {
     color: #757575;
 }
 
+/* Hanya mempengaruhi tampilan mobile */
+@media (max-width: 767.98px) {
+    .carousel-img {
+        height: auto !important;
+        max-height: 50vh;
+        object-fit: contain !important;
+    }
+
+    .carousel-inner {
+        height: auto !important;
+    }
+}
+
 .carousel-img {
     height: 600px;
     object-fit: cover;
@@ -10092,8 +10105,7 @@ fieldset:disabled .btn {
 
 /* Menampilkan logo dan menyembunyikan teks pada tampilan kecil */
 .logo {
-    width: 40px; /* Ukuran logo */
-    height: auto;
+    max-height: none !important;
 }
 
 /* Menyembunyikan teks pada tampilan kecil */
