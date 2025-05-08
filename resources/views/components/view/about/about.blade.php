@@ -15,8 +15,10 @@
                 </div>
                 <div class="row g-5 mb-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="col-12 text-center">
-                        <img src="/image/about/{{ $about->image }}" class=""
-                            style="max-width: 800px; width: 100%; height: auto; border-radius: 20px;" alt="">
+                        <div style="max-width: 800px; margin: 0 auto; aspect-ratio: 16/9;">
+                            <img src="/image/about/{{ $about->image }}" class="img-fluid w-100 h-100"
+                                style="object-fit: cover; border-radius: 20px;" alt="">
+                        </div>
                     </div>
                 </div>
                 <div class="row g-5 wow fadeInUp" data-wow-delay="0.4s">
@@ -28,10 +30,9 @@
                 <!-- Layout untuk halaman lainnya (tetap seperti sebelumnya) -->
                 <div class="row g-5">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="RotateMoveLeft">
-                            <img src="/image/about/{{ $about->image }}" class="img-fluid w-100"
-                                style="max-width: 500px; height: auto; object-fit: cover; border-radius: 20px;"
-                                alt="">
+                        <div class="RotateMoveLeft ratio ratio-16x9" style="max-width: 500px;">
+                            <img src="/image/about/{{ $about->image }}" class="img-fluid w-100 h-100"
+                                style="object-fit: cover; border-radius: 20px;" alt="">
                         </div>
                     </div>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
