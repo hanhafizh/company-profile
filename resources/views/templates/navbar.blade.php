@@ -28,18 +28,13 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('services') }}"
-                        class="nav-link {{ Request::routeIs('services') ? 'active' : '' }}">
+                        class="nav-link {{ Request::routeIs('services') || Request::routeIs('serviceDetail') ? 'active' : '' }}">
                         Services
                     </a>
                 </li>
-                {{-- <li class="nav-item">
-                    <a href="{{ route('ourwork') }}"
-                        class="nav-link {{ Request::routeIs('ourwork') ? 'active' : '' }}">
-                        Our Works
-                    </a>
-                </li> --}}
                 <li class="nav-item">
-                    <a href="{{ route('event') }}" class="nav-link {{ Request::routeIs('event') ? 'active' : '' }}">
+                    <a href="{{ route('event') }}"
+                        class="nav-link {{ Request::routeIs('event') || Request::routeIs('eventsDetail') ? 'active' : '' }}">
                         Events
                     </a>
                 </li>
@@ -50,7 +45,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('career') }}" class="nav-link {{ Request::routeIs('career') ? 'active' : '' }}">
+                    <a href="{{ route('career') }}"
+                        class="nav-link {{ Request::routeIs('career') || Request::routeIs('careersDetail') ? 'active' : '' }}">
                         Careers
                     </a>
                 </li>
