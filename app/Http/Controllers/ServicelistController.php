@@ -133,7 +133,13 @@ class ServicelistController extends Controller
         $serviceList->title = $request->title;
         $serviceList->description = $request->description;
 
+        // Handle main image update
         if ($request->hasFile('image')) {
+            // Delete old image if exists
+            if ($serviceList->image && file_exists(public_path('image/servicelist/' . $serviceList->image))) {
+                unlink(public_path('image/servicelist/' . $serviceList->image));
+            }
+
             $image = $request->file('image');
             $imageName = date('YmdHis') . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
             $image->move(public_path('image/servicelist/'), $imageName);
@@ -146,7 +152,7 @@ class ServicelistController extends Controller
         $existingDetailIds = $serviceList->details()->pluck('id')->toArray();
         $incomingDetailIds = [];
 
-        foreach ($request->input('details', []) as $detail) {
+        foreach ($request->details ?? [] as $detail) {
             if (isset($detail['id'])) {
                 // Update existing detail
                 $existingDetail = ServiceListDetails::find($detail['id']);
@@ -154,7 +160,12 @@ class ServicelistController extends Controller
                     $existingDetail->title = $detail['title'];
                     $existingDetail->subtitle = $detail['subtitle'] ?? null;
 
-                    if (isset($detail['image']) && $detail['image']) {
+                    if (isset($detail['image']) && $detail['image'] instanceof \Illuminate\Http\UploadedFile) {
+                        // Delete old image if exists
+                        if ($existingDetail->image && file_exists(public_path('image/servicelist/details/' . $existingDetail->image))) {
+                            unlink(public_path('image/servicelist/details/' . $existingDetail->image));
+                        }
+
                         $img = $detail['image'];
                         $imgName = date('YmdHis') . '_' . uniqid() . '.' . $img->getClientOriginalExtension();
                         $img->move(public_path('image/servicelist/details/'), $imgName);
@@ -167,7 +178,7 @@ class ServicelistController extends Controller
             } else {
                 // Create new detail
                 $imgName = null;
-                if (isset($detail['image']) && $detail['image']) {
+                if (isset($detail['image']) && $detail['image'] instanceof \Illuminate\Http\UploadedFile) {
                     $img = $detail['image'];
                     $imgName = date('YmdHis') . '_' . uniqid() . '.' . $img->getClientOriginalExtension();
                     $img->move(public_path('image/servicelist/details/'), $imgName);
@@ -184,13 +195,14 @@ class ServicelistController extends Controller
 
         // Hapus detail yang tidak dikirim (dianggap dihapus user)
         $toDelete = array_diff($existingDetailIds, $incomingDetailIds);
-
-        $detailsToDelete = ServiceListDetails::whereIn('id', $toDelete)->get();
-        foreach ($detailsToDelete as $detail) {
-            if ($detail->image && File::exists(public_path('image/servicelist/details/' . $detail->image))) {
-                File::delete(public_path('image/servicelist/details/' . $detail->image));
+        if (!empty($toDelete)) {
+            $detailsToDelete = ServiceListDetails::whereIn('id', $toDelete)->get();
+            foreach ($detailsToDelete as $detail) {
+                if ($detail->image && file_exists(public_path('image/servicelist/details/' . $detail->image))) {
+                    unlink(public_path('image/servicelist/details/' . $detail->image));
+                }
+                $detail->delete();
             }
-            $detail->delete();
         }
 
         return redirect()->route('servicesection.index')->with('success', 'Data berhasil diperbarui!');
