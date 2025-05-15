@@ -22,8 +22,8 @@
                     </div>
                 </div>
                 <div class="row g-5 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="col-12 text-justify"> <!-- Rata kanan-kiri -->
-                        {!! $about->description !!}
+                    <div class="col-12" style="text-align: justify;">
+                        {!! nl2br(str_replace('*', '<br>', $about->description)) !!}
                     </div>
                 </div>
             @else

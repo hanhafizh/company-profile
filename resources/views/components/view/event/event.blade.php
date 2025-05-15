@@ -13,9 +13,11 @@
             @foreach ($eventlists as $lists)
                 <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="/image/eventlist/{{ $lists->image }}" class="img-fluid w-100" alt="">
+                        <div class="blog-img" style="width: 100%; height: 200px; overflow: hidden;">
+                            <img src="/image/eventlist/{{ $lists->image }}" class="img-fluid w-100 h-100"
+                                style="object-fit: cover;" alt="">
                         </div>
+
                         <div class="blog-content text-dark border p-4 ">
                             <h5 class="mb-4">{{ $lists->title }}</h5>
                             <p class="mb-4">{{ \Illuminate\Support\Str::limit($lists->description, 100, '...') }}
