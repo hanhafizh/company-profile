@@ -27,7 +27,9 @@
                             <p class="text-center">{{ $detail->subtitle }}</p>
                             @if ($detail->image)
                                 <div class="text-center">
-                                    <img src="{{ asset('image/servicelist/details/' . $detail->image) }}" width="100%">
+                                    <img src="{{ asset('image/servicelist/details/' . $detail->image) }}"
+                                        class="img-fluid mb-4 mx-auto d-block" style="width: 80%;"
+                                        alt="{{ $detail->title ?? 'Detail Image' }}">
                                 </div>
                             @endif
                         </div>
